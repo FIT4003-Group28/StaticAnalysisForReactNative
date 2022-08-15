@@ -1,7 +1,26 @@
 function main() {
     let store = require('app-store-scraper');
     let collection = store.collection.TOP_FREE_IOS;
-    let categories = [store.category.SOCIAL_NETWORKING, store.category.GAMES, store.category.UTILITIES, store.category.BUSINESS, store.category.NEWS, store.category.EDUCATION, store.category.FINANCE, store.category.FOOD_AND_DRINK, store.category.SHOPPING];
+    let categories = [
+        store.category.BUSINESS,
+        store.category.EDUCATION,
+        store.category.FINANCE,
+        store.category.FOOD_AND_DRINK,
+        store.category.GAMES,
+        store.category.HEALTH_AND_FITNESS,
+        store.category.LIFESTYLE,
+        store.category.MEDICAL,
+        store.category.NEWS,
+        store.category.NAVIGATION,
+        store.category.PRODUCTIVITY,
+        store.category.PHOTO_AND_VIDEO,
+        store.category.SHOPPING,
+        store.category.SOCIAL_NETWORKING,
+        store.category.SPORTS,
+        store.category.TRAVEL,
+        store.category.UTILITIES,
+        store.category.WEATHER
+    ];
     let num = 200;
     writeAllIOSAppsToCSV(store, collection, categories, num);
 }

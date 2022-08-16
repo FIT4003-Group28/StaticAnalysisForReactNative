@@ -1,6 +1,6 @@
 function main() {
     let store = require('app-store-scraper');
-    let collection = store.collection.TOP_FREE_IOS;
+    let collection = [store.collection.TOP_FREE_IOS, store.collection.NEW_FREE_IOS];
     let categories = [
         store.category.BUSINESS,
         store.category.EDUCATION,
@@ -25,12 +25,15 @@ function main() {
     writeAllIOSAppsToCSV(store, collection, categories, num);
 }
 
-async function writeAllIOSAppsToCSV(store, collection, categories, num) {
+async function writeAllIOSAppsToCSV(store, collections, categories, num) {
     let setOfBundleIds = new Set();
 
     // Retrieve the bundle ids of all apps by iterating through each category
-    for (category of categories) {
-        setOfBundleIds = new Set([...setOfBundleIds, ...await getIOSAppBundleIds(store, collection, category, num)]);
+
+    for (collection of collections) {
+        for (category of categories) {
+            setOfBundleIds = new Set([...setOfBundleIds, ...await getIOSAppBundleIds(store, collection, category, num)]);
+        }
     }
 
     // Write to a csv file

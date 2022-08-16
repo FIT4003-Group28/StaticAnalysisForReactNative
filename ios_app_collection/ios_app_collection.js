@@ -26,21 +26,21 @@ function main() {
 }
 
 async function writeAllIOSAppsToCSV(store, collection, categories, num) {
-    let listOfBundleIds = []
+    let setOfBundleIds = new Set();
 
     // Retrieve the bundle ids of all apps by iterating through each category
     for (category of categories) {
-        listOfBundleIds = listOfBundleIds.concat(await getIOSAppBundleIds(store, collection, category, num));
+        setOfBundleIds = new Set([...setOfBundleIds, ...await getIOSAppBundleIds(store, collection, category, num)]);
     }
 
     // Write to a csv file
     const fs = require('fs');
     const writeStream = fs.createWriteStream('ios_bundle_ids.csv');
-    writeStream.write(listOfBundleIds.join('\n'));
+    writeStream.write(Array.from(setOfBundleIds).join('\n'));
 }
 
 async function getIOSAppBundleIds(store, collection, category, num) {
-    let listOfBundleIds = [];
+    let setOfBundleIds = new Set();
 
     // Retrieve the bundle ids of apps that meet the provided criteria
     const listOfApps = await store.list({
@@ -51,9 +51,9 @@ async function getIOSAppBundleIds(store, collection, category, num) {
 
     try {
         for (i in listOfApps) {
-            listOfBundleIds.push(listOfApps[i].appId);
+            setOfBundleIds.add(listOfApps[i].appId);
         }
-        return listOfBundleIds;
+        return setOfBundleIds;
     }
     catch (error) {
         console.log(error)

@@ -20,10 +20,21 @@ if [ ! -f "./package.json" ]
 fi
 
 # Install required npm library components
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 echo "Installing npm library packages:" $(pwd)
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 npm install
+
+# Build code bundle from project
+echo "-------------------------------------------------------------------------"
+echo "Building code bundle --> index.android.bundle"
+echo "-------------------------------------------------------------------------"
+npx react-native bundle --dev false --platform android --entry-file $2 --bundle-output ./index.android.bundle
+if [ ! $? ]
+  then
+    echo "Error: Failed to build code bundle"
+    exit 1
+fi
 
 # Ensure that hermes engine was installed by npm
 if [ ! -e "./node_modules/hermes-engine" ]
@@ -36,41 +47,30 @@ fi
 PROJ_HBC=$(./node_modules/hermes-engine/linux64-bin/hermesc -version | egrep -oe "HBC bytecode version: [0-9]{1,}" | egrep -oe "[0-9]{1,}")
 if [ ! $? ]
   then
-    echo "Could not determine hermes bytecode version"
+    echo "Error: Could not determine hermes bytecode version"
     exit 1
 fi
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 echo "Detected project hermes version:" $PROJ_HBC
-echo "========================================================="
-
-# Build code bundle from project
-echo "Building code bundle --> index.android.bundle"
-npx react-native bundle --dev false --platform android --entry-file $2 --bundle-output ./index.android.bundle
-if [ ! $? ]
-  then
-    echo "Failed to build code bundle"
-    exit 1
-fi
 
 # Compile js bundle into hermes binary
-echo "========================================================="
 echo "Assembling js bundle into hermes binary --> index.android.bundle.hbc"
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 ./node_modules/hermes-engine/linux64-bin/hermesc -O -emit-binary -out=index.android.bundle.hbc index.android.bundle
 if [ ! $? ]
   then
-    echo "Failed to assemble js into hermes binary"
+    echo "Error: Failed to assemble js into hermes binary"
     exit 1
 fi
 
 # Disassemble hermes binary in readable hermes bytecode
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 echo "Disassembling hermes binary into hermes readable bytecode -->" $3
-echo "========================================================="
+echo "-------------------------------------------------------------------------"
 $SCRIPT_DIR/build/bin$PROJ_HBC/hermesc -dump-bytecode index.android.bundle.hbc -out $3
 if [ ! $? ]
   then
-    echo "Failed to disassemble hermes binary into bytecode"
+    echo "Error: Failed to disassemble hermes binary into bytecode"
     exit 1
 fi
 

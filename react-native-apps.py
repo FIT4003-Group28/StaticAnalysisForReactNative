@@ -12,7 +12,7 @@ AUTH_HEADER = {'Authorization': 'token %s' % ACCESS_TOKEN, 'Accept': 'applicatio
 output = []
 lowest_star_count = 999999
 
-for i in range(1, int(MAX_ITERATIONS / PER_PAGE)):
+for i in range(1, int(MAX_ITERATIONS / PER_PAGE) + 1):
     url = "https://api.github.com/search/repositories?q=topic:" + TOPIC + "&sort=" + SORT + "&order=desc" + ORDER + "&page=" + str(i) + "&per_page=" + str(PER_PAGE)
     response = requests.get(url, headers=AUTH_HEADER)
     response_dict = response.json()
@@ -26,7 +26,7 @@ for i in range(1, int(MAX_ITERATIONS / PER_PAGE)):
 
 STARS = "stars:<" + str(lowest_star_count)
 
-for i in range(int(MAX_ITERATIONS / PER_PAGE) + 1, int(MAX_ITERATIONS*2 / PER_PAGE)):
+for i in range(int(MAX_ITERATIONS / PER_PAGE) + 1, int(MAX_ITERATIONS*2 / PER_PAGE) + 1):
     url = "https://api.github.com/search/repositories?q=topic:" + TOPIC + " " + STARS + "&sort=" + SORT + "&order=desc" + ORDER + "&page=" + str(i - (MAX_ITERATIONS/PER_PAGE)) + "&per_page=" + str(PER_PAGE)
     response = requests.get(url, headers=AUTH_HEADER)
     response_dict = response.json()

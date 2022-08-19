@@ -1,1 +1,1 @@
-To store only the files for the ios apps developed in React Native.
+To store files for the ios apps downloaded which were developed in React Native.

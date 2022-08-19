@@ -1,1 +1,1 @@
-To store ipa files for the downloaded ios apps
+To store zip files for the downloaded ios apps

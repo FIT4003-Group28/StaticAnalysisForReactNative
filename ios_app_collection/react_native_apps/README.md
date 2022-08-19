@@ -1,1 +1,1 @@
-To store ipa files for the downloaded ios apps
+To store only the files for the ios apps developed in React Native.

@@ -32,9 +32,9 @@ def main():
         # Source (https://stackoverflow.com/questions/41826868/moving-all-files-from-one-directory-to-another-using-python)
         # Once downloaded, get all the ipa files in the current directory
         source_dir = '.'
-        target_dir = './ios_apps'
-        files_in_curr_dir = os.listdir(source_dir)  
-        ipa_files = list(filter(lambda x: x.endswith(".ipa"), files_in_curr_dir))
+        target_dir = './ios_apps_ipa'
+        files = os.listdir(source_dir)  
+        ipa_files = list(filter(lambda x: x.endswith(".ipa"), files))
 
         # Move the ipa files from source directory to destination
         for ipa_file in ipa_files:

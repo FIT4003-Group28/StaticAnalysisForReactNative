@@ -1,0 +1,1 @@
+To store ipa files for the downloaded ios apps

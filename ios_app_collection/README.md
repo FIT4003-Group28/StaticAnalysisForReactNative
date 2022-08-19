@@ -1,11 +1,12 @@
 # Software Requirements (As Tested):
-Python: 3.8.6
+python: 3.8.6\
 node: 16.14.2
 
 # How To Run
 Firstly, enter the email and password for the iTunes account that will be used to download the apps in ios_app_download.py. Ensure you have access to a device using this account as a 2FA code may be needed.
 
-For bundle ids collection, iOS app download and filtering of React Native apps, a superscript can be run as such: sh ios_app_collection_superscript.sh
+For bundle ids collection, iOS app download and filtering of React Native apps, a superscript can be run as such:\
+sh ios_app_collection_superscript.sh
 
 Note: The above handles the installation of required packages.
 
@@ -20,4 +21,4 @@ Note: The above modules don't depend on each other, however each modules depends
 
 1) node ios_app_collection.js (node_module exists)
 2) python3 ios_app_download.py (csv file is populated with required bundle ids)
-3) python3 ios_app_react_native_filter.py (ipa files exist in ios_apps_ipa)
+3) python3 ios_app_react_native_filter.py (ipa files exist in the directory ios_apps_ipa)

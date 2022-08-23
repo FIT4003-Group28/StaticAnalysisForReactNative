@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "Event Name"; ObjectID = "5zF-Lv-1iZ"; Note = "This is a placeholder. Please, don't translate."; */
+"5zF-Lv-1iZ.text" = "Event Name";
+
+/* Class = "UILabel"; text = "Event Type"; ObjectID = "h9A-ed-NNZ"; Note = "This is a placeholder. Please, don't translate."; */
+"h9A-ed-NNZ.text" = "イベントのタイプ";
+
+/* Class = "UIButton"; normalTitle = "Resume Recording or End the Game"; ObjectID = "zcu-T1-d0W"; */
+"zcu-T1-d0W.normalTitle" = "録画の再開またはゲームの終了";
+

@@ -1,0 +1,15 @@
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "2In-cP-J9I"; */
+"2In-cP-J9I.normalTitle" = "次へ";
+
+/* Class = "UILabel"; text = "Push Notifications from Hudl"; ObjectID = "7DO-XL-m90"; */
+"7DO-XL-m90.text" = "Hudlからのプッシュ通知";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Dzj-Ef-b4P"; */
+"Dzj-Ef-b4P.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "No, Thanks"; ObjectID = "fUH-Bi-YuT"; */
+"fUH-Bi-YuT.normalTitle" = "いいえ,結構です";
+
+/* Class = "UITextView"; text = "You can now receive push notifications about Hudl activity, even when the app is closed."; ObjectID = "I0T-hS-OSQ"; */
+"I0T-hS-OSQ.text" = "アプリを閉じている時でも, Hudlのアクティビティについての通知を受け取ることができます.";
+

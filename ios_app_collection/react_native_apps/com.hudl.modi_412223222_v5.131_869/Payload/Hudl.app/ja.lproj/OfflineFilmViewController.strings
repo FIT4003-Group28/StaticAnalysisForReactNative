@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "You can clear up to 4.5 GB of storage."; ObjectID = "0iK-AM-58D"; */
+"0iK-AM-58D.text" = "最大 4.5 GBのストレージをクリアできます";
+
+/* Class = "UILabel"; text = "No film available for offline viewing."; ObjectID = "amn-cf-iLH"; */
+"amn-cf-iLH.text" = "オフラインで視聴できるビデオはありません.";
+
+/* Class = "UILabel"; text = "0.0B"; ObjectID = "cSR-oG-3AR"; */
+"cSR-oG-3AR.text" = "0.0B";
+
+/* Class = "UILabel"; text = "0.0B"; ObjectID = "Ffp-MI-b1S"; */
+"Ffp-MI-b1S.text" = "0.0B";
+
+/* Class = "UILabel"; text = "Backups of recently uploaded video."; ObjectID = "HKJ-Uk-Htm"; */
+"HKJ-Uk-Htm.text" = "最近アップロードしたビデオのバックアップ";
+
+/* Class = "UILabel"; text = "Storage used outside of the Hudl app."; ObjectID = "PRJ-4z-ec0"; */
+"PRJ-4z-ec0.text" = "Hudlアプリ以外での使用済みストレージ";
+

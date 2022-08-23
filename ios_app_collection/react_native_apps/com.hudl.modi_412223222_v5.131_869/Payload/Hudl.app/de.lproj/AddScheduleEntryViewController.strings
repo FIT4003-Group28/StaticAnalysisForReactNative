@@ -1,0 +1,72 @@
+/* Class = "UILabel"; text = "New Schedule Entry"; ObjectID = "0CI-dU-Db1"; */
+"0CI-dU-Db1.text" = "Neuer Kalendereintrag";
+
+/* Class = "UIButton"; normalTitle = "Date"; ObjectID = "3YW-GP-Wpj"; */
+"3YW-GP-Wpj.normalTitle" = "Datum";
+
+/* Class = "UIButton"; normalTitle = "Reg. Season"; ObjectID = "5bC-1P-K3Z"; */
+"5bC-1P-K3Z.normalTitle" = "Saison";
+
+/* Class = "UIButton"; normalTitle = "Tournament"; ObjectID = "5WB-ZG-YXW"; */
+"5WB-ZG-YXW.normalTitle" = "Turnier";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "8xH-zk-3Tg"; */
+"8xH-zk-3Tg.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "9JH-4U-8g9"; */
+"9JH-4U-8g9.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Type"; ObjectID = "byb-HK-DhQ"; */
+"byb-HK-DhQ.normalTitle" = "Typ";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "dEu-rc-v3K"; */
+"dEu-rc-v3K.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Opponent"; ObjectID = "Dle-8L-V6A"; */
+"Dle-8L-V6A.normalTitle" = "Gegner";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "DP2-WO-Faw"; */
+"DP2-WO-Faw.normalTitle" = "Speichern";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "g3t-Pw-Ypu"; */
+"g3t-Pw-Ypu.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "gxe-kA-16Z"; */
+"gxe-kA-16Z.normalTitle" = "Zurück";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "HJM-C7-yNd"; */
+"HJM-C7-yNd.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Ms5-lX-LVH"; */
+"Ms5-lX-LVH.normalTitle" = "Fertig";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nsm-f6-Y1y"; */
+"Nsm-f6-Y1y.normalTitle" = "Abbrechen";
+
+/* Class = "UIButton"; normalTitle = "Location"; ObjectID = "PrO-5t-WcI"; */
+"PrO-5t-WcI.normalTitle" = "Ort";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "sdE-N4-mzH"; */
+"sdE-N4-mzH.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "tRq-7l-zUd"; */
+"tRq-7l-zUd.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "twQ-S8-BWE"; */
+"twQ-S8-BWE.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Home"; ObjectID = "y2x-4J-ulN"; */
+"y2x-4J-ulN.normalTitle" = "Heim";
+
+/* Class = "UIButton"; normalTitle = "Neutral"; ObjectID = "yg6-rt-fM2"; */
+"yg6-rt-fM2.normalTitle" = "Neutral";
+
+/* Class = "UIButton"; normalTitle = "Scrimmage"; ObjectID = "Yrg-p4-dEl"; */
+"Yrg-p4-dEl.normalTitle" = "Testspiel";
+
+/* Class = "UIButton"; normalTitle = "Away"; ObjectID = "ZB9-vB-EAc"; */
+"ZB9-vB-EAc.normalTitle" = "Auswärts";
+
+/* Class = "UILabel"; text = "Reg. Season"; ObjectID = "ZhB-Tj-np4"; */
+"ZhB-Tj-np4.text" = "Saison";
+

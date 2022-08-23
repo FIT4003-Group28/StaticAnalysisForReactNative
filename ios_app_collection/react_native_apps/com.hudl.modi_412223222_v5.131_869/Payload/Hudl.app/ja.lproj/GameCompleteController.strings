@@ -1,0 +1,21 @@
+/* Class = "UILabel"; text = "1. Upload Your Video with Mercury"; ObjectID = "15"; */
+"15.text" = "1. ビデオをMercuryでアップロード";
+
+/* Class = "UIBarButtonItem"; title = "All Done. Go Back to the Home Screen."; ObjectID = "19"; */
+"19.title" = "すべて終了. ホームスクリーンに戻る.";
+
+/* Class = "UILabel"; text = "Use Mercury for Windows or Mac to upload the video you recorded at this event to Hudl.com."; ObjectID = "38"; */
+"38.text" = "WindowsまたはMac用のMercuryを使用してこのイベントのビデオをHudl.comにアップロード";
+
+/* Class = "UILabel"; text = "2. Find \"Live Tag\" Data on Hudl"; ObjectID = "42"; */
+"42.text" = "2. Hudlで「ライブタグ」データを探す";
+
+/* Class = "UILabel"; text = "Look for an item named \"Live Tag\" under the event. Select it and the video, then \"Match.\""; ObjectID = "44"; */
+"44.text" = "イベントの中にある「ライブタグ」を探します. タグとビデオを選択したら「マッチ」を選択します.";
+
+/* Class = "UILabel"; text = "3. Auto-match that Data with Video"; ObjectID = "45"; */
+"45.text" = "3. データとビデオを自動的にマッチする";
+
+/* Class = "UILabel"; text = "Hudl will try to automatically match the video and data you tagged live. You can adjust it, too."; ObjectID = "47"; */
+"47.text" = "Hudlはビデオとライブで付けたタグを自動的に合わせます. 調整することもできます.";
+

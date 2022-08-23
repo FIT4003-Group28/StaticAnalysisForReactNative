@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "View Your Video"; ObjectID = "4"; */
+"4.normalTitle" = "ビデオを見る";
+
+/* Class = "UILabel"; text = "No Game Highlights Have Been Marked"; ObjectID = "8"; */
+"8.text" = "ゲームハイライトがマークされていません";
+
+/* Class = "UILabel"; text = "To mark a clip as a highlight, play a clip from your library and double-tap during playback."; ObjectID = "9"; */
+"9.text" = "クリップをハイライトとしてマークするには, ライブラリでクリップを再生し, 再生中にダブルタップしてください.";
+

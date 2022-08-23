@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SinfPaths</key>
+	<array>
+		<string>SC_Info/Swipr.sinf</string>
+	</array>
+	<key>SinfReplicationPaths</key>
+	<array>
+		<string>Frameworks/FBAEMKit.framework/SC_Info/FBAEMKit.sinf</string>
+		<string>Frameworks/FBSDKCoreKit.framework/SC_Info/FBSDKCoreKit.sinf</string>
+		<string>Frameworks/FBSDKCoreKit_Basics.framework/SC_Info/FBSDKCoreKit_Basics.sinf</string>
+		<string>Frameworks/FBSDKGamingServicesKit.framework/SC_Info/FBSDKGamingServicesKit.sinf</string>
+		<string>Frameworks/FBSDKLoginKit.framework/SC_Info/FBSDKLoginKit.sinf</string>
+		<string>Frameworks/FBSDKShareKit.framework/SC_Info/FBSDKShareKit.sinf</string>
+		<string>Frameworks/SCSDKCoreKit.framework/SC_Info/SCSDKCoreKit.sinf</string>
+		<string>Frameworks/SCSDKCreativeKit.framework/SC_Info/SCSDKCreativeKit.sinf</string>
+		<string>Frameworks/SCSDKLoginKit.framework/SC_Info/SCSDKLoginKit.sinf</string>
+		<string>Frameworks/TikTokOpenSDK.framework/SC_Info/TikTokOpenSDK.sinf</string>
+		<string>Frameworks/hermes.framework/SC_Info/hermes.sinf</string>
+		<string>PlugIns/ImageNotification.appex/SC_Info/ImageNotification.sinf</string>
+		<string>SC_Info/Swipr.sinf</string>
+	</array>
+</dict>
+</plist>

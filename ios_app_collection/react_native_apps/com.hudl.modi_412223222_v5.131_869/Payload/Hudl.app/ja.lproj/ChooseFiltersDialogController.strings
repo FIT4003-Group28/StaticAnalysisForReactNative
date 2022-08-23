@@ -1,0 +1,6 @@
+/* Class = "UINavigationItem"; title = " Filter Your Clips"; ObjectID = "4"; */
+"4.title" = "クリップをフィルター";
+
+/* Class = "UILabel"; text = "Select up to 3 filters to apply to all clips."; ObjectID = "Zcw-jj-cxv"; */
+"Zcw-jj-cxv.text" = "すべてのクリップに適用するフィルターを3つまで選択できます.";
+

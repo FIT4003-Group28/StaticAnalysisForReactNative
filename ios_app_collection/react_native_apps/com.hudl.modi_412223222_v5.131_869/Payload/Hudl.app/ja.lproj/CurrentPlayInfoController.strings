@@ -1,0 +1,54 @@
+/* Class = "UILabel"; text = "DOWN"; ObjectID = "56h-eU-OPG"; */
+"56h-eU-OPG.text" = "ダウン";
+
+/* Class = "UIButton"; accessibilityLabel = "DownValue"; ObjectID = "109"; Note = "This is a placeholder. Don't translate."; */
+"109.accessibilityLabel" = "DownValue";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "109"; Note = "This is a placeholder. Don't translate."; */
+"109.normalTitle" = "1";
+
+/* Class = "UIButton"; accessibilityLabel = "ToGoValue"; ObjectID = "114"; Note = "This is a placeholder. Don't translate."; */
+"114.accessibilityLabel" = "ToGoValue";
+
+/* Class = "UIButton"; normalTitle = "10"; ObjectID = "114"; Note = "This is a placeholder. Don't translate."; */
+"114.normalTitle" = "10";
+
+/* Class = "UIButton"; accessibilityLabel = "BallOnValue"; ObjectID = "116"; Note = "This is a placeholder. Don't translate."; */
+"116.accessibilityLabel" = "BallOnValue";
+
+/* Class = "UIButton"; normalTitle = "15"; ObjectID = "116"; Note = "This is a placeholder. Don't translate."; */
+"116.normalTitle" = "15";
+
+/* Class = "UIButton"; accessibilityLabel = "QuarterValue"; ObjectID = "118"; Note = "This is a placeholder. Don't translate."; */
+"118.accessibilityLabel" = "QuarterValue";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "118"; Note = "This is a placeholder. Don't translate."; */
+"118.normalTitle" = "1";
+
+/* Class = "UILabel"; text = "Team 1 High School"; ObjectID = "bbk-lt-wBp"; Note = "This is a placeholder. Don't translate."; */
+"bbk-lt-wBp.text" = "Team 1 High School";
+
+/* Class = "UILabel"; text = "TO GO"; ObjectID = "DwX-ud-fge"; */
+"DwX-ud-fge.text" = "TO GO";
+
+/* Class = "UILabel"; text = "Team 2 High School Longer Name"; ObjectID = "eJJ-mw-MjU"; Note = "This is a placeholder. Don't translate."; */
+"eJJ-mw-MjU.text" = "Team 2 High School Longer Name";
+
+/* Class = "UILabel"; text = "QTR"; ObjectID = "Wif-Q1-RMa"; */
+"Wif-Q1-RMa.text" = "QTR";
+
+/* Class = "UILabel"; accessibilityLabel = "Team2Score"; ObjectID = "xZw-Hs-EdM"; Note = "This is a placeholder. Don't translate."; */
+"xZw-Hs-EdM.accessibilityLabel" = "Team2Score";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "xZw-Hs-EdM"; Note = "This is a placeholder. Don't translate."; */
+"xZw-Hs-EdM.text" = "10";
+
+/* Class = "UILabel"; text = "BALL ON"; ObjectID = "yCw-fP-jxw"; */
+"yCw-fP-jxw.text" = "ボールオン";
+
+/* Class = "UILabel"; accessibilityLabel = "Team1Score"; ObjectID = "Zcc-8h-rXB"; Note = "This is a placeholder. Don't translate."; */
+"Zcc-8h-rXB.accessibilityLabel" = "Team1Score";
+
+/* Class = "UILabel"; text = "17"; ObjectID = "Zcc-8h-rXB"; Note = "This is a placeholder. Don't translate."; */
+"Zcc-8h-rXB.text" = "17";
+

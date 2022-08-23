@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SinfPaths</key>
+	<array>
+		<string>SC_Info/NFLMobile.sinf</string>
+	</array>
+	<key>SinfReplicationPaths</key>
+	<array>
+		<string>Frameworks/ChoiceMobile.framework/SC_Info/ChoiceMobile.sinf</string>
+		<string>Frameworks/ComScore.framework/SC_Info/ComScore.sinf</string>
+		<string>Frameworks/FANKit.framework/SC_Info/FANKit.sinf</string>
+		<string>Frameworks/FEWShared.framework/SC_Info/FEWShared.sinf</string>
+		<string>Frameworks/GoogleInteractiveMediaAds.framework/SC_Info/GoogleInteractiveMediaAds.sinf</string>
+		<string>Frameworks/OneSignal.framework/SC_Info/OneSignal.sinf</string>
+		<string>Frameworks/OneSignalCore.framework/SC_Info/OneSignalCore.sinf</string>
+		<string>Frameworks/OneSignalExtension.framework/SC_Info/OneSignalExtension.sinf</string>
+		<string>Frameworks/OneSignalOutcomes.framework/SC_Info/OneSignalOutcomes.sinf</string>
+		<string>Frameworks/ProgrammaticAccessLibrary.framework/SC_Info/ProgrammaticAccessLibrary.sinf</string>
+		<string>Frameworks/fan_engagement_widgets.framework/SC_Info/fan_engagement_widgets.sinf</string>
+		<string>Frameworks/hermes.framework/SC_Info/hermes.sinf</string>
+		<string>PlugIns/Mobile-NotificationExtension.appex/SC_Info/Mobile-NotificationExtension.sinf</string>
+		<string>SC_Info/NFLMobile.sinf</string>
+	</array>
+</dict>
+</plist>

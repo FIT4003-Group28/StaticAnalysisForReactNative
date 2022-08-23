@@ -4,8 +4,8 @@ import shutil
 
 
 def main():
-    email = "ENTER_EMAIL"
-    password = "ENTER_PASSWORD"
+    email = "monash.smat.mac@gmail.com"
+    password = "Camtams-0807"
 
     try:
         list_of_bundle_ids = []

@@ -1,0 +1,21 @@
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "21z-Rr-vhV"; */
+"21z-Rr-vhV.title" = "キャンセル";
+
+/* Class = "UILabel"; text = "Share your best moments with friends, family and recruiters on your public profile"; ObjectID = "AWl-vD-A2H"; */
+"AWl-vD-A2H.text" = "公開プロフィールで友人, 家族, リクルーターと最高の瞬間を共有しましょう";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "GpB-uv-nfT"; */
+"GpB-uv-nfT.title" = "完了";
+
+/* Class = "UIImageView"; accessibilityLabel = "Right trimming handle"; ObjectID = "I22-d6-QWb"; */
+"I22-d6-QWb.accessibilityLabel" = "右トリムハンドル";
+
+/* Class = "UILabel"; text = "Hudl Highlights"; ObjectID = "Ldm-mS-gB2"; */
+"Ldm-mS-gB2.text" = "Hudlハイライト";
+
+/* Class = "UIButton"; normalTitle = "Let's Go!"; ObjectID = "XiE-fi-FzU"; */
+"XiE-fi-FzU.normalTitle" = "さあ 始めましょう!";
+
+/* Class = "UIImageView"; accessibilityLabel = "Left trimming handle"; ObjectID = "XO5-x6-KbE"; */
+"XO5-x6-KbE.accessibilityLabel" = "左トリムハンドル";
+

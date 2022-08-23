@@ -1,0 +1,27 @@
+/* Class = "UILabel"; text = "0"; ObjectID = "5xq-f2-okz"; Note = "This is a placeholder. Please, don't translate."; */
+"5xq-f2-okz.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "8RF-Xl-EXr"; Note = "This is a placeholder. Please, don't translate."; */
+"8RF-Xl-EXr.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "In Possession"; ObjectID = "aXI-PX-Rgi"; */
+"aXI-PX-Rgi.normalTitle" = "ポゼッション中";
+
+/* Class = "UILabel"; text = "Team 2"; ObjectID = "aZ0-4t-eob"; Note = "This is a placeholder. Please, don't translate."; */
+"aZ0-4t-eob.text" = "Team 2";
+
+/* Class = "UIButton"; normalTitle = "In Possession"; ObjectID = "dBY-a5-Ev4"; */
+"dBY-a5-Ev4.normalTitle" = "ポゼッション中";
+
+/* Class = "UIButton"; normalTitle = "Shot"; ObjectID = "im8-AO-34t"; */
+"im8-AO-34t.normalTitle" = "シュート";
+
+/* Class = "UIButton"; normalTitle = "Shot"; ObjectID = "KVb-oQ-EJg"; */
+"KVb-oQ-EJg.normalTitle" = "シュート";
+
+/* Class = "UIButton"; normalTitle = "Out of Play"; ObjectID = "nHc-fR-Znn"; */
+"nHc-fR-Znn.normalTitle" = "アウトオブプレー";
+
+/* Class = "UILabel"; text = "Team 1"; ObjectID = "ojL-DT-W7K"; Note = "This is a placeholder. Please, don't translate."; */
+"ojL-DT-W7K.text" = "Team 1";
+

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>arm64</string>
+    </array>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>We use your data to acquire relevant users via advertising. For example: If you are interested in travelling, we will advertise our app on travelling sites to find like-minded people for you.</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>©catbyte</string>
+    <key>DTPlatformVersion</key>
+    <string>15.4</string>
+    <key>DTSDKName</key>
+    <string>iphoneos15.4</string>
+    <key>CFBundleName</key>
+    <string>SocialConnections</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Select one of your pictures and add it to your profile.</string>
+    <key>NSAdvertisingAttributionReportEndpoint</key>
+    <string>https://woo-api.com</string>
+    <key>CFBundleIcons</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>DTAppStoreToolsBuild</key>
+    <string>13F100</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>CFBundleDisplayName</key>
+    <string>BUBU</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Share your location to find Singles around you.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>fetch</string>
+      <string>remote-notification</string>
+    </array>
+    <key>DTSDKBuild</key>
+    <string>19E239</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Upload a picture of yourself for your profile.</string>
+    <key>CFBundleShortVersionString</key>
+    <string>86</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+      <string>iPhoneOS</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>BuildMachineOSBuild</key>
+    <string>21E258</string>
+    <key>DTPlatformBuild</key>
+    <string>19E239</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>MinimumOSVersion</key>
+    <string>11.0</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>DTXcodeBuild</key>
+    <string>13E500a</string>
+    <key>CFBundleVersion</key>
+    <string>86</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>AntDesign.ttf</string>
+      <string>Entypo.ttf</string>
+      <string>EvilIcons.ttf</string>
+      <string>Feather.ttf</string>
+      <string>FontAwesome.ttf</string>
+      <string>FontAwesome5_Brands.ttf</string>
+      <string>FontAwesome5_Regular.ttf</string>
+      <string>FontAwesome5_Solid.ttf</string>
+      <string>Fontisto.ttf</string>
+      <string>Foundation.ttf</string>
+      <string>Ionicons.ttf</string>
+      <string>MaterialCommunityIcons.ttf</string>
+      <string>MaterialIcons.ttf</string>
+      <string>Octicons.ttf</string>
+      <string>SimpleLineIcons.ttf</string>
+      <string>Zocial.ttf</string>
+      <string>Samble Tracie Bold.otf</string>
+      <string>Samble Tracie_Swash Bold.otf</string>
+      <string>Samble Tracie_Swash.otf</string>
+      <string>Samble Tracie.otf</string>
+      <string>Comme-Bold.ttf</string>
+      <string>Comme-ExtraBold.ttf</string>
+      <string>Comme-ExtraLight.ttf</string>
+      <string>Comme-Heavy.ttf</string>
+      <string>Comme-Light.ttf</string>
+      <string>Comme-Medium.ttf</string>
+      <string>Comme-Regular (1).ttf</string>
+      <string>Comme-SemiBold.ttf</string>
+      <string>Comme-Thin.ttf</string>
+      <string>Kontrapunkt Bob Bold.otf</string>
+      <string>Kontrapunkt Bob Light.otf</string>
+      <string>alsscrp.ttf</string>
+      <string>Quicksand Bold 700.ttf</string>
+      <string>Quicksand Light 300.ttf</string>
+      <string>Quicksand Medium 500.ttf</string>
+      <string>Quicksand Regular 400.ttf</string>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>BootSplash</string>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+    </array>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Your microphone is required to start your own Livestream.</string>
+    <key>CFBundleIdentifier</key>
+    <string>app.social</string>
+    <key>DTXcode</key>
+    <string>1331</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>localhost</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
+      </dict>
+    </dict>
+    <key>CFBundleExecutable</key>
+    <string>SocialConnections</string>
+    <key>firebase_json_raw</key>
+    <string>e30=</string>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+      <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon60x60</string>
+          <string>AppIcon76x76</string>
+        </array>
+        <key>CFBundleIconName</key>
+        <string>AppIcon</string>
+      </dict>
+    </dict>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+  </dict>
+</plist>

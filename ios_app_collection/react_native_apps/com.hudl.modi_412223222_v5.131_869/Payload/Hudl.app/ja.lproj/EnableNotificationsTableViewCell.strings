@@ -1,0 +1,6 @@
+/* Class = "UITextView"; text = "Change your preference in the Settings app to receive notifications from Hudl."; ObjectID = "EsE-Kx-RcF"; */
+"EsE-Kx-RcF.text" = "Hudlからの通知を受信できるように「設定」アプリで設定を変更してください.";
+
+/* Class = "UILabel"; text = "Allow Notifications from Hudl"; ObjectID = "Qxx-xm-HPD"; */
+"Qxx-xm-HPD.text" = "Hudlからの通知を許可";
+

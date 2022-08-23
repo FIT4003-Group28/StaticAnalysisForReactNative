@@ -1,0 +1,24 @@
+/* Class = "UIButton"; normalTitle = "Share Your Highlight"; ObjectID = "7ov-QC-Y84"; */
+"7ov-QC-Y84.normalTitle" = "ハイライトを共有";
+
+/* Class = "UILabel"; text = "Share Your Highlight"; ObjectID = "Fcs-wx-uZw"; */
+"Fcs-wx-uZw.text" = "ハイライトを共有";
+
+/* Class = "UITextField"; placeholder = "Give your highlight a title"; ObjectID = "gDn-fQ-hQt"; */
+"gDn-fQ-hQt.placeholder" = "ハイライトにタイトルを付けてください.";
+
+/* Class = "UIButton"; normalTitle = "Share Your Highlight"; ObjectID = "Mc4-zu-tax"; */
+"Mc4-zu-tax.normalTitle" = "ハイライトを共有";
+
+/* Class = "UILabel"; text = "Your Highlight Has Been Created"; ObjectID = "Mf3-vF-bJb"; */
+"Mf3-vF-bJb.text" = "ハイライトが作成されました";
+
+/* Class = "UIButton"; normalTitle = "Return To Your Video"; ObjectID = "PfW-5K-Rhh"; */
+"PfW-5K-Rhh.normalTitle" = "ビデオに戻る";
+
+/* Class = "UIButton"; normalTitle = "Return To Your Video"; ObjectID = "phZ-IW-Uop"; */
+"phZ-IW-Uop.normalTitle" = "ビデオに戻る";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "YlY-gq-M1Z"; */
+"YlY-gq-M1Z.normalTitle" = "共有";
+

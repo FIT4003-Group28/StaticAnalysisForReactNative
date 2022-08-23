@@ -1,0 +1,24 @@
+/* Class = "UILabel"; text = "Downloads"; ObjectID = "6Wc-Ni-Stv"; */
+"6Wc-Ni-Stv.text" = "ダウンロード";
+
+/* Class = "UILabel"; text = "Everything is up on Hudl.com."; ObjectID = "bMW-Yh-6f6"; */
+"bMW-Yh-6f6.text" = "Hudl.comにすべてアップされています.";
+
+/* Class = "UILabel"; text = "Nothing downloading at the moment."; ObjectID = "DOZ-6T-e1c"; */
+"DOZ-6T-e1c.text" = "現在ダウンロードしているものはありません.";
+
+/* Class = "UIButton"; normalTitle = "Manage Offline Video"; ObjectID = "hYq-tc-Fmw"; */
+"hYq-tc-Fmw.normalTitle" = "オフラインビデオを管理";
+
+/* Class = "UILabel"; text = "You have 12.4GB available on your device."; ObjectID = "sjb-Tq-m6y"; Note = "This is a placeholder. Please, don't translate."; */
+"sjb-Tq-m6y.text" = "You have 12.4GB available on your device.";
+
+/* Class = "UIButton"; normalTitle = "Manage Offline Video"; ObjectID = "tG1-FG-lMZ"; */
+"tG1-FG-lMZ.normalTitle" = "オフラインビデオを管理";
+
+/* Class = "UILabel"; text = "UPLOADS"; ObjectID = "uwi-vb-vsN"; */
+"uwi-vb-vsN.text" = "アップロード";
+
+/* Class = "UIButton"; normalTitle = "Upload Tips"; ObjectID = "vJZ-5D-GyP"; */
+"vJZ-5D-GyP.normalTitle" = "アップロードのヒント";
+

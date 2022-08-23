@@ -1,0 +1,15 @@
+/* Class = "UILabel"; text = "Tag Shot Locations"; ObjectID = "AzE-qo-aFN"; */
+"AzE-qo-aFN.text" = "Positions de tir";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "HgL-KE-AW0"; */
+"HgL-KE-AW0.normalTitle" = "Annuler";
+
+/* Class = "UILabel"; text = "Periods"; ObjectID = "Idk-9B-j3H"; */
+"Idk-9B-j3H.text" = "Périodes";
+
+/* Class = "UIButton"; normalTitle = "Start Tagging"; ObjectID = "Ser-pv-Uw8"; */
+"Ser-pv-Uw8.normalTitle" = "Commencer l'analyse";
+
+/* Class = "UILabel"; text = "Jersey Color"; ObjectID = "WsW-tr-lbE"; Note = "This is a placeholder. Don't translate."; */
+"WsW-tr-lbE.text" = "Couleur de maillot";
+

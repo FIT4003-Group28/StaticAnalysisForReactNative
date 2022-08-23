@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "W"; ObjectID = "Bib-gU-svc"; Note = "This is a placeholder. Please don't translate it."; */
+"Bib-gU-svc.text" = "W";
+
+/* Class = "UIButton"; normalTitle = "Choose"; ObjectID = "pVx-0l-sCq"; */
+"pVx-0l-sCq.normalTitle" = "選択する";
+
+/* Class = "UILabel"; text = "Change"; ObjectID = "qFE-kP-64E"; */
+"qFE-kP-64E.text" = "変更する";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Tg6-6m-Fel"; */
+"Tg6-6m-Fel.normalTitle" = "キャンセル";
+

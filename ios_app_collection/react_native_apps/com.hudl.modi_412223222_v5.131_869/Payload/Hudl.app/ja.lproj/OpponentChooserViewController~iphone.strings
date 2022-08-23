@@ -1,0 +1,15 @@
+/* Class = "UITextField"; placeholder = "Scouted Team Name"; ObjectID = "4"; */
+"4.placeholder" = "スカウトしたチーム名";
+
+/* Class = "UITextField"; placeholder = "Opponent Team Name"; ObjectID = "5"; */
+"5.placeholder" = "対戦相手のチーム名";
+
+/* Class = "UILabel"; text = "vs."; ObjectID = "6"; */
+"6.text" = "vs.";
+
+/* Class = "UIButton"; normalTitle = "Tag this Game Now"; ObjectID = "7"; */
+"7.normalTitle" = "このゲームを今すぐタグ付け";
+
+/* Class = "UINavigationItem"; title = "Tag a Game"; ObjectID = "12"; */
+"12.title" = "ゲームをタグ付け";
+

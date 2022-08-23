@@ -1,0 +1,30 @@
+/* Class = "UIButton"; normalTitle = "Resume Tagging"; ObjectID = "0ef-i1-IEX"; */
+"0ef-i1-IEX.normalTitle" = "Reprendre l'analyse";
+
+/* Class = "UILabel"; text = "What now?"; ObjectID = "4UO-gE-NEC"; */
+"4UO-gE-NEC.text" = "Et maintenant ?";
+
+/* Class = "UIButton"; normalTitle = "View Box Score"; ObjectID = "AiS-dS-mKr"; */
+"AiS-dS-mKr.normalTitle" = "Voir le tableau de score";
+
+/* Class = "UILabel"; text = "Tagging is paused."; ObjectID = "AYT-XX-yzA"; */
+"AYT-XX-yzA.text" = "L'analyse est interrompue";
+
+/* Class = "UILabel"; text = "Waiting for a data connection..."; ObjectID = "BOr-6c-Ksk"; */
+"BOr-6c-Ksk.text" = "En attente des données...";
+
+/* Class = "UIButton"; accessibilityLabel = "Final Exit"; ObjectID = "lHH-OC-uDm"; */
+"lHH-OC-uDm.accessibilityLabel" = "Quitter";
+
+/* Class = "UIButton"; normalTitle = "Exit"; ObjectID = "lHH-OC-uDm"; */
+"lHH-OC-uDm.normalTitle" = "Quitter";
+
+/* Class = "UIButton"; normalTitle = "View Box Score"; ObjectID = "Wwx-1f-PEo"; */
+"Wwx-1f-PEo.normalTitle" = "Voir le tableau de score";
+
+/* Class = "UIButton"; normalTitle = "The Game is Over"; ObjectID = "X7f-Py-coh"; */
+"X7f-Py-coh.normalTitle" = "Le match est terminé";
+
+/* Class = "UILabel"; text = "For bar biz baz buz. Lorem ipsum dolor sit amet leedle leedle lee."; ObjectID = "y6C-3i-Yfo"; Note = "This is a placeholder. Don't translate."; */
+"y6C-3i-Yfo.text" = "For bar biz baz buz. Lorem ipsum dolor sit amet leedle leedle lee.";
+

@@ -1,0 +1,33 @@
+/* Class = "UILabel"; text = "2pt Miss"; ObjectID = "2Lg-1v-42H"; */
+"2Lg-1v-42H.text" = "2ポイントシュート失敗";
+
+/* Class = "UIView"; accessibilityLabel = "endGameView"; ObjectID = "c86-kt-Z8j"; */
+"c86-kt-Z8j.accessibilityLabel" = "エンドゲームビュー";
+
+/* Class = "UILabel"; text = "Start tagging team stats. We'll let you know when to tag players and \nshot location."; ObjectID = "Fco-io-ixz"; */
+"Fco-io-ixz.text" = "チームスタッツのタギングを開始してください. プレーヤーとシュート位置のタグ付けについて説明します.";
+
+/* Class = "UILabel"; text = "Def. Rebound"; ObjectID = "fFY-bW-5kg"; */
+"fFY-bW-5kg.text" = "ディフェンスリバウンド";
+
+/* Class = "UILabel"; text = "24-33"; ObjectID = "gQZ-nW-9ZQ"; */
+"gQZ-nW-9ZQ.text" = "24-33";
+
+/* Class = "UILabel"; text = "24-33"; ObjectID = "jKn-Uu-Ivf"; */
+"jKn-Uu-Ivf.text" = "24-33";
+
+/* Class = "UILabel"; text = "3pt Make"; ObjectID = "OTC-IQ-ugs"; */
+"OTC-IQ-ugs.text" = "3ポイント成功";
+
+/* Class = "UISegmentedControl"; Y38-0m-g8J.segmentTitles[0] = "Team 1"; ObjectID = "Y38-0m-g8J"; */
+"Y38-0m-g8J.segmentTitles[0]" = "チーム 1";
+
+/* Class = "UISegmentedControl"; Y38-0m-g8J.segmentTitles[1] = "Team 2"; ObjectID = "Y38-0m-g8J"; */
+"Y38-0m-g8J.segmentTitles[1]" = "チーム 2";
+
+/* Class = "UILabel"; text = "24-36"; ObjectID = "yAj-Sp-A0J"; */
+"yAj-Sp-A0J.text" = "24-36";
+
+/* Class = "UIButton"; normalTitle = "Save & Exit"; ObjectID = "z7f-R1-Ale"; */
+"z7f-R1-Ale.normalTitle" = "保存して閉じる";
+

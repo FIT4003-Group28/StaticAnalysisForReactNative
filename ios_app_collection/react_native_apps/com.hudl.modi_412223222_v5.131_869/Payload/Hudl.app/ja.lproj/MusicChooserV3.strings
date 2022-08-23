@@ -1,0 +1,18 @@
+/* Class = "UIBarButtonItem"; title = "Add To Reel"; ObjectID = "8hA-1J-oG2"; */
+"8hA-1J-oG2.title" = "リールに追加";
+
+/* Class = "UIButton"; normalTitle = "All Genres"; ObjectID = "833-Qc-5R1"; */
+"833-Qc-5R1.normalTitle" = "すべてのジャンル";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "c3O-6B-ciE"; */
+"c3O-6B-ciE.title" = "キャンセル";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Kv1-We-kjg"; Note = "This is a placeholder. Please don't translate it."; */
+"Kv1-We-kjg.text" = "Title";
+
+/* Class = "UILabel"; text = "88:88"; ObjectID = "uFK-ov-0BP"; Note = "This is a placeholder. Please don't translate it."; */
+"uFK-ov-0BP.text" = "88:88";
+
+/* Class = "UIButton"; normalTitle = "Genre"; ObjectID = "VcN-Wi-zzl"; Note = "This is a placeholder. Please don't translate it."; */
+"VcN-Wi-zzl.normalTitle" = "Genre";
+

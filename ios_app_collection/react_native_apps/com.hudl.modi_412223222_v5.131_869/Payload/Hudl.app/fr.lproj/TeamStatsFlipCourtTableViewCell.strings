@@ -1,0 +1,6 @@
+/* Class = "UIButton"; normalTitle = "Flip Court"; ObjectID = "cKJ-L5-Wp1"; */
+"cKJ-L5-Wp1.normalTitle" = "Changer de côté";
+
+/* Class = "UILabel"; text = "Court Direction"; ObjectID = "Wfd-zT-3vh"; */
+"Wfd-zT-3vh.text" = "Orientation du terrain";
+

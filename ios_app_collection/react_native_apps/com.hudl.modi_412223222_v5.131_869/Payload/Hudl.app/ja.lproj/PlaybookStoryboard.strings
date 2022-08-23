@@ -1,0 +1,54 @@
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "4cO-eR-1no"; */
+"4cO-eR-1no.title" = "完了";
+
+/* Class = "UILabel"; text = "2456 play cards"; ObjectID = "4Zt-2M-lla"; Note = "This is a placeholder. Please, don't translate."; */
+"4Zt-2M-lla.text" = "2456 play cards";
+
+/* Class = "UILabel"; text = "Offensive Playbook"; ObjectID = "8KG-7Q-TNY"; Note = "This is a placeholder. Please, don't translate."; */
+"8KG-7Q-TNY.text" = "Offensive Playbook";
+
+/* Class = "UILabel"; text = "138 cards"; ObjectID = "9Us-Cb-kAK"; Note = "This is a placeholder. Please, don't translate."; */
+"9Us-Cb-kAK.text" = "138 cards";
+
+/* Class = "UILabel"; text = "155 Installs"; ObjectID = "aQV-NQ-nuy"; Note = "This is a placeholder. Please, don't translate."; */
+"aQV-NQ-nuy.text" = "155 Installs";
+
+/* Class = "UILabel"; text = "Dikembe Mutombo III"; ObjectID = "fUB-nH-Hjn"; Note = "This is a placeholder. Please, don't translate."; */
+"fUB-nH-Hjn.text" = "Dikembe Mutombo III";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hrr-Yq-UY9"; Note = "This is a placeholder. Please, don't translate."; */
+"hrr-Yq-UY9.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "htI-Hj-Auf"; */
+"htI-Hj-Auf.title" = "アイテム";
+
+/* Class = "UIViewController"; title = "Offense or Defense"; ObjectID = "Hw6-6r-MZK"; */
+"Hw6-6r-MZK.title" = "オフェンスまたはディフェンス";
+
+/* Class = "UILabel"; text = "3 millenia ago"; ObjectID = "I7v-vW-6XQ"; Note = "This is a placeholder. Please, don't translate."; */
+"I7v-vW-6XQ.text" = "3 millenia ago";
+
+/* Class = "UILabel"; text = "+ Add Athletes"; ObjectID = "iiR-f9-ANn"; */
+"iiR-f9-ANn.text" = "+ アスリートを追加";
+
+/* Class = "UILabel"; text = "Wait!"; ObjectID = "jrc-FV-0OP"; */
+"jrc-FV-0OP.text" = "お待ちください!";
+
+/* Class = "UILabel"; text = "viewed 127 of 238"; ObjectID = "q5i-09-CuO"; Note = "This is a placeholder. Please, don't translate."; */
+"q5i-09-CuO.text" = "viewed 127 of 238";
+
+/* Class = "UILabel"; text = "More cards in install..."; ObjectID = "q65-gm-rsG"; */
+"q65-gm-rsG.text" = "さらにカードをインストール中...";
+
+/* Class = "UILabel"; text = "Activity: 100%"; ObjectID = "v4z-gQ-83e"; Note = "This is a placeholder. Please, don't translate."; */
+"v4z-gQ-83e.text" = "アクティビティ：100%";
+
+/* Class = "UINavigationItem"; title = "Offense or Defense"; ObjectID = "Van-BJ-8bs"; */
+"Van-BJ-8bs.title" = "オフェンスまたはディフェンス";
+
+/* Class = "UILabel"; text = "More plays..."; ObjectID = "xSR-Ox-Mux"; */
+"xSR-Ox-Mux.text" = "より多くのプレー...";
+
+/* Class = "UILabel"; text = "Active Install - Summer Camp"; ObjectID = "Zrj-7t-isV"; Note = "This is a placeholder. Please, don't translate."; */
+"Zrj-7t-isV.text" = "Active Install - Summer Camp";
+

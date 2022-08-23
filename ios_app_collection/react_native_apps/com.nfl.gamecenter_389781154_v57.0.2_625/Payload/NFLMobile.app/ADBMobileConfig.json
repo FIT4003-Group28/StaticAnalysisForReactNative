@@ -1,0 +1,39 @@
+{
+  "lastModified": "2020-08-27T18:21:09.212Z",
+  "marketingCloud": {
+    "org": "F75C3025512D2C1D0A490D44@AdobeOrg"
+  },
+  "target": {
+    "clientCode": "nflenterprises",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "",
+    "analyticsForwardingEnabled": true,
+    "timeout": 5
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "8bc788c4-2761-4d7a-a72e-55776a516f7a"
+  },
+  "analytics": {
+    "rsids": "nflglobal2016",
+    "server": "smetrics.nfl.com",
+    "ssl": true,
+    "offlineEnabled": false,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "EDT",
+    "timezoneOffset": -240,
+    "referrerTimeout": 3,
+    "backdateSessionInfo": false,
+    "poi": []
+  },
+  "messages": [],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5575ed8d65346100175c0800.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5575ed8a6664390017b50800.json"
+  }
+}

@@ -1,0 +1,60 @@
+/* Class = "UIView"; accessibilityLabel = "Video Player"; ObjectID = "2"; */
+"2.accessibilityLabel" = "ビデオプレーヤー";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "2U9-Iw-dHE"; */
+"2U9-Iw-dHE.normalTitle" = "取り消す";
+
+/* Class = "UILabel"; text = "Highlight"; ObjectID = "9H1-1V-XzV"; */
+"9H1-1V-XzV.text" = "ハイライト";
+
+/* Class = "UIView"; accessibilityLabel = "Loading Indicator"; ObjectID = "80"; */
+"80.accessibilityLabel" = "インディケーターをロード中";
+
+/* Class = "UILabel"; text = "Loading"; ObjectID = "81"; */
+"81.text" = "ロード中";
+
+/* Class = "UILabel"; text = "This video is too old to be played on the iPad"; ObjectID = "124"; */
+"124.text" = "このビデオはiPadで再生するには古すぎます";
+
+/* Class = "UILabel"; text = "There was an error loading this video. Try the next one."; ObjectID = "126"; */
+"126.text" = "このビデオを読み込む際にエラーが発生しました. 別のビデオを試してください.";
+
+/* Class = "UILabel"; text = "No internet connection."; ObjectID = "128"; */
+"128.text" = "インターネット接続がありません.";
+
+/* Class = "UIButton"; accessibilityLabel = "Next Button"; ObjectID = "137"; */
+"137.accessibilityLabel" = "次のボタン";
+
+/* Class = "UIButton"; accessibilityLabel = "Previous Button"; ObjectID = "142"; */
+"142.accessibilityLabel" = "前に戻るボタン";
+
+/* Class = "UILabel"; text = "The Laser Pointer works best if you AirPlay or connect to a second screen."; ObjectID = "200"; */
+"200.text" = "レーザーポインタはAirPlayの使用中またはセカンドスクリーンに接続している際に便利です";
+
+/* Class = "UILabel"; text = "Pro tip: Try tapping and holding."; ObjectID = "203"; */
+"203.text" = "プロのコツ：タップしてホールド";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "E6V-qI-H0w"; */
+"E6V-qI-H0w.normalTitle" = "クリア";
+
+/* Class = "UILabel"; text = "Tap an existing note to edit it, or drag it to reposition."; ObjectID = "ey5-cY-KrB"; */
+"ey5-cY-KrB.text" = "現在のノートをタップして編集し, ドラッグして位置を変更します.";
+
+/* Class = "UILabel"; text = "Laser Pointer"; ObjectID = "Hwp-mP-xeW"; */
+"Hwp-mP-xeW.text" = "レーザーポインタ";
+
+/* Class = "UIButton"; normalTitle = "Show Notes"; ObjectID = "jgY-qb-zOr"; */
+"jgY-qb-zOr.normalTitle" = "ノートを表示";
+
+/* Class = "UILabel"; text = "Telestration"; ObjectID = "kwz-Rd-XlO"; */
+"kwz-Rd-XlO.text" = "テレストレーション";
+
+/* Class = "UILabel"; text = "Tap to create a new text note."; ObjectID = "syW-0H-Ibx"; */
+"syW-0H-Ibx.text" = "タップして新しいテキストノートを作成";
+
+/* Class = "UILabel"; text = "Text Note"; ObjectID = "YXG-Vt-XNh"; */
+"YXG-Vt-XNh.text" = "テキストノート";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Zar-g4-r1U"; */
+"Zar-g4-r1U.normalTitle" = "完了";
+

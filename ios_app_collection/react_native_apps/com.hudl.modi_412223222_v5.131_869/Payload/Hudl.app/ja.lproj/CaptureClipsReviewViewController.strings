@@ -1,0 +1,27 @@
+/* Class = "UIButton"; normalTitle = "Record New Clips"; ObjectID = "3xR-NH-oft"; */
+"3xR-NH-oft.normalTitle" = "新しいクリップを録画";
+
+/* Class = "UIButton"; normalTitle = "Move To…"; ObjectID = "5J5-mJ-UBs"; */
+"5J5-mJ-UBs.normalTitle" = "移動...";
+
+/* Class = "UILabel"; text = "No Clips to Review"; ObjectID = "acd-MM-H1E"; */
+"acd-MM-H1E.text" = "表示するクリップはありません";
+
+/* Class = "UILabel"; text = "Clips that have already been uploaded to Hudl\ncan be found in your Video section."; ObjectID = "ctf-P9-JYU"; */
+"ctf-P9-JYU.text" = "Hudlにアップロード済みのクリップはビデオのページに表示されます.";
+
+/* Class = "UIButton"; normalTitle = "View Your Video"; ObjectID = "cuW-lV-3Yb"; */
+"cuW-lV-3Yb.normalTitle" = "ビデオを見る";
+
+/* Class = "UIButton"; normalTitle = "Select All"; ObjectID = "I8Z-Po-jpg"; */
+"I8Z-Po-jpg.normalTitle" = "すべてを選択";
+
+/* Class = "UIButton"; normalTitle = "Delete (0)"; ObjectID = "KDw-fV-MR1"; */
+"KDw-fV-MR1.normalTitle" = "削除 (0)";
+
+/* Class = "UIButton"; normalTitle = "Record New Clips"; ObjectID = "mvW-d5-VmI"; */
+"mvW-d5-VmI.normalTitle" = "新しいクリップを録画";
+
+/* Class = "UILabel"; text = "You haven't recorded any clips recently."; ObjectID = "YZn-73-CgG"; */
+"YZn-73-CgG.text" = "最近録画したクリップはありません";
+

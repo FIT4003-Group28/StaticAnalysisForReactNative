@@ -1,0 +1,93 @@
+/* Class = "UILabel"; text = "New Schedule Entry"; ObjectID = "0CI-dU-Db1"; */
+"0CI-dU-Db1.text" = "新しいスケジュール入力";
+
+/* Class = "UIButton"; normalTitle = "Date"; ObjectID = "3YW-GP-Wpj"; */
+"3YW-GP-Wpj.normalTitle" = "日付";
+
+/* Class = "UIButton"; normalTitle = "Reg. Season"; ObjectID = "5bC-1P-K3Z"; */
+"5bC-1P-K3Z.normalTitle" = "レギュラーシーズン";
+
+/* Class = "UIButton"; normalTitle = "Tournament"; ObjectID = "5WB-ZG-YXW"; */
+"5WB-ZG-YXW.normalTitle" = "トーナメント";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "8xH-zk-3Tg"; */
+"8xH-zk-3Tg.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "9JH-4U-8g9"; */
+"9JH-4U-8g9.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Type"; ObjectID = "byb-HK-DhQ"; */
+"byb-HK-DhQ.normalTitle" = "タイプ";
+
+/* Class = "UITextField"; placeholder = "Jan, 1 2015   8:00 PM"; ObjectID = "dc8-k2-xi0"; */
+"dc8-k2-xi0.placeholder" = "2015年1月1日 PM 8:00";
+
+/* Class = "UITextField"; text = "Jan, 1 2015   8:00 PM"; ObjectID = "dc8-k2-xi0"; */
+"dc8-k2-xi0.text" = "2015年1月1日 PM 8:00";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "dEu-rc-v3K"; */
+"dEu-rc-v3K.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Opponent"; ObjectID = "Dle-8L-V6A"; */
+"Dle-8L-V6A.normalTitle" = "対戦相手";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "DP2-WO-Faw"; */
+"DP2-WO-Faw.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "g3t-Pw-Ypu"; */
+"g3t-Pw-Ypu.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "gxe-kA-16Z"; */
+"gxe-kA-16Z.normalTitle" = "戻る";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "HJM-C7-yNd"; */
+"HJM-C7-yNd.text" = "✓";
+
+/* Class = "UILabel"; text = "Jan, 1 2015   8:00 PM"; ObjectID = "hLt-Jr-Nc1"; */
+"hLt-Jr-Nc1.text" = "2015年1月1日 PM 8:00";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Ms5-lX-LVH"; */
+"Ms5-lX-LVH.normalTitle" = "完了";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nsm-f6-Y1y"; */
+"Nsm-f6-Y1y.normalTitle" = "キャンセル";
+
+/* Class = "UIButton"; normalTitle = "Post Season"; ObjectID = "nU5-BL-hGk"; */
+"nU5-BL-hGk.normalTitle" = "ポストシーズン";
+
+/* Class = "UIButton"; normalTitle = "Camp"; ObjectID = "oek-6h-m0R"; */
+"oek-6h-m0R.normalTitle" = "キャンプ";
+
+/* Class = "UIButton"; normalTitle = "Location"; ObjectID = "PrO-5t-WcI"; */
+"PrO-5t-WcI.normalTitle" = "試合会場";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "rlu-Qo-Kvf"; */
+"rlu-Qo-Kvf.text" = "ホーム";
+
+/* Class = "UILabel"; text = "Boys Basketball Somethingeranother"; ObjectID = "rZk-WE-XuX"; */
+"rZk-WE-XuX.text" = "男子バスケットボール 別のもの";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "sdE-N4-mzH"; */
+"sdE-N4-mzH.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "tRq-7l-zUd"; */
+"tRq-7l-zUd.text" = "✓";
+
+/* Class = "UILabel"; text = "✓"; ObjectID = "twQ-S8-BWE"; */
+"twQ-S8-BWE.text" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Home"; ObjectID = "y2x-4J-ulN"; */
+"y2x-4J-ulN.normalTitle" = "ホーム";
+
+/* Class = "UIButton"; normalTitle = "Neutral"; ObjectID = "yg6-rt-fM2"; */
+"yg6-rt-fM2.normalTitle" = "中立地";
+
+/* Class = "UIButton"; normalTitle = "Scrimmage"; ObjectID = "Yrg-p4-dEl"; */
+"Yrg-p4-dEl.normalTitle" = "スクリメージ";
+
+/* Class = "UIButton"; normalTitle = "Away"; ObjectID = "ZB9-vB-EAc"; */
+"ZB9-vB-EAc.normalTitle" = "アウェイ";
+
+/* Class = "UILabel"; text = "Reg. Season"; ObjectID = "ZhB-Tj-np4"; */
+"ZhB-Tj-np4.text" = "レギュラーシーズン";
+

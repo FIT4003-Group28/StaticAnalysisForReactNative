@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "CuV-8f-xKa"; */
+"CuV-8f-xKa.normalTitle" = "キャンセル";
+
+/* Class = "UIButton"; normalTitle = "Resume Tagging"; ObjectID = "izs-7C-J8E"; */
+"izs-7C-J8E.normalTitle" = "タギングを再開";
+
+/* Class = "UIButton"; normalTitle = "Start Tagging"; ObjectID = "Kc0-W2-H43"; */
+"Kc0-W2-H43.normalTitle" = "タギングを開始";
+

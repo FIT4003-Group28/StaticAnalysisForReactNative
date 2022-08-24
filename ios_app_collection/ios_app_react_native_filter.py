@@ -5,12 +5,10 @@ import zipfile
 
 def main():
     ios_apps_ipa_dir = "./ios_apps_ipa"
-    ios_apps_zip_dir = "./ios_apps_zip"
     react_native_apps_dir = "./react_native_apps"
 
-    # copy_files(ios_apps_ipa_dir, ios_apps_zip_dir)
-    # ipa_to_zip(ios_apps_zip_dir)
-    copy_files(ios_apps_zip_dir, react_native_apps_dir)
+    copy_files(ios_apps_ipa_dir, react_native_apps_dir)
+    ipa_to_zip(react_native_apps_dir)
     unzip(react_native_apps_dir)
     filter_react_native_apps(react_native_apps_dir)
 

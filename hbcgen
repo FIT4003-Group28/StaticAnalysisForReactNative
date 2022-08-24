@@ -1,0 +1,83 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]
+  then
+    echo "Usage is ./hbcgen <proj_dir> <entry_filename> <output_name>"
+    exit 1
+fi
+
+# Switch into project dir
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ORG_DIR=$(pwd)
+cd $1
+echo "Switching to path:" $(pwd)
+
+# Ensure the project directory is a nodejs directory
+if [ ! -f "./package.json" ]
+  then
+    echo "Error: Directory found is not an NPM root directory"
+    exit 1
+fi
+
+# Install required npm library components
+echo "-------------------------------------------------------------------------"
+echo "Installing npm library packages:" $(pwd)
+echo "-------------------------------------------------------------------------"
+npm install
+
+# Build code bundle from project
+echo "-------------------------------------------------------------------------"
+echo "Building code bundle --> index.android.bundle"
+echo "-------------------------------------------------------------------------"
+npx react-native bundle --dev false --platform android --entry-file $2 --bundle-output ./index.android.bundle --minify false
+if [ ! $? ]
+  then
+    echo "Error: Failed to build code bundle"
+    exit 1
+fi
+
+# Ensure that hermes engine was installed by npm
+if [ ! -e "./node_modules/hermes-engine" ]
+  then
+    echo "Error: Hermes not detected in project"
+    exit 1
+fi
+
+# Detect Hermes version in project
+PROJ_HBC=$(./node_modules/hermes-engine/linux64-bin/hermesc -version | egrep -oe "HBC bytecode version: [0-9]{1,}" | egrep -oe "[0-9]{1,}")
+if [ ! $? ]
+  then
+    echo "Error: Could not determine hermes bytecode version"
+    exit 1
+fi
+echo "-------------------------------------------------------------------------"
+echo "Detected project hermes version:" $PROJ_HBC
+
+# Compile js bundle into hermes binary
+echo "Assembling js bundle into hermes binary --> index.android.bundle.hbc"
+echo "-------------------------------------------------------------------------"
+./node_modules/hermes-engine/linux64-bin/hermesc -O -emit-binary -out=index.android.bundle.hbc index.android.bundle
+if [ ! $? ]
+  then
+    echo "Error: Failed to assemble js into hermes binary"
+    exit 1
+fi
+
+# Disassemble hermes binary in readable hermes bytecode
+echo "-------------------------------------------------------------------------"
+echo "Disassembling hermes binary into hermes readable bytecode -->" $3
+echo "-------------------------------------------------------------------------"
+$SCRIPT_DIR/build/bin$PROJ_HBC/hermesc -dump-bytecode index.android.bundle.hbc -out $3
+if [ ! $? ]
+  then
+    echo "Error: Failed to disassemble hermes binary into bytecode"
+    exit 1
+fi
+
+echo "HBC Generation successful! Enjoy :)"
+
+# Reset path and unset variables
+cd $ORG_DIR
+unset SCRIPT_DIR
+unset ORG_DIR
+unset PROJ_HBC

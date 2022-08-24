@@ -1,6 +1,5 @@
-import requests, os
+import requests
 from cred import ACCESS_TOKEN
-from git import Repo
 
 # Define constants
 TOPIC = "react-native"
@@ -53,24 +52,3 @@ for i in range(NUM_OF_PAGES + 1, (NUM_OF_PAGES * 2) + 1):
 with open('repos.txt', 'w', encoding='utf-8') as f:
     for i in range(0, len(output)):
         f.write(output[i] + "\n")
-
-# Create directory
-PARENT_DIR = "B:/"
-DIRECTORY = "open-source-collection"
-
-# Pull repos
-#for i in range(0, len(output)):
-for i in range(0, 5):
-    new_directory = output[i].split('/')[-1].split('.')[0]
-    new_directory_path = PARENT_DIR + DIRECTORY + "/" + new_directory
-    
-    # Check if directory exists, and if so skip cloning
-    if os.path.exists(new_directory_path):
-        print("Skipping repo: " + new_directory + " because dir already exists")
-        continue
-
-    # Clone repo
-    os.mkdir(new_directory_path)
-    print("Starting clone of repo: " + new_directory)
-    Repo.clone_from(output[i], new_directory_path)
-    print("Finished clone of repo: " + new_directory)

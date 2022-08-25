@@ -20,7 +20,7 @@ def copy_files(source_dir, target_dir):
 def ipa_to_zip(dir):
     for file in os.listdir(dir):
         try:
-            if (file.endswith(".ipa")):
+            if file.endswith(".ipa"):
                 os.rename(f"{dir}/{file}", f"{dir}/{file[:-4]}.zip")
         except Exception as e:
             print(e)
@@ -28,7 +28,7 @@ def ipa_to_zip(dir):
 def unzip(dir):
     for file in os.listdir(dir):
         try:
-            if (file.endswith(".zip")):
+            if file.endswith(".zip"):
                 app_dir = f"{dir}/{file[:-4]}"        
                 if not os.path.isdir(app_dir):
                     os.mkdir(app_dir)

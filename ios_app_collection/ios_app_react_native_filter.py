@@ -6,11 +6,13 @@ import zipfile
 def main():
     ios_apps_ipa_dir = "./ios_apps_ipa"
     react_native_apps_dir = "./react_native_apps"
+    react_native_bundle_files = "./react_native_bundle_files"
 
-    copy_files(ios_apps_ipa_dir, react_native_apps_dir)
-    ipa_to_zip(react_native_apps_dir)
-    unzip(react_native_apps_dir)
-    filter_react_native_apps(react_native_apps_dir)
+    # copy_files(ios_apps_ipa_dir, react_native_apps_dir)
+    # ipa_to_zip(react_native_apps_dir)
+    # unzip(react_native_apps_dir)
+    # filter_react_native_apps(react_native_apps_dir)
+    collect_jsbundle_files(react_native_apps_dir,react_native_bundle_files)
 
 def copy_files(source_dir, target_dir):
     files = os.listdir(source_dir)  
@@ -51,6 +53,17 @@ def filter_react_native_apps(dir):
                             if os.path.isdir(file_dir):
                                 shutil.rmtree(dir_name)
 
+def collect_jsbundle_files(source_dir, target_dir):
+    for file in os.listdir(source_dir):
+        file_dir = f"{source_dir}/{file}"
+        if os.path.isdir(file_dir):
+            for x in os.walk(file_dir):
+                for s in x[2]:
+                    if ".jsbundle" in s:
+                        jsbundle_path = f"{x[0]}/{s}"
+                        app_bundle_path = f"{target_dir}/{file}"
+                        os.makedirs(app_bundle_path, exist_ok=True)
+                        shutil.copy(jsbundle_path, app_bundle_path)
 
 
 

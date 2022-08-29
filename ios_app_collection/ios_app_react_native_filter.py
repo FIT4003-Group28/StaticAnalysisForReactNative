@@ -8,10 +8,10 @@ def main():
     react_native_apps_dir = "./react_native_apps"
     react_native_bundle_files = "./react_native_bundle_files"
 
-    # copy_files(ios_apps_ipa_dir, react_native_apps_dir)
-    # ipa_to_zip(react_native_apps_dir)
-    # unzip(react_native_apps_dir)
-    # filter_react_native_apps(react_native_apps_dir)
+    copy_files(ios_apps_ipa_dir, react_native_apps_dir)
+    ipa_to_zip(react_native_apps_dir)
+    unzip(react_native_apps_dir)
+    filter_react_native_apps(react_native_apps_dir)
     collect_jsbundle_files(react_native_apps_dir,react_native_bundle_files)
 
 def copy_files(source_dir, target_dir):

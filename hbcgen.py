@@ -7,6 +7,11 @@ import sys
 
 # -------------------------------------------------------------
 def process_input_args() -> argparse.Namespace:
+    """
+    Processes input arguments from the command line
+
+    :return: an object containing input arguments
+    """
     parser = argparse.ArgumentParser()
 
     # Required input of the NodeJS project directory
@@ -32,6 +37,12 @@ def process_input_args() -> argparse.Namespace:
 
 # -------------------------------------------------------------
 def determine_entry_point(proj_dir: str) -> str:
+    """
+    Determines the entry point of a NodeJS project directory
+
+    :param proj_dir: a path of a NodeJS directory
+    :return: the filename of the entry point inside the project directory
+    """
     pkg_json_path = path.join(proj_dir, "package.json")
 
     # Find the entry point of the NodeJS project
@@ -56,6 +67,12 @@ def determine_entry_point(proj_dir: str) -> str:
 
 # -------------------------------------------------------------
 def determine_subprocess_result(process: subprocess.Popen, mute=False) -> None:
+    """
+    Checks the result from the subprocess and prints out any errors
+
+    :param process: the subprocess to analyse
+    :param mute: optional mute the 'DONE' output
+    """
     if process.returncode != 0:
         print("FAILED")
         output, err_output = process.communicate()
@@ -72,6 +89,11 @@ def determine_subprocess_result(process: subprocess.Popen, mute=False) -> None:
 
 # -------------------------------------------------------------
 def find_installed_hermes() -> str:
+    """
+    Finds the installed version of Hermes within a NodeJS directory
+
+    :return: a path to the Hermes executable file
+    """
     # Determine user's OS
     os_platform = platform.system()
     os_folder = None
@@ -104,6 +126,12 @@ def find_installed_hermes() -> str:
 
 # -------------------------------------------------------------
 def execute_command(msg: str, cmd: str) -> None:
+    """
+    Spawns a subprocess to execute and OS command and check the result
+
+    :param msg: a message to print out before the process runs
+    :param cmd: the command to execute in the OS
+    """
     sys.stdout.write(msg + " ")
     sys.stdout.flush()
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -113,6 +141,7 @@ def execute_command(msg: str, cmd: str) -> None:
 
 # -------------------------------------------------------------
 def main() -> int:
+    """Does the work"""
     # Process input arguments
     original_dir = getcwd()
     args = process_input_args()

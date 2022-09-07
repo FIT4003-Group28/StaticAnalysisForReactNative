@@ -1,4 +1,5 @@
 import argparse
+from genericpath import isfile
 import json
 import platform
 import subprocess
@@ -66,6 +67,34 @@ def determine_entry_point(proj_dir: str) -> str:
 
 
 # -------------------------------------------------------------
+def check_react_native_version() -> None:
+    """
+    Determines the React Native version of a NodeJS project directory
+
+    :param proj_dir: a path of a NodeJS directory
+    :return: the React Native version number
+    """
+    # Find the react-native version in the NodeJS project
+    with open("package.json", "r") as pkg_json_f:
+        pkg_json = json.load(pkg_json_f)
+
+        # Get react-native version from pakage.json
+        rn_version = pkg_json.get("dependencies", {}).get("react-native", None)
+        if rn_version is None:
+            raise ValueError("NPM package 'react-native' is not installed in this project")
+
+        # Check the version is atleast 0.60.4
+        print("Current react-native version " + rn_version.lstrip("^~"))
+        rn_v_split = rn_version.lstrip("^~").split(".")
+        if (int(rn_v_split[0]) == 0 and int(rn_v_split[1]) < 61
+            and ".".join(rn_v_split) not in ("0.60.4", "0.60.5", "0.60.6")):
+            raise ValueError(
+                "Hermes engine is only supported by React Native versions 0.60.4 and up\n"
+                "Please consider upgrading version of 'react-native' for this tool to work"
+            )
+
+
+# -------------------------------------------------------------
 def determine_subprocess_result(process: subprocess.Popen, mute=False) -> None:
     """
     Checks the result from the subprocess and prints out any errors
@@ -104,7 +133,7 @@ def find_installed_hermes() -> str:
     elif os_platform == "Darwin":
         os_folder = "osx-bin"
     else:
-        raise OSError(f"ERROR: Unsupported OS version. Got '{os_platform}' but expected 'Windows', 'Linux' or 'Darwin' (MacOS)")
+        raise OSError(f"ERROR: Unsupported OS. Got '{os_platform}' but expected 'Windows', 'Linux' or 'Darwin' (MacOS)")
 
     # Locate directory of Hermes binary file
     hermes_paths = [
@@ -113,7 +142,7 @@ def find_installed_hermes() -> str:
     ]
     found_path = next(filter(lambda p: path.isdir(p), hermes_paths), None)
 
-    if found_path is None:
+    if found_path is None:             
         raise FileNotFoundError("ERROR: Could not find hermes executable in project")
 
     # Return path to executable
@@ -169,12 +198,6 @@ def main() -> int:
             cmd="npm install --force"
         )
 
-        # Building JavaScript bundle from project
-        execute_command(
-            msg=f"Building code bundle from '{entry_file}' to 'index.android.bundle'...",
-            cmd=f"npx react-native bundle --dev false --platform android --entry-file {entry_file} --bundle-output index.android.bundle --minify false"
-        )
-
         # Detect Hermes installed version in project
         hermes_file = find_installed_hermes()
         p_hrms = subprocess.Popen(f"{hermes_file} -version", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -185,15 +208,23 @@ def main() -> int:
         for line in p_hrms.stdout:
             if "HBC bytecode version: " in line.decode():
                 hbc_version = line.decode().split(" ")[-1].rstrip("\n")
-                print("Detected installed Hermes version " + hbc_version)
+                print("Detected installed Hermes bytecode version " + hbc_version)
                 break
-        
+
         if hbc_version is None:
             raise ValueError("ERROR: Could not determine the installed Hermes version in project")
 
+        check_react_native_version()
+
+        # Building JavaScript bundle from project
+        execute_command(
+            msg=f"Building code bundle from '{entry_file}' to 'index.android.bundle'...",
+            cmd=f"npx react-native bundle --dev false --platform android --entry-file {entry_file} --bundle-output index.android.bundle --minify false"
+        )
+
         # Compile JS bundle into Hermes binary
         execute_command(
-            msg="Assembling bundle into hermes binary to 'index.android.bundle.hbc'...",
+            msg="Assembling bundle into Hermes binary to 'index.android.bundle.hbc'...",
             cmd=f"{hermes_file} -O -emit-binary -out=index.android.bundle.hbc index.android.bundle"
         )
         if not args.keep_files:
@@ -204,7 +235,7 @@ def main() -> int:
 
         # Disassemble Hermes binary in readable Hermes bytecode
         execute_command(
-            msg=f"Disassembling hermes binary into hermes readable bytecode to '{outfile_name}'...",
+            msg=f"Disassembling Hermes binary into Hermes readable bytecode to '{outfile_name}'...",
             cmd=f"{hermes_file} -dump-bytecode index.android.bundle.hbc -out {outfile_name}"
         )
         if not args.keep_files:
@@ -227,4 +258,3 @@ if __name__ == "__main__":
     # except Exception as e:
     #     print(e)
     #     exit(1)
-

@@ -1,0 +1,132 @@
+package defpackage;
+
+import android.content.res.Resources;
+import com.google.android.apps.maps.R;
+/* compiled from: PG */
+/* renamed from: bfuz  reason: default package */
+/* loaded from: classes3.dex */
+public class bfuz {
+    private static final bfux A;
+    private static final bfux B;
+    private static final bfux C;
+    private static final bfux D;
+    public static final dcdn<dnnv, bfux> a;
+    private static final bfux c;
+    private static final bfux d;
+    private static final bfux e;
+    private static final bfux f;
+    private static final bfux g;
+    private static final bfux h;
+    private static final bfux i;
+    private static final bfux j;
+    private static final bfux k;
+    private static final bfux l;
+    private static final bfux m;
+    private static final bfux n;
+    private static final bfux o;
+    private static final bfux p;
+    private static final bfux q;
+    private static final bfux r;
+    private static final bfux s;
+    private static final bfux t;
+    private static final bfux u;
+    private static final bfux v;
+    private static final bfux w;
+    private static final bfux x;
+    private static final bfux y;
+    private static final bfux z;
+    public final Resources b;
+
+    static {
+        bfux bfuxVar = new bfux(R.drawable.air_conditioning, R.drawable.air_conditioning_dark, R.string.AIR_CONDITIONED);
+        c = bfuxVar;
+        bfux bfuxVar2 = new bfux(R.drawable.lounge, R.drawable.lounge_dark, R.string.BAR);
+        d = bfuxVar2;
+        bfux bfuxVar3 = new bfux(R.drawable.beach_access, R.drawable.beach_access_dark, R.string.BEACH_ACCESS);
+        e = bfuxVar3;
+        bfux bfuxVar4 = new bfux(R.drawable.business_favorite, R.drawable.business_favorite_dark, R.string.POPULAR_WITH_BUSINESS_TRAVELERS);
+        f = bfuxVar4;
+        bfux bfuxVar5 = new bfux(R.drawable.couple_favorite, R.drawable.couple_favorite_dark, R.string.POPULAR_WITH_COUPLES);
+        g = bfuxVar5;
+        bfux bfuxVar6 = new bfux(R.drawable.designer_vibe, R.drawable.designer_vibe_dark, R.string.STYLISH_VIBE);
+        h = bfuxVar6;
+        bfux bfuxVar7 = new bfux(R.drawable.family_favorite, R.drawable.family_favorite_dark, R.string.POPULAR_WITH_FAMILIES);
+        i = bfuxVar7;
+        bfux bfuxVar8 = new bfux(R.drawable.free_breakfast, R.drawable.free_breakfast_dark, R.string.FREE_BREAKFAST);
+        j = bfuxVar8;
+        bfux bfuxVar9 = new bfux(R.drawable.free_parking, R.drawable.free_parking_dark, R.string.FREE_PARKING);
+        k = bfuxVar9;
+        bfux bfuxVar10 = new bfux(R.drawable.free_wifi, R.drawable.free_wifi_dark, R.string.FREE_WIFI);
+        l = bfuxVar10;
+        bfux bfuxVar11 = new bfux(R.drawable.free_breakfast, R.drawable.free_breakfast_dark, R.string.GREAT_BREAKFAST);
+        m = bfuxVar11;
+        bfux bfuxVar12 = new bfux(R.drawable.great_dining, R.drawable.great_dining_dark, R.string.GREAT_DINING);
+        n = bfuxVar12;
+        bfux bfuxVar13 = new bfux(R.drawable.great_location, R.drawable.great_location_dark, R.string.GREAT_LOCATION);
+        o = bfuxVar13;
+        bfux bfuxVar14 = new bfux(R.drawable.nightlife, R.drawable.nightlife_dark, R.string.GOOD_FOR_NIGHTLIFE);
+        p = bfuxVar14;
+        bfux bfuxVar15 = new bfux(R.drawable.pool, R.drawable.pool_dark, R.string.GREAT_POOL);
+        q = bfuxVar15;
+        bfux bfuxVar16 = new bfux(R.drawable.great_rooms, R.drawable.great_rooms_dark, R.string.GREAT_ROOMS);
+        r = bfuxVar16;
+        bfux bfuxVar17 = new bfux(R.drawable.great_service, R.drawable.great_service_dark, R.string.GREAT_SERVICE);
+        s = bfuxVar17;
+        bfux bfuxVar18 = new bfux(R.drawable.sleep, R.drawable.sleep_dark, R.string.RESTFUL_STAY);
+        t = bfuxVar18;
+        bfux bfuxVar19 = new bfux(R.drawable.wellness, R.drawable.wellness_dark, R.string.WELLNESS_AMENITIES);
+        u = bfuxVar19;
+        bfux bfuxVar20 = new bfux(R.drawable.gym, R.drawable.gym_dark, R.string.FITNESS_CENTER);
+        v = bfuxVar20;
+        bfux bfuxVar21 = new bfux(R.drawable.hot_tub, R.drawable.hot_tub_dark, R.string.HOT_TUB);
+        w = bfuxVar21;
+        bfux bfuxVar22 = new bfux(R.drawable.lux_vibe, R.drawable.lux_vibe_dark, R.string.LUXURIOUS_VIBE);
+        x = bfuxVar22;
+        bfux bfuxVar23 = new bfux(R.drawable.modern_vibe, R.drawable.modern_vibe_dark, R.string.MODERN_VIBE);
+        y = bfuxVar23;
+        bfux bfuxVar24 = new bfux(R.drawable.poi_transit, R.drawable.poi_transit_dark, R.string.NEAR_PUBLIC_TRANSIT);
+        z = bfuxVar24;
+        bfux bfuxVar25 = new bfux(R.drawable.allows_pets, R.drawable.allows_pets_dark, R.string.PET_FRIENDLY);
+        A = bfuxVar25;
+        bfux bfuxVar26 = new bfux(R.drawable.pool, R.drawable.pool_dark, R.string.POOL);
+        B = bfuxVar26;
+        bfux bfuxVar27 = new bfux(R.drawable.great_dining, R.drawable.great_dining_dark, R.string.RESTAURANT);
+        C = bfuxVar27;
+        bfux bfuxVar28 = new bfux(R.drawable.spa, R.drawable.spa_dark, R.string.SPA);
+        D = bfuxVar28;
+        dcdg p2 = dcdn.p();
+        p2.f(dnnv.HIGHLIGHT_BUSINESS_FAVORITE, bfuxVar4);
+        p2.f(dnnv.HIGHLIGHT_COUPLE_FAVORITE, bfuxVar5);
+        p2.f(dnnv.HIGHLIGHT_DESIGNER_VIBE, bfuxVar6);
+        p2.f(dnnv.HIGHLIGHT_FAMILY_FAVORITE, bfuxVar7);
+        p2.f(dnnv.HIGHLIGHT_FREE_BREAKFAST, bfuxVar8);
+        p2.f(dnnv.HIGHLIGHT_FREE_PARKING, bfuxVar9);
+        p2.f(dnnv.HIGHLIGHT_FREE_WIFI, bfuxVar10);
+        p2.f(dnnv.HIGHLIGHT_GREAT_BREAKFAST, bfuxVar11);
+        p2.f(dnnv.HIGHLIGHT_GREAT_DINING, bfuxVar12);
+        p2.f(dnnv.HIGHLIGHT_GREAT_LOCATION, bfuxVar13);
+        p2.f(dnnv.HIGHLIGHT_GREAT_NIGHTLIFE, bfuxVar14);
+        p2.f(dnnv.HIGHLIGHT_GREAT_POOL, bfuxVar15);
+        p2.f(dnnv.HIGHLIGHT_GREAT_ROOMS, bfuxVar16);
+        p2.f(dnnv.HIGHLIGHT_GREAT_SERVICE, bfuxVar17);
+        p2.f(dnnv.HIGHLIGHT_GREAT_SLEEP, bfuxVar18);
+        p2.f(dnnv.HIGHLIGHT_GREAT_WELLNESS, bfuxVar19);
+        p2.f(dnnv.HIGHLIGHT_HAS_AIR_CONDITIONING, bfuxVar);
+        p2.f(dnnv.HIGHLIGHT_HAS_BAR_OR_LOUNGE, bfuxVar2);
+        p2.f(dnnv.HIGHLIGHT_HAS_BEACH_ACCESS, bfuxVar3);
+        p2.f(dnnv.HIGHLIGHT_HAS_GYM, bfuxVar20);
+        p2.f(dnnv.HIGHLIGHT_HAS_HOT_TUB, bfuxVar21);
+        p2.f(dnnv.HIGHLIGHT_HAS_POOL, bfuxVar26);
+        p2.f(dnnv.HIGHLIGHT_HAS_RESTAURANT, bfuxVar27);
+        p2.f(dnnv.HIGHLIGHT_HAS_SPA, bfuxVar28);
+        p2.f(dnnv.HIGHLIGHT_LUXURIOUS_VIBE, bfuxVar22);
+        p2.f(dnnv.HIGHLIGHT_MODERN_VIBE, bfuxVar23);
+        p2.f(dnnv.HIGHLIGHT_NEAR_PUBLIC_TRANSIT, bfuxVar24);
+        p2.f(dnnv.HIGHLIGHT_PETS_ALLOWED, bfuxVar25);
+        a = dcjz.c(p2.b());
+    }
+
+    public bfuz(Resources resources) {
+        this.b = resources;
+    }
+}

@@ -1,0 +1,30 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: dcap  reason: default package */
+/* loaded from: classes5.dex */
+final class dcap extends dcao {
+    final /* synthetic */ dcar a;
+    private final int d;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public dcap(dcar dcarVar, int i) {
+        super(dcarVar.d[i]);
+        this.a = dcarVar;
+        this.d = i;
+    }
+
+    @Override // defpackage.dcao
+    public final dcdn a() {
+        return this.a.c;
+    }
+
+    @Override // defpackage.dcao
+    public final Object b(int i) {
+        return this.a.f[this.d][i];
+    }
+
+    @Override // defpackage.dcdn
+    public final boolean c() {
+        return true;
+    }
+}

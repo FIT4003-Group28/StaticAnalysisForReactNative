@@ -1,8 +1,10 @@
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 public class Decompiler {
-    public static void main(String[] args) {
-        new ReactNativeDetector().decompileAPK("apk_files", "00D02BB2EA9528543DD274A68E1DDEDCA4D49C52B9887821BAA101545D6F40F2.apk");
-    }
-
       public void decompileAPK(String directory) {
         try {
             List<String> files = searchAPKFile(directory, "");
@@ -45,5 +47,4 @@ public class Decompiler {
             }
         }
     }
-
 }

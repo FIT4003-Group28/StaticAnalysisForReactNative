@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.button.MaterialButton android:id="@+id/turn_off_incognito_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:backgroundTint="?attr/colorOnSurface" style="@style/OneGoogle.AccountMenu.IconButton"/>
+    <android.support.v7.widget.RecyclerView android:id="@+id/action_groups" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/OneGoogle.AccountMenu.RecyclerView"/>
+</merge>

@@ -1,0 +1,19 @@
+package defpackage;
+/* renamed from: nzh  reason: default package */
+/* loaded from: classes7.dex */
+final /* synthetic */ class nzh implements cqlc {
+    static final cqlc a = new nzh();
+
+    private nzh() {
+    }
+
+    @Override // defpackage.cqlc
+    public final Object a(cqkp cqkpVar) {
+        return ((oxi) cqkpVar).f();
+    }
+
+    @Override // defpackage.cqlc
+    public final boolean b() {
+        return false;
+    }
+}

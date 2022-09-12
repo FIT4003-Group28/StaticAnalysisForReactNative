@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/imageSelector" android:background="@color/mod_daynight_grey100" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/ordinalBadge" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/PhotoPostPhotoPickerSelectionBadge"/>
+    <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/image" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="centerCrop" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintDimensionRatio="W,1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+</android.support.constraint.ConstraintLayout>

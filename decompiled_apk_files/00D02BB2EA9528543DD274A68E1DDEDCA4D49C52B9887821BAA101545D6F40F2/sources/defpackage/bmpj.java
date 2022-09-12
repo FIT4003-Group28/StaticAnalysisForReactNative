@@ -1,0 +1,22 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: bmpj  reason: default package */
+/* loaded from: classes3.dex */
+enum bmpj {
+    ARE_YOU_HERE_NOW_QUESTION,
+    YOU_ARE_HERE_NOW,
+    LAST_VISITED_TITLE,
+    CHECKIN_YES,
+    CHECKIN_NO,
+    COLLAPSE_TOGGLE_CHEVRON,
+    SHOW_PLACE_TIMELINE,
+    YOU_HAVE_VISITED_THIS_PLACE,
+    YOU_HAVE_NOT_VISITED_THIS_PLACE,
+    EDIT_MARK_AS_VISITED,
+    EDIT_MARK_AS_NOT_BEEN_HERE,
+    EDIT_REMOVE_ALL_VISITS,
+    REMOVE_ALL_VISITS,
+    ARE_YOU_HERE_NOW_QUESTION_SPLIT,
+    VIEW_IN_VISITED_PLACES,
+    VISIBLE_ONLY_TO_YOU
+}

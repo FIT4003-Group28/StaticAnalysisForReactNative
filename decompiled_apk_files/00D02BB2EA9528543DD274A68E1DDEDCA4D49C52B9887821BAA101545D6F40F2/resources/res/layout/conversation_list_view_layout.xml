@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@+id/empty_conversation_list_stub" android:inflatedId="@+id/empty_conversation_list" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.google.android.libraries.messaging.lighter.ui.common.pagedrecyclerview.PagedRecyclerView android:id="@+id/paged_recycler" android:paddingTop="8dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:importantForAccessibility="yes" app:pagingMode="0"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle"/>
+    <com.google.android.libraries.messaging.lighter.ui.common.LoadingView android:layout_gravity="bottom|center_horizontal" android:id="@+id/conversation_list_loading_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal"/>
+</merge>

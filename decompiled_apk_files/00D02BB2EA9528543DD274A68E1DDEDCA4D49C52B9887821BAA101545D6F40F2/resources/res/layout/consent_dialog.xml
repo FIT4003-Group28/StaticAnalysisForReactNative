@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/consent_directions_overlay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.airbnb.lottie.LottieAnimationView android:id="@+id/consent_directions_overlay_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="matrix"/>
+        </com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout>
+        <TextView android:gravity="center" android:id="@+id/consent_directions_overlay_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="@string/ARWN_CONSENT_STEP2_TITLE" style="?attr/arDialogTitleStyle"/>
+        <TextView android:gravity="center" android:id="@+id/consent_directions_overlay_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ARWN_CONSENT_STEP2_DESCRIPTION" style="?attr/arDialogDescriptionStyle"/>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton android:id="@+id/consent_directions_overlay_cancel_button" android:padding="10dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="136dp" android:text="@android:string/cancel" android:layout_marginEnd="8dp" style="@style/Widget.GoogleMaterial.Button.StrokedButton"/>
+            <com.google.android.material.button.MaterialButton android:gravity="center" android:id="@+id/consent_directions_overlay_next_button" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="136dp" android:text="@string/ARWN_CONSENT_NEXT" style="@style/Widget.GoogleMaterial.Button"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/consent_access_camera" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/consent_access_camera_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout>
+        <TextView android:gravity="center" android:id="@+id/consent_access_camera_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="6dp" android:text="@string/ARWN_CONSENT_STEP3_TITLE" style="?attr/arDialogTitleStyle"/>
+        <TextView android:gravity="center" android:id="@+id/consent_access_camera_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ARWN_CONSENT_STEP3_DESCRIPTION" style="?attr/arDialogDescriptionStyle"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@+id/consent_access_camera_next_button" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="136dp" android:text="@string/ARWN_CONSENT_NEXT" style="@style/Widget.GoogleMaterial.Button"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/consent_awareness" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/consent_awareness_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout>
+        <TextView android:gravity="center" android:id="@+id/consent_awareness_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="6dp" android:text="@string/ARWN_CONSENT_STEP4_TITLE" style="?attr/arDialogTitleStyle"/>
+        <TextView android:gravity="center" android:id="@+id/consent_awareness_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ARWN_CONSENT_STEP4_DESCRIPTION" android:layout_centerHorizontal="true" style="?attr/arDialogDescriptionStyle"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@+id/consent_awareness_start_button" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="136dp" android:text="@string/ARWN_CONSENT_START" android:layout_below="@+id/consent_awareness_description" style="@style/Widget.GoogleMaterial.Button"/>
+    </LinearLayout>
+</FrameLayout>

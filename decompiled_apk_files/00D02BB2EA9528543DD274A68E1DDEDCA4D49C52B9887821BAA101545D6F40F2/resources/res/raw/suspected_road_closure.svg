@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24.15px" height="24px" viewBox="0 0 24.15 24" enable-background="new 0 0 24.15 24" xml:space="preserve">
+<circle fill-rule="evenodd" clip-rule="evenodd" fill="#FBBC04" cx="12" cy="12" r="12"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="23.05" y="-298.75" width="360" height="640"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+</g>
+<circle fill-rule="evenodd" clip-rule="evenodd" fill="#4D3300" cx="12" cy="17.5" r="1.5"/>
+<rect x="10.5" y="5" fill-rule="evenodd" clip-rule="evenodd" fill="#4D3300" width="3" height="9"/>
+</svg>

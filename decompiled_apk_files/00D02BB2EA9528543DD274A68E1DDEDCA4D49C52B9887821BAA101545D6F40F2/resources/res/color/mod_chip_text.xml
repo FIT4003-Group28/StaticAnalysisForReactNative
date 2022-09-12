@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_checked="true" android:color="@color/mod_daynight_blue500"/>
+    <item android:state_enabled="true" android:color="@color/mod_daynight_grey800"/>
+    <item android:color="@color/mod_daynight_grey300"/>
+</selector>

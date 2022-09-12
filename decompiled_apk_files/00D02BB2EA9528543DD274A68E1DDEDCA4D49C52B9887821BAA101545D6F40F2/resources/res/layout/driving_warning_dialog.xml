@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/driving_warning_dialog_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp">
+        <com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="34dp" android:layout_marginTop="34dp" android:layout_marginRight="34dp" android:layout_marginBottom="54dp">
+            <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/driving_warning_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.google.android.apps.gmm.base.views.layout.FixedAspectRatioLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/google_grey900" android:gravity="center" android:id="@+id/driving_warning_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/AR_DRIVING_WARNING_TITLE" android:fontFamily="@font/google_sans_medium"/>
+        <com.google.android.material.button.MaterialButton android:theme="@style/Theme.GoogleMaterial.Light" android:id="@+id/driving_warning_route_overview_button" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/google_min_touch_target_size" android:text="@string/AR_DRIVING_ROUTE_OVERVIEW_BUTTON" style="@style/Widget.GoogleMaterial.Button"/>
+    </LinearLayout>
+</FrameLayout>

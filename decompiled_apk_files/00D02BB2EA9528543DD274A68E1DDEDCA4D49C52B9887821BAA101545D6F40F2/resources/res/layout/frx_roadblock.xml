@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/roadblock_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="80dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingStart="32dp" android:paddingEnd="32dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp" android:src="@drawable/car_only_ic_pin_error"/>
+        <TextView android:textSize="24sp" android:textColor="@android:color/white" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="48dp" android:text="@string/CAR_PHONE_LOCATION_SETTING_SCREEN_HEADER"/>
+        <TextView android:textSize="16sp" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@+id/roadblock_text" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include layout="@layout/frx_button_footer"/>
+</LinearLayout>

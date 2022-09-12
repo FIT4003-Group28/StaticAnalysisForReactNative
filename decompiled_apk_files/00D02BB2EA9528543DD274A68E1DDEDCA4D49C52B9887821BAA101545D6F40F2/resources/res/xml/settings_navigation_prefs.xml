@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preference_category_layout" android:title="@string/SOUND_VOICE_TITLE" android:key="sound_voice_settings">
+        <com.google.android.apps.gmm.settings.navigation.InlineButtonPreference android:persistent="true" android:key="voice_level" custom:endText="@string/VOICE_LEVEL_LOUDER" custom:middleText="@string/VOICE_LEVEL_NORMAL" custom:startText="@string/VOICE_LEVEL_SOFTER" custom:titleText="@string/GUIDANCE_VOLUME_TITLE"/>
+        <com.google.android.apps.gmm.settings.navigation.VoiceOptionListPreference android:persistent="true" android:title="@string/VOICE_OPTION_TITLE" android:key="voice_option" android:defaultValue="NORMAL" android:dialogTitle="@string/VOICE_OPTION_TITLE"/>
+        <SwitchPreference android:persistent="true" android:title="@string/PLAY_VOICE_OVER_BLUETOOTH" android:key="play_voice_over_bluetooth" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/PLAY_NAV_AUDIO_WHILE_IN_CALL" android:key="play_nav_audio_while_in_call" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/PLAY_AUDIO_CUES_IN_NAVIGATION" android:key="play_audio_cues_in_navigation" android:defaultValue="true"/>
+        <com.google.android.apps.gmm.settings.navigation.NavigationPlayTestSoundPreference android:title="@string/NAVIGATION_SETTING_TEST_NAVIGATION_VOICE" android:key="play_test_sound"/>
+        <Preference android:title="@string/GOOGLE_ASSISTANT_SETTINGS" android:key="google_assistant_settings" android:summary="@string/GOOGLE_ASSISTANT_SETTINGS"/>
+        <Preference android:title="@string/GOOGLE_ASSISTANT_SETTINGS" android:key="google_assistant_driving_mode_settings" android:summary="@string/GOOGLE_ASSISTANT_DRIVING_MODE_SETTINGS_SUMMARY"/>
+        <Preference android:title="@string/HOTWORD_SETTINGS" android:key="hotword_settings" android:summary="@string/HOTWORD_SETTINGS_SUMMARY"/>
+        <SwitchPreference android:title="@string/ENABLE_MEDIA_CONTROLS_PREFERENCE" android:key="show_media_controls" android:defaultValue="false"/>
+        <com.google.android.apps.gmm.settings.navigation.DefaultMediaAppPreference android:title="@string/DEFAULT_MEDIA_APP_PREFERENCE" android:key="default_media_app" android:dependency="show_media_controls"/>
+        <Preference android:title="@string/ASSISTANT_MEDIA_PROVIDER_TITLE" android:key="google_assistant_music_settings" android:summary="@string/ASSISTANT_MEDIA_PROVIDER_SUMMARY"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category_layout" android:title="@string/ROUTE_OPTIONS_TITLE" android:key="route_options">
+        <SwitchPreference android:title="@string/DIRECTIONS_OPTIONS_AVOID_HIGHWAYS" android:key="avoid_highways"/>
+        <Preference android:enabled="false" android:selectable="false" android:key="assistant_promo_highways"/>
+        <SwitchPreference android:title="@string/DIRECTIONS_OPTIONS_AVOID_TOLLS" android:key="avoid_tolls"/>
+        <Preference android:enabled="false" android:selectable="false" android:key="assistant_promo_tolls"/>
+        <SwitchPreference android:title="@string/DIRECTIONS_OPTIONS_AVOID_FERRIES" android:key="avoid_ferries"/>
+        <com.google.android.apps.gmm.settings.navigation.OddEvenLicensePlatePreference android:persistent="true" android:title="@string/ODD_EVEN_LICENSE_PLATE_SETTINGS_TITLE" android:key="odd_even_license_plate" android:summary="@string/ODD_EVEN_LICENSE_PLATE_SETTINGS_SUMMARY" android:dialogTitle="@string/ODD_EVEN_LICENSE_PLATE_SETTINGS_SUMMARY"/>
+        <com.google.android.apps.gmm.settings.navigation.RodizioLicensePlatePreference android:persistent="true" android:title="@string/RODIZIO_LICENSE_PLATE_SETTINGS_TITLE" android:key="rodizio_license_plate_settings" android:dialogTitle="@string/RODIZIO_LICENSE_PLATE_SETTINGS_DIALOG_TITLE"/>
+        <com.google.android.apps.gmm.settings.navigation.ManilaLicensePlatePreference android:persistent="true" android:title="@string/MANILA_LICENSE_PLATE_SETTINGS_TITLE" android:key="manila_number_coding_license_plate_settings" android:dialogTitle="@string/MANILA_LICENSE_PLATE_SETTINGS_SUMMARY"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category_layout" android:title="@string/MAP_DISPLAY_TITLE" android:key="map_display_settings">
+        <com.google.android.apps.gmm.settings.navigation.InlineButtonPreference android:persistent="true" android:key="color_scheme" custom:bottomPadding="16dp" custom:endText="@string/COLOR_SCHEME_NIGHT" custom:middleText="@string/COLOR_SCHEME_DAY" custom:startText="@string/COLOR_SCHEME_AUTOMATIC" custom:titleText="@string/COLOR_SCHEME_TITLE"/>
+        <com.google.android.apps.gmm.settings.navigation.InlineButtonPreference android:persistent="true" android:key="distance_units" custom:endText="@string/UNITS_IMPERIAL" custom:middleText="@string/UNITS_METRIC" custom:startText="@string/UNITS_AUTOMATIC" custom:titleText="@string/UNITS"/>
+        <SwitchPreference android:persistent="true" android:title="@string/NAVIGATION_SETTING_NORTH_UP_PREFERRED" android:key="north_up_preferred" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category_layout" android:title="@string/DRIVING_OPTIONS_TITLE" android:key="driving_options">
+        <SwitchPreference android:persistent="true" android:title="@string/REMEMBER_MONTHLY_NAV_STATS" android:key="remember_monthly_nav_stats" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/SPEED_LIMITS_SETTING" android:key="speed_limits_enabled" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/SPEEDOMETER_SETTING" android:key="speedometer_enabled" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/DRIVING_MODE_DETECTION_NOTIFICATION_SETTING" android:key="driving_mode_detection_notification" android:summary="@string/DRIVING_MODE_DETECTION_NOTIFICATION_SETTING_SUMMARY"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category_layout" android:title="@string/WALKING_OPTIONS_TITLE" android:key="walking_options">
+        <SwitchPreference android:persistent="true" android:title="@string/ARWN_OPTIONS_TITLE" android:key="arwn_tilt_setting" android:summary="@string/ARWN_TILT_SETTING_TEXT" android:defaultValue="true"/>
+        <SwitchPreference android:persistent="true" android:title="@string/EYES_FREE_OPTIONS_TITLE" android:key="eyes_free_walking_guidance_enabled" android:summary="@string/EYES_FREE_EXTRA_DETAIL_SETTING" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0">
+    <ImageView android:id="@+id/offscreen_indicator_ripple" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14sp" android:textColor="@color/google_white" android:ellipsize="end" android:gravity="center" android:id="@+id/offscreen_indicator_hint_text" android:paddingLeft="12dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ARWN_OFFSCREEN_INDICATOR_NEXT_STEP" android:maxLength="20" android:fontFamily="sans-serif-medium" android:elevation="3dp" android:paddingHorizontal="12dp"/>
+    <FrameLayout android:id="@+id/offscreen_indicator_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="3dp">
+        <ImageView android:layout_gravity="center" android:id="@+id/offscreen_indicator_background" android:layout_width="50dp" android:layout_height="50dp"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/offscreen_indicator_icon" android:visibility="gone" android:layout_width="18dp" android:layout_height="18dp"/>
+    </FrameLayout>
+</FrameLayout>

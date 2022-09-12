@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/qu_daynight_google_blue_500"/>
+    </item>
+    <item android:bottom="@dimen/appwidget_bottom_bar_height">
+        <color android:color="@color/qu_daynight_white"/>
+    </item>
+    <item android:bottom="@dimen/pd_main">
+        <bitmap android:gravity="center" android:src="0x7f08037c" android:tint="@color/qu_daynight_google_blue_500"/>
+    </item>
+</layer-list>

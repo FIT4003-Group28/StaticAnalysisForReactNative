@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <size android:height="@dimen/rich_card_start_end_padding" android:width="@dimen/rich_card_start_end_padding"/>
+</shape>

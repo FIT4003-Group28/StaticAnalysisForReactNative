@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/tristate_checkbox_checked">
+    <target android:name="icon_null" android:animation="@animator/scale_animation_166ms"/>
+    <target android:name="check_completed" android:animation="@animator/check_animation_to_indeterminate"/>
+    <target android:name="dash_collapsed" android:animation="@animator/dash_animation_from_checked"/>
+</animated-vector>

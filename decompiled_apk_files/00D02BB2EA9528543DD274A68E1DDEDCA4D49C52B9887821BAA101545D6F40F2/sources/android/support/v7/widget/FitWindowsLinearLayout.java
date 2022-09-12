@@ -1,0 +1,32 @@
+package android.support.v7.widget;
+
+import android.content.Context;
+import android.graphics.Rect;
+import android.util.AttributeSet;
+import android.widget.LinearLayout;
+/* compiled from: PG */
+/* loaded from: classes.dex */
+public class FitWindowsLinearLayout extends LinearLayout {
+    private zn a;
+
+    public FitWindowsLinearLayout(Context context) {
+        super(context);
+    }
+
+    @Override // android.view.View
+    protected final boolean fitSystemWindows(Rect rect) {
+        zn znVar = this.a;
+        if (znVar != null) {
+            znVar.a();
+        }
+        return super.fitSystemWindows(rect);
+    }
+
+    public void setOnFitSystemWindowsListener(zn znVar) {
+        this.a = znVar;
+    }
+
+    public FitWindowsLinearLayout(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+    }
+}

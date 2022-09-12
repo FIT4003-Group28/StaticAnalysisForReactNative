@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/blue_rounded_rectangle" android:text="@string/AR_DONE_LOCALIZING_TEXT" android:drawablePadding="4dp" android:drawableStart="0x7f08077d" style="@style/LocalizationPill"/>

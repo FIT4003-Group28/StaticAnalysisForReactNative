@@ -1,0 +1,30 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: cyfk  reason: default package */
+/* loaded from: classes5.dex */
+public enum cyfk {
+    SOCIAL_AFFINITY("SOCIAL_AFFINITY"),
+    SOCIAL_AFFINITY_PHOTOS("SOCIAL_AFFINITY_PHOTOS"),
+    PEOPLE_AUTOCOMPLETE("PEOPLE_AUTOCOMPLETE"),
+    SENDKIT("SENDKIT"),
+    GMAIL_ANDROID("GMAIL_ANDROID"),
+    GMAIL_ANDROID_PRIMES("GMAIL_ANDROID_PRIMES"),
+    CALENDAR_ANDROID_PRIMES("CALENDAR_ANDROID_PRIMES"),
+    DRIVE("DRIVE"),
+    DOCS("DOCS"),
+    SHEETS("SHEETS"),
+    SLIDES("SLIDES"),
+    DRIVE_VE("DRIVE_VE"),
+    PHOTOS("PHOTOS"),
+    KEEP("KEEP"),
+    KEEP_ANDROID_PRIMES("KEEP_ANDROID_PRIMES"),
+    DYNAMITE_ANDROID_PRIMES("DYNAMITE_ANDROID_PRIMES"),
+    TACHYON_LOG_REQUEST("TACHYON_LOG_REQUEST"),
+    TACHYON_ANDROID_PRIMES("TACHYON_ANDROID_PRIMES");
+    
+    public final String s;
+
+    cyfk(String str) {
+        this.s = str;
+    }
+}

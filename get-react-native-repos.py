@@ -9,10 +9,13 @@ from datetime import timedelta
 # Define constants
 TOPIC = "react-native"
 LANGUAGE = ' language:"javascript" language:"typescript"'
+SORT = 'updated'
+ORDER = 'desc'
 DAYS_PER_ITERATION = 7
 LOWEST_FILTER_DATE = datetime.datetime(2015, 1, 1)
 PER_PAGE = 100
-URL_PREFIX = "https://api.github.com/search/repositories?q="
+URL_PREFIX = "https://api.github.com/search/repositories?q=" + "topic:" + TOPIC + LANGUAGE
+URL_SUFFIX = "&per_page=" + str(PER_PAGE) + "&sort=" + SORT + "&order=" + ORDER
 AUTH_HEADER = {'Authorization': 'token %s' % ACCESS_TOKEN, 'Accept': 'application/vnd.github.v3.raw'}
 
 
@@ -25,7 +28,7 @@ current_filter_date = datetime.datetime.now()
 # Get total number of expected results
 def get_total_num_results():
     # Return new URL    
-    url = URL_PREFIX + "topic:" + TOPIC + LANGUAGE + " pushed:>" + LOWEST_FILTER_DATE.strftime("%Y-%m-%dT%H:%M:%S")
+    url = create_url(" pushed:>" + LOWEST_FILTER_DATE.strftime("%Y-%m-%dT%H:%M:%S"))
 
     try:
         response = requests.get(url, headers=AUTH_HEADER)
@@ -46,7 +49,13 @@ def get_date_range(decrement_value):
 # Decrement the date
 def decrement_date(decrement_value):
     global current_filter_date
-    current_filter_date = current_filter_date - timedelta(days=decrement_value)
+    current_filter_date = current_filter_date - timedelta(days=decrement_value) - timedelta(seconds=1)
+    # print(get_date_range(DAYS_PER_ITERATION))
+
+
+# Create URL
+def create_url(params):
+    return URL_PREFIX + str(params) + URL_SUFFIX
 
 
 # Function to get request URL
@@ -54,7 +63,7 @@ def get_repos(page_num, decrement_value):
     filter = " pushed:" + get_date_range(decrement_value) 
 
     # Return new URL
-    url = URL_PREFIX + "topic:" + TOPIC + LANGUAGE + filter + "&page=" + str(page_num) + "&per_page=" + str(PER_PAGE)
+    url = create_url(filter + "&page=" + str(page_num))
 
     while True:
         try:
@@ -93,11 +102,13 @@ with Bar('Processing', max=get_total_num_results()) as bar:
 
             # Record resulting clone URLs
             for repo in repos:
-                if repo['full_name'] in output_dict.keys():
+                if repo['id'] in output_dict.keys():
                     duplicate_hits += 1
+                    print("\n" + repo['full_name'])
                     continue
 
                 dictionary = {
+                    'id': repo['id'],
                     'name': repo['full_name'],
                     'clone_url': repo['clone_url'],
                     'stars': repo['stargazers_count'],
@@ -107,7 +118,7 @@ with Bar('Processing', max=get_total_num_results()) as bar:
                 }
 
                 # Create a json object and add to array
-                output_dict[repo['full_name']] = len(output)
+                output_dict[repo['id']] = None
                 output.append(dictionary)
 
                 bar.next()  

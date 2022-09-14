@@ -14,13 +14,16 @@ class RepoThread(Thread):
 
 
     def validate_is_react_native(self, repository):
+        global failed_count
         files_to_search = ["yarn.lock", "package-lock.json"]
         content = ""
             
         for file in files_to_search:
             url = f"{URL_PREFIX}/{repository['name']}/{repository['default_branch']}/{file}"
             response = requests.get(url, headers=AUTH_HEADER)
-            if response.status_code == 200:
+            if response.status_code == 429:
+                failed_count += 1
+            elif response.status_code == 200:
                 content = response.text
                 break
         
@@ -52,6 +55,7 @@ class RepoThread(Thread):
 # URL_PREFIX = "https://api.github.com/repos/"
 URL_PREFIX = "https://raw.githubusercontent.com"
 AUTH_HEADER = {'Authorization': 'token %s' % ACCESS_TOKEN, 'Accept': 'application/vnd.github.v3.raw'}
+failed_count = 0
 
 # If not already, run get-clone-urls.py
 # Read in repo URLs from file
@@ -101,3 +105,4 @@ with Bar('Validating', max=len(repos)) as bar:
     bar.finish()
 
 print(f"Valid: {len(validated_repos)} / {len(repos)}")
+print(f"Failed: {failed_count} / {len(repos)}")

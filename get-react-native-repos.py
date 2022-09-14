@@ -24,6 +24,7 @@ output = []
 output_dict = {}
 current_filter_date = datetime.datetime.now()
 
+time_start = datetime.datetime.now()
 
 # Get total number of expected results
 def get_total_num_results():
@@ -49,7 +50,7 @@ def get_date_range(decrement_value):
 # Decrement the date
 def decrement_date(decrement_value):
     global current_filter_date
-    current_filter_date = current_filter_date - timedelta(days=decrement_value) - timedelta(seconds=1)
+    current_filter_date = current_filter_date - timedelta(days=decrement_value) # - timedelta(seconds=1)
     # print(get_date_range(DAYS_PER_ITERATION))
 
 
@@ -138,6 +139,10 @@ with Bar('Processing', max=get_total_num_results()) as bar:
         bar.finish()
     f.close()
 
+# Clear varaibles no longer used
+del output_dict
+del output
+
 print("Duplicates hit: " + str(duplicate_hits) + " times")
 print("Total loops: " + str(total_loops) + " times")
 
@@ -161,3 +166,4 @@ with open('repos.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(sorted_output[i]) + "\n")
 f.close()
 print("Getting repos complete!\n")
+print("Time elapsed: " + str(datetime.datetime.now() - time_start))

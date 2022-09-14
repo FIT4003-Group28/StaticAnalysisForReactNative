@@ -1,0 +1,24 @@
+package me.leolin.shortcutbadger.impl;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+import java.util.Arrays;
+import java.util.List;
+/* loaded from: classes.dex */
+public class c implements g.a.a.a {
+    @Override // g.a.a.a
+    public List<String> a() {
+        return Arrays.asList("com.huawei.android.launcher");
+    }
+
+    @Override // g.a.a.a
+    public void a(Context context, ComponentName componentName, int i) {
+        Bundle bundle = new Bundle();
+        bundle.putString("package", context.getPackageName());
+        bundle.putString("class", componentName.getClassName());
+        bundle.putInt("badgenumber", i);
+        context.getContentResolver().call(Uri.parse("content://com.huawei.android.launcher.settings/badge/"), "change_badge", (String) null, bundle);
+    }
+}

@@ -10,8 +10,9 @@ public class Decompiler {
             List<String> files = searchAPKFile(directory, "");
             Runtime rt = Runtime.getRuntime();
 
-            for (String file:files){
-                rt.exec(String.format("jadx %s", file));
+            for (String file :files){
+                String[] jadxCommand = {"jadx", file};
+                rt.exec(jadxCommand);
             }
 
         } catch (Exception e) {
@@ -22,7 +23,8 @@ public class Decompiler {
     public void decompileAPK(String directory, String apkFile) {
         try {
             Runtime rt = Runtime.getRuntime();
-            rt.exec(String.format("jadx %s", directory + "/" + apkFile));
+            String[] jadxCommand = {"jadx", directory + "/" + apkFile};
+            rt.exec(jadxCommand);
         } catch (Exception e) {
             e.printStackTrace();
         }

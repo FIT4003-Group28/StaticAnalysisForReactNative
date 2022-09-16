@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="16dp" android:paddingEnd="0dp">
+    <android.support.v7.widget.AppCompatImageView android:id="@+id/icon" android:clickable="false" android:layout_width="24dp" android:layout_height="24dp" android:tint="?attr/ytTextPrimary"/>
+    <FrameLayout android:id="@+id/spinner_header_item_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatImageView android:id="@+id/spinner_arrow" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="0x7f080a19" android:tint="?attr/ytTextPrimary"/>
+</LinearLayout>

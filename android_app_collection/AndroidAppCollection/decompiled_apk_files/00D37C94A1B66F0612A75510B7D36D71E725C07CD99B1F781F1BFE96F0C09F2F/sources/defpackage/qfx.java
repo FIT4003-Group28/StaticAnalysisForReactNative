@@ -1,0 +1,12 @@
+package defpackage;
+
+import android.os.IBinder;
+import android.os.IInterface;
+/* compiled from: PG */
+/* renamed from: qfx  reason: default package */
+/* loaded from: classes4.dex */
+public final class qfx extends dvc implements IInterface {
+    public qfx(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.reward.mediation.client.IMediationRewardedVideoAdListener");
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:counterEnabled="true" app:counterMaxLength="300">
+        <com.google.android.apps.youtube.app.common.ui.bottomui.KeyPressAwareEditText android:textAppearance="?attr/textAppearanceBody1" android:id="@+id/input" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="4" android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/textAppearanceCaption" android:gravity="center_vertical" android:id="@+id/disclaimer" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="4dp" android:paddingEnd="4dp"/>
+</LinearLayout>

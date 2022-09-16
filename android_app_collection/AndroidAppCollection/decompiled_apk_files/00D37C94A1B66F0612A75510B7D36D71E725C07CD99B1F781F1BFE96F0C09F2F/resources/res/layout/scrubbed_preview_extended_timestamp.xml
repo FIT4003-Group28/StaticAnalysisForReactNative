@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:id="@+id/thumbnail_container" android:background="@drawable/white_rectangular_border" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@+id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/accessibility_scrubbed_preview"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/close_icon" android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f0806b7" android:contentDescription="@null" android:alpha="0"/>
+    </FrameLayout>
+    <LinearLayout android:gravity="top|center_horizontal" android:orientation="vertical" android:id="@+id/text_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:minHeight="34dp">
+        <TextView android:textAppearance="?attr/ytTextAppearanceBody1a" android:textColor="?attr/ytStaticBrandWhite" android:ellipsize="end" android:gravity="center" android:id="@+id/chapter_title" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1"/>
+        <TextView android:textColor="?attr/ytOverlayTextSecondary" android:ellipsize="end" android:gravity="center" android:id="@+id/timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/ScrubbedPreviewTimestamp"/>
+        <TextView android:textAppearance="?attr/ytTextAppearanceBody1a" android:textColor="?attr/ytStaticBrandWhite" android:ellipsize="end" android:gravity="center" android:id="@+id/timed_decoration" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1"/>
+    </LinearLayout>
+</LinearLayout>

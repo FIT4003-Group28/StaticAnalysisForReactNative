@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="?attr/ytTouchFeedbackCircle" android:layout_width="24dp" android:layout_height="24dp" android:contentDescription="@null">
+    <ImageView android:layout_gravity="center" android:id="@+id/button_icon" android:layout_width="18dp" android:layout_height="18dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+</FrameLayout>

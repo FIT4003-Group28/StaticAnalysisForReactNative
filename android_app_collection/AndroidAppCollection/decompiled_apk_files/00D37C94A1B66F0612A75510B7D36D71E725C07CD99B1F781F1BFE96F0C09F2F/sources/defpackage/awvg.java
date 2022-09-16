@@ -1,0 +1,7 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: awvg  reason: default package */
+/* loaded from: classes2.dex */
+final class awvg {
+    static final aoqo a = aoqo.b(aosj.STRING, "", aosj.INT64, 0L);
+}

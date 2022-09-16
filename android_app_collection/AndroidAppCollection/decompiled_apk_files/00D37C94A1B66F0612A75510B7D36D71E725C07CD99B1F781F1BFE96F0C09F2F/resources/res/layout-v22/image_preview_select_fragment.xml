@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/CompatElevationZ4">
+        <android.support.v7.widget.Toolbar android:theme="@style/ImagePreviewActionBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" yt:navigationIcon="0x7f080671"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.libraries.youtube.comment.image.ImagePreviewSelectView android:id="@+id/image_preview_select_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <android.support.constraint.ConstraintLayout android:id="@+id/tooltip" android:background="@drawable/preview_select_tooltip_border" android:padding="@dimen/image_preview_select_tooltip_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/image_preview_select_tooltip_margin_horizontal" android:layout_marginTop="@dimen/image_preview_select_tooltip_margin_top" android:layout_marginRight="@dimen/image_preview_select_tooltip_margin_horizontal" android:layout_marginHorizontal="@dimen/image_preview_select_tooltip_margin_horizontal">
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/ytTextAppearanceBody2a" android:textColor="@color/yt_grey5" android:textColorLink="@color/yt_dark_blue" android:id="@+id/tooltip_text" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/image_preview_select_tooltip_text_margin_end" yt:hyperlinksClickable="true" yt:layout_constraintBottom_toBottomOf="0" yt:layout_constraintEnd_toEndOf="0" yt:layout_constraintStart_toStartOf="0" yt:layout_constraintTop_toTopOf="0"/>
+            <ImageView android:id="@+id/dismiss_button" android:layout_width="@dimen/image_preview_select_tooltip_dismiss_button_size" android:layout_height="@dimen/image_preview_select_tooltip_dismiss_button_size" android:src="0x7f0806b7" android:tint="?attr/ytIconInactive" android:contentDescription="@string/accessibility_dismiss_tooltip_button" yt:layout_constraintEnd_toEndOf="0" yt:layout_constraintTop_toTopOf="0"/>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

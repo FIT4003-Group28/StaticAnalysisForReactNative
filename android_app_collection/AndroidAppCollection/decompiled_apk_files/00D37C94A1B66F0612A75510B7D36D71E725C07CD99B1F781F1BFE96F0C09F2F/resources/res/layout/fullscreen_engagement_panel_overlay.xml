@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.apps.youtube.app.player.overlay.FullscreenEngagementPanelCoordinatorLayout android:layout_gravity="end" android:id="@+id/fullscreen_engagement_panel_holder" android:layout_width="match_parent" android:layout_height="match_parent" yt:maxWidth="320dp" yt:minWidth="320dp"/>
+</FrameLayout>

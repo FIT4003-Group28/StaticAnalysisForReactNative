@@ -1,0 +1,19 @@
+package com.google.android.apps.youtube.app.extensions.reel.creation.shorts.common.media;
+
+import android.net.Uri;
+import android.os.Parcelable;
+/* compiled from: PG */
+/* loaded from: classes2.dex */
+public abstract class ShortsVideoMetadata implements Parcelable {
+    public static gyr e() {
+        return new gyr();
+    }
+
+    public abstract int a();
+
+    public abstract int b();
+
+    public abstract long c();
+
+    public abstract Uri d();
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:gravity="top" android:orientation="horizontal" android:paddingTop="8dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:paddingStart="16dp" android:paddingEnd="16dp">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/action_button_bar" android:layout_width="match_parent" android:layout_height="64dp">
+        <include android:id="@+id/action_button1" layout="@layout/video_action_button_ghost_card"/>
+        <include android:id="@+id/action_button2" layout="@layout/video_action_button_ghost_card"/>
+        <include android:id="@+id/action_button3" layout="@layout/video_action_button_ghost_card"/>
+        <include android:id="@+id/action_button4" layout="@layout/video_action_button_ghost_card"/>
+        <include android:id="@+id/action_button5" layout="@layout/video_action_button_ghost_card"/>
+    </LinearLayout>
+    <com.google.android.libraries.youtube.common.ui.CircularImageView android:id="@+id/channel_avatar" android:background="?attr/ghostCardBackground" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="8dp" android:layout_below="@+id/action_button_bar" android:layout_marginEnd="16dp" android:layout_alignParentStart="true"/>
+    <View android:id="@+id/channel_name_box" android:background="?attr/ghostCardBackground" android:layout_width="120dp" android:layout_height="16dp" android:layout_marginTop="18dp" android:layout_toRightOf="@+id/channel_avatar" android:layout_below="@+id/action_button_bar" android:layout_alignParentEnd="false"/>
+</RelativeLayout>

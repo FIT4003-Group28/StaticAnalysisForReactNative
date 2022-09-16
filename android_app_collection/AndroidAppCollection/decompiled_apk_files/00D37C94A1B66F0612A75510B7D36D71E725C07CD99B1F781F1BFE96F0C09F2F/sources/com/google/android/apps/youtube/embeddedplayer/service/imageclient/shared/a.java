@@ -1,0 +1,26 @@
+package com.google.android.apps.youtube.embeddedplayer.service.imageclient.shared;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import com.google.android.apps.youtube.embeddedplayer.service.model.BitmapKey;
+/* compiled from: PG */
+/* loaded from: classes2.dex */
+public final class a extends dvc implements c {
+    public a(IBinder iBinder) {
+        super(iBinder, "com.google.android.apps.youtube.embeddedplayer.service.imageclient.shared.IEmbedImageClientService");
+    }
+
+    @Override // com.google.android.apps.youtube.embeddedplayer.service.imageclient.shared.c
+    public final void a(BitmapKey bitmapKey) {
+        Parcel pv = pv();
+        dve.g(pv, bitmapKey);
+        px(2, pv);
+    }
+
+    @Override // com.google.android.apps.youtube.embeddedplayer.service.imageclient.shared.c
+    public final void f(BitmapKey bitmapKey) {
+        Parcel pv = pv();
+        dve.g(pv, bitmapKey);
+        px(1, pv);
+    }
+}

@@ -1,0 +1,56 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: awte  reason: default package */
+/* loaded from: classes2.dex */
+public final class awte extends aopi implements aoqv {
+    public static final awte a;
+    private static volatile aorb h;
+    public int b;
+    public long c;
+    public boolean e;
+    public long g;
+    public String d = "";
+    public String f = "";
+
+    static {
+        awte awteVar = new awte();
+        a = awteVar;
+        aopi.registerDefaultInstance(awte.class, awteVar);
+    }
+
+    private awte() {
+    }
+
+    @Override // defpackage.aopi
+    protected final Object dynamicMethod(aoph aophVar, Object obj, Object obj2) {
+        aoph aophVar2 = aoph.GET_MEMOIZED_IS_INITIALIZED;
+        switch (aophVar.ordinal()) {
+            case 0:
+                return (byte) 1;
+            case 1:
+                return null;
+            case 2:
+                return newMessageInfo(a, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001ဂ\u0000\u0002ဈ\u0001\u0003ဇ\u0002\u0004ဈ\u0003\u0005ဂ\u0004", new Object[]{"b", "c", "d", "e", "f", "g"});
+            case 3:
+                return new awte();
+            case 4:
+                return new aopa(a);
+            case 5:
+                return a;
+            case 6:
+                aorb aorbVar = h;
+                if (aorbVar == null) {
+                    synchronized (awte.class) {
+                        aorbVar = h;
+                        if (aorbVar == null) {
+                            aorbVar = new aopb(a);
+                            h = aorbVar;
+                        }
+                    }
+                }
+                return aorbVar;
+            default:
+                throw new UnsupportedOperationException();
+        }
+    }
+}

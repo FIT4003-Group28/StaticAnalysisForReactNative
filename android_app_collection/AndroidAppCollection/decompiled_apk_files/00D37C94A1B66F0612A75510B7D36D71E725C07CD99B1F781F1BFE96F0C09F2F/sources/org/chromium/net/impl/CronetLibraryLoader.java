@@ -1,0 +1,83 @@
+package org.chromium.net.impl;
+
+import J.N;
+import android.content.Context;
+import android.os.ConditionVariable;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Process;
+import org.chromium.net.NetworkChangeNotifier;
+/* compiled from: PG */
+/* loaded from: classes4.dex */
+public class CronetLibraryLoader {
+    private static final String b = "cronet.94.0.4602.6";
+    private static final String c = "CronetLibraryLoader";
+    private static volatile boolean f;
+    private static final Object a = new Object();
+    private static final HandlerThread d = new HandlerThread("CronetInit");
+    private static volatile boolean e = false;
+    private static final ConditionVariable g = new ConditionVariable();
+
+    public static void a(Context context, bael baelVar) {
+        synchronized (a) {
+            if (!f) {
+                babj.c = context;
+                HandlerThread handlerThread = d;
+                if (!handlerThread.isAlive()) {
+                    handlerThread.start();
+                }
+                c(new ajsy(19));
+            }
+            if (!e) {
+                if (baelVar.b() != null) {
+                    baelVar.b().loadLibrary(b);
+                } else {
+                    System.loadLibrary(b);
+                }
+                if (!"94.0.4602.6".equals(N.M6xubM8G())) {
+                    throw new RuntimeException(String.format("Expected Cronet version number %s, actual version number %s.", "94.0.4602.6", N.M6xubM8G()));
+                }
+                bacc.e(c, "Cronet version: %s, arch: %s", "94.0.4602.6", System.getProperty("os.arch"));
+                e = true;
+                g.open();
+            }
+        }
+    }
+
+    public static void b() {
+        if (f) {
+            return;
+        }
+        NetworkChangeNotifier.init();
+        NetworkChangeNotifier.registerToReceiveNotificationsAlways();
+        g.block();
+        N.MROCxiBo();
+        f = true;
+    }
+
+    public static void c(Runnable runnable) {
+        HandlerThread handlerThread = d;
+        if (handlerThread.getLooper() != Looper.myLooper()) {
+            new Handler(handlerThread.getLooper()).post(runnable);
+        } else {
+            runnable.run();
+        }
+    }
+
+    private static void ensureInitializedFromNative() {
+        synchronized (a) {
+            e = true;
+            g.open();
+        }
+        a(babj.c, null);
+    }
+
+    private static String getDefaultUserAgent() {
+        return bagq.a(babj.c);
+    }
+
+    private static void setNetworkThreadPriorityOnNetworkThread(int i) {
+        Process.setThreadPriority(i);
+    }
+}

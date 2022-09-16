@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/reel_edit_delete_button_layout" android:background="@color/edit_fully_transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageButton android:id="@+id/reel_edit_delete_button" android:background="@drawable/reel_outlined_circular_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="0x7f080acb" android:tint="?attr/ytTextPrimary" android:contentDescription="@null"/>
+</FrameLayout>

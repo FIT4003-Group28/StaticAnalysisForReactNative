@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/round_button_bg"/>
+    <item android:gravity="center">
+        <selector android:layout_width="match_parent" android:layout_height="match_parent">
+            <item android:state_selected="true" android:drawable="@drawable/quantum_ic_pause_vd_theme_24"/>
+            <item android:state_selected="false" android:drawable="0x7f0809fa"/>
+            <item android:drawable="0x7f0809fa"/>
+        </selector>
+    </item>
+</layer-list>

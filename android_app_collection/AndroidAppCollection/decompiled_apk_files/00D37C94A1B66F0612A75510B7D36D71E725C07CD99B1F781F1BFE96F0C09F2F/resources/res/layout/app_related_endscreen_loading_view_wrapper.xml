@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.common.ui.ResponsiveShelfFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:layout_gravity="center" android:padding="@dimen/app_related_end_screen_item_padding" android:layout_width="wrap_content" android:layout_height="match_parent" android:foreground="@drawable/app_related_end_screen_item_touch_feedback" yt:itemCount="1" yt:itemGap="0dp" yt:itemPeekAmount="24dp">
+    <com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout android:layout_gravity="center" android:id="@+id/container" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+</com.google.android.apps.youtube.app.common.ui.ResponsiveShelfFrameLayout>

@@ -1,0 +1,46 @@
+package defpackage;
+/* compiled from: PG */
+/* renamed from: ajbg  reason: default package */
+/* loaded from: classes.dex */
+public class ajbg extends ajbm {
+    public volatile boolean l;
+    public volatile int m;
+
+    public ajbg(long j, long j2, int i, int i2, String str) {
+        super(j, j2, i - 1, str);
+        this.l = true;
+        this.m = i2;
+    }
+
+    protected void a() {
+    }
+
+    protected void b(boolean z, boolean z2, boolean z3) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public final synchronized void l(boolean z, boolean z2, boolean z3) {
+        if (this.l) {
+            b(z, z2, z3);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public final synchronized void m(long j) {
+        if (p() >= j) {
+            return;
+        }
+        this.o.a = j;
+    }
+
+    public final synchronized void n() {
+        this.l = false;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public final synchronized void o() {
+        if (this.l) {
+            a();
+        }
+    }
+}

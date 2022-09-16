@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phenotype-registrations>
+    <phenotype-registration>
+        <configuration-package>com.google.android.libraries.notifications.platform
+        </configuration-package>
+        <log-sources>
+            <log-source>ANDROID_GROWTH
+            </log-source>
+            <log-source>CHIME
+            </log-source>
+            <log-source>PHOTOS_ANDROID_PRIMES
+            </log-source>
+            <log-source>YT_MAIN_APP_ANDROID_PRIMES
+            </log-source>
+        </log-sources>
+        <auto-subpackage>true
+        </auto-subpackage>
+        <params>CO37x7oB
+        </params>
+    </phenotype-registration>
+</phenotype-registrations>

@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ReactNativeDetector {
 
@@ -22,21 +23,23 @@ public class ReactNativeDetector {
 
     public void extractBundleFile(String appDirectory) {
         try {
-            Files.walk(Paths.get(appDirectory)).forEach(source -> {
-                if (source.toString().contains("index.android.bundle")) {
-                    String destinationDir = "reactnative_bundle_files" + "/" + appDirectory.substring(appDirectory.lastIndexOf("/") + 1);
-                    File f = new File(destinationDir);
-                    if (!f.exists()) {
-                        f.mkdir();
-                    }
-
-                    try {
-                        Files.copy(source, new File(destinationDir + "/" + source.toString().substring(source.toString().lastIndexOf("/") + 1)).toPath(), StandardCopyOption.REPLACE_EXISTING);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
+           List<String> files = Files.walk(Paths.get(appDirectory)).map(Path::toString).collect(Collectors.toList());
+           if (files.stream().anyMatch(source -> source.toString().contains("com/facebook/react"))){
+               files.forEach(source -> {
+                   if (source.toString().contains("index.android.bundle")) {
+                       String destinationDir = "reactnative_bundle_files" + "/" + appDirectory.substring(appDirectory.lastIndexOf("/") + 1);
+                       File f = new File(destinationDir);
+                       if (!f.exists()) {
+                           f.mkdir();
+                       }
+                       try {
+                           Files.copy(new File(source).toPath(), new File(destinationDir + "/" + source.toString().substring(source.toString().lastIndexOf("/") + 1)).toPath(), StandardCopyOption.REPLACE_EXISTING);
+                       } catch (IOException e) {
+                           e.printStackTrace();
+                       }
+                   }
+               });
+           }
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -14,22 +14,21 @@ ORDER = 'desc'
 DAYS_PER_ITERATION = 7
 LOWEST_FILTER_DATE = datetime.datetime(2015, 1, 1)
 PER_PAGE = 100
-URL_PREFIX = "https://api.github.com/search/repositories?q=" + "topic:" + TOPIC + LANGUAGE
+URL_PREFIX = "https://api.github.com/search/repositories?q="
 URL_SUFFIX = "&per_page=" + str(PER_PAGE) + "&sort=" + SORT + "&order=" + ORDER
 AUTH_HEADER = {'Authorization': 'token %s' % ACCESS_TOKEN, 'Accept': 'application/vnd.github.v3.raw'}
 
 
-# Begin repo list
-output = []
+# Global variables
 output_dict = {}
-current_filter_date = datetime.datetime.now()
+duplicate_hits = 0
 
 time_start = datetime.datetime.now()
 
 # Get total number of expected results
-def get_total_num_results():
+def get_total_num_results(topic, query=""):
     # Return new URL    
-    url = create_url(" pushed:>" + LOWEST_FILTER_DATE.strftime("%Y-%m-%dT%H:%M:%S"))
+    url = create_url(topic, " pushed:>" + LOWEST_FILTER_DATE.strftime("%Y-%m-%dT%H:%M:%S"), query)
 
     try:
         response = requests.get(url, headers=AUTH_HEADER)
@@ -40,31 +39,28 @@ def get_total_num_results():
 
 
 # Get the date range for URL
-def get_date_range(decrement_value):
-    global current_filter_date
-
+def get_date_range(decrement_value, current_filter_date):
     lower_date_range = (current_filter_date - timedelta(days=decrement_value)).strftime("%Y-%m-%dT%H:%M:%S")
     return lower_date_range + ".." + current_filter_date.strftime("%Y-%m-%dT%H:%M:%S")
 
 
 # Decrement the date
-def decrement_date(decrement_value):
-    global current_filter_date
-    current_filter_date = current_filter_date - timedelta(days=decrement_value) # - timedelta(seconds=1)
-    # print(get_date_range(DAYS_PER_ITERATION))
+def decrement_date(decrement_value, current_filter_date):
+    current_filter_date = current_filter_date - timedelta(days=decrement_value)
+    return current_filter_date
 
 
 # Create URL
-def create_url(params):
-    return URL_PREFIX + str(params) + URL_SUFFIX
+def create_url(topic, params, query=""):
+    return URL_PREFIX + query + (" topic:" + topic if topic != "" else "") + LANGUAGE + str(params) + URL_SUFFIX
 
 
 # Function to get request URL
-def get_repos(page_num, decrement_value):
-    filter = " pushed:" + get_date_range(decrement_value) 
+def get_repos(topic, page_num, decrement_value, current_filter_date, query=""):
+    filter = " pushed:" + get_date_range(decrement_value, current_filter_date) 
 
     # Return new URL
-    url = create_url(filter + "&page=" + str(page_num))
+    url = create_url(topic, filter + "&page=" + str(page_num), query)
 
     while True:
         try:
@@ -80,71 +76,85 @@ def get_repos(page_num, decrement_value):
             time.sleep(5)
 
 
-# Get repos and append them to file per page loaded
-with Bar('Processing', max=get_total_num_results()) as bar:
-    with open('repos.json', 'w', encoding='utf-8') as f:
-        current_page = 1
-        decrement_value = DAYS_PER_ITERATION
-        duplicate_hits = 0
-        total_loops = 0
+def get_repos_for_topic(topic, query=""):
+    global duplicate_hits, output_dict, current_filter_date
+    output = []
+    max_results = get_total_num_results(topic, query)
+    current_filter_date = datetime.datetime.now()
 
-        while current_filter_date > LOWEST_FILTER_DATE:
-            repos = get_repos(current_page, decrement_value)
-            
-            # Check that number of results is less than 1000
-            if repos == False:
-                if decrement_value == DAYS_PER_ITERATION:
-                    decrement_value = 1
-                elif decrement_value <= 1:
-                    decrement_value /= 2
-                continue
+    # Get repos and append them to file per page loaded
+    with Bar('Getting repos for: "{}"'.format(topic), max=max_results) as bar:
+        with open('repos.json', 'a', encoding='utf-8') as f:
+            current_page = 1
+            decrement_value = DAYS_PER_ITERATION
+            if max_results <= 1000:
+                decrement_value = 2000
 
-            output = []
-
-            # Record resulting clone URLs
-            for repo in repos:
-                if repo['id'] in output_dict.keys():
-                    duplicate_hits += 1
-                    print("\n" + repo['full_name'])
+            while current_filter_date > LOWEST_FILTER_DATE:
+                repos = get_repos(topic, current_page, decrement_value, current_filter_date, query)
+                
+                # Check that number of results is less than 1000
+                if repos == False:
+                    if decrement_value >= DAYS_PER_ITERATION:
+                        decrement_value = 1
+                    elif decrement_value <= 1:
+                        decrement_value /= 2
                     continue
 
-                dictionary = {
-                    'id': repo['id'],
-                    'name': repo['full_name'],
-                    'clone_url': repo['clone_url'],
-                    'stars': repo['stargazers_count'],
-                    'forks': repo['forks_count'],
-                    'updated_at': repo['updated_at'],
-                    'default_branch': repo['default_branch']
-                }
+                output = []
 
-                # Create a json object and add to array
-                output_dict[repo['id']] = None
-                output.append(dictionary)
+                # Record resulting clone URLs
+                for repo in repos:
+                    if repo['id'] in output_dict.keys():
+                        duplicate_hits += 1
+                        bar.next() 
+                        # print("\n" + repo['full_name'])
+                        continue
 
-                bar.next()  
+                    dictionary = {
+                        'id': repo['id'],
+                        'name': repo['full_name'],
+                        'clone_url': repo['clone_url'],
+                        'stars': repo['stargazers_count'],
+                        'forks': repo['forks_count'],
+                        'updated_at': repo['updated_at'],
+                        'default_branch': repo['default_branch']
+                    }
 
-            for i in range(0, len(output)):
-                f.write(json.dumps(output[i]) + "\n")  
-            
-            current_page += 1
+                    # Create a json object and add to array
+                    output_dict[repo['id']] = None
+                    output.append(dictionary)
 
-            if current_page > 10 or len(repos) < PER_PAGE:
-                decrement_date(decrement_value)
-                decrement_value = DAYS_PER_ITERATION
-                current_page = 1
+                    bar.next()  
 
-                total_loops += 1
-            
-        bar.finish()
-    f.close()
+                for i in range(0, len(output)):
+                    f.write(json.dumps(output[i]) + "\n")  
+                
+                current_page += 1
 
-# Clear varaibles no longer used
-del output_dict
-del output
+                if current_page > 10 or len(repos) < PER_PAGE:
+                    current_filter_date = decrement_date(decrement_value, current_filter_date)
+                    if decrement_value < DAYS_PER_ITERATION:
+                        decrement_value = DAYS_PER_ITERATION
+                    current_page = 1
+                
+            bar.finish()
+        f.close()
+
+    # Clear varaibles no longer used
+    del output
+
+# Empty file contents
+open('repos.json', 'w').close()
+
+# Get repos for various topics
+query = TOPIC
+get_repos_for_topic("yarn", query)
+get_repos_for_topic("npm-package", query)
+get_repos_for_topic(TOPIC)
 
 print("Duplicates hit: " + str(duplicate_hits) + " times")
-print("Total loops: " + str(total_loops) + " times")
+del output_dict
 
 # Read in repos from file
 f = open("repos.json", "r")
@@ -165,5 +175,6 @@ with open('repos.json', 'w', encoding='utf-8') as f:
     for i in range(0, len(sorted_output)):
         f.write(json.dumps(sorted_output[i]) + "\n")
 f.close()
+
 print("Getting repos complete!\n")
 print("Time elapsed: " + str(datetime.datetime.now() - time_start))

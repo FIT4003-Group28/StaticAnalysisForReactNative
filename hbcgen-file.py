@@ -1,7 +1,8 @@
 import argparse
+import subprocess
 from os import chdir, getcwd, mkdir, path
 from shutil import rmtree
-from hbcgen import execute_command, find_installed_hermes
+from hbcgen import execute_command, find_local_hermes
 
 TEMP_DIR_NAME = "hermes_tmp"
 
@@ -31,7 +32,10 @@ def main() -> int:
     """Does the work"""
     # Process input arguments
     args = process_input_args()
+
+    # Variables used in the script
     original_dir = getcwd()
+    script_dir = path.dirname(path.abspath(__file__))
 
     # Check if file exists
     if not path.isfile(args.js_file):
@@ -49,14 +53,22 @@ def main() -> int:
     chdir(TEMP_DIR_NAME)
 
     try:
-        # Install hermes into temp directory
-        execute_command(
-            msg="Installing 'hermes-engine' into temp directory...",
-            cmd="npm init -y && npm install hermes-engine"
-        )
-
         # Detect Hermes installed version in project
-        hermes_file = find_installed_hermes(allow_in_rn=False)
+        hermes_file = find_local_hermes(script_dir)
+        p_hrms = subprocess.Popen(
+            f"{hermes_file} -version",
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        p_hrms.wait()
+
+        hbc_version = None
+        for line in p_hrms.stdout:
+            if "HBC bytecode version: " in line.decode():
+                hbc_version = line.decode().split(" ")[-1].rstrip("\n")
+                print("Using Hermes bytecode version " + hbc_version)
+                break
 
         # Compile JS bundle into Hermes binary
         execute_command(
@@ -64,7 +76,7 @@ def main() -> int:
             cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc {file_path}"
         )
 
-        outfile_path = path.join(original_dir, f"{filename}.hbc")
+        outfile_path = path.join(original_dir, f"{filename}.txt")
 
         # Disassemble Hermes binary in readable Hermes bytecode
         execute_command(

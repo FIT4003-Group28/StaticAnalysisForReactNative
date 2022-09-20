@@ -2,8 +2,9 @@ import argparse
 import json
 import platform
 import subprocess
-from os import chdir, getcwd, listdir, path, remove
 import sys
+from os import chdir, getcwd, listdir, path, remove
+from xml.dom import NotFoundErr
 
 # -------------------------------------------------------------
 def process_input_args() -> argparse.Namespace:
@@ -30,7 +31,7 @@ def process_input_args() -> argparse.Namespace:
     # Allow an option to keep the generated files in intermediate steps
     parser.add_argument("--keep-files", "-k", action="store_true", default=False, 
         help="Keep the generated 'index.android.bundle' and 'index.android.bundle.hbc' "
-             "files after the script completes. By default it does not.")
+             "files after the script completes. By default it does not")
 
     return parser.parse_args()
 
@@ -68,10 +69,9 @@ def determine_entry_point(proj_dir: str) -> str:
 # -------------------------------------------------------------
 def check_react_native_version() -> None:
     """
-    Determines the React Native version of a NodeJS project directory
+    Checks the React Native version of a NodeJS project directory an alert if too old
 
     :param proj_dir: a path of a NodeJS directory
-    :return: the React Native version number
     """
     # Find the react-native version in the NodeJS project
     with open("package.json", "r") as pkg_json_f:
@@ -80,7 +80,10 @@ def check_react_native_version() -> None:
         # Get react-native version from pakage.json
         rn_version = pkg_json.get("dependencies", {}).get("react-native", None)
         if rn_version is None:
-            raise ValueError("NPM package 'react-native' is not installed in this project")
+            raise NotFoundErr(
+                "WARNING: NPM package 'react-native' is not installed in this project "
+                "and Hermes likely will not be installed"
+            )
 
         # Check the version is atleast 0.60.4
         print("Current react-native version " + rn_version.lstrip("^~"))
@@ -88,8 +91,9 @@ def check_react_native_version() -> None:
         if (int(rn_v_split[0]) == 0 and int(rn_v_split[1]) < 61
             and ".".join(rn_v_split) not in ("0.60.4", "0.60.5", "0.60.6")):
             raise ValueError(
-                "Hermes engine is only supported by React Native versions 0.60.4 and up\n"
-                "Please consider upgrading version of 'react-native' for this tool to work"
+                "WARNING: Hermes engine is only supported by React Native versions 0.60.4 and up\n"
+                "Please upgrade version of 'react-native' for this tool to work properly, will "
+                "use the highest version of Hermes sourced locally but it may cause issues"
             )
 
 
@@ -111,11 +115,82 @@ def determine_subprocess_result(process: subprocess.Popen, mute=False) -> None:
         print("----------------------------------------------------------")
         raise OSError(
             f"ERROR: Failed to execute command '{process.args}' "
-            "(Failed with exit code {process.returncode})"
+            f"(Failed with exit code {process.returncode})"
         )
     else:
         if not mute:
             print("DONE")
+
+
+# -------------------------------------------------------------
+def get_os_folder() -> str:
+    """
+    Gets the folder name specific to the current platform
+
+    :return: a folder name specific to OS platform
+    """
+    os_platform = platform.system()
+    if os_platform == "Windows":
+        return "win64-bin"
+    elif os_platform == "Linux":
+        return "linux64-bin"
+    elif os_platform == "Darwin":
+        return "osx-bin"
+    
+    # If no OS's match error
+    raise OSError(
+            f"ERROR: Unsupported OS. Got '{os_platform}' but expected "
+            "'Windows', 'Linux' or 'Darwin' (MacOS)"
+        )
+
+
+# -------------------------------------------------------------
+def find_local_hermes(script_path: str, version: str = None) -> str:
+    """
+    Finds the local version of Hermes within this scripts directory
+
+    :param script_path: an absolute path to the location this script runs
+    :param version: a Hermes bytecode version to search by, by default will get highest version
+    :return: a path to the Hermes executable file
+    """
+    # Determine user's OS
+    os_folder = get_os_folder()
+
+    # Locate directory of Hermes executable
+    hermes_dir = path.join(script_path, "hermes", os_folder)
+
+    if not path.isdir(hermes_dir):
+        raise NotFoundErr(f"ERROR: Could not find the local built Hermes directory ({hermes_dir})")
+
+    # If version not specified, find the highest local Hermes build version
+    if not version:
+        cur_file = None
+        for file in listdir(hermes_dir):
+            if not file.startswith("hermesc") and not file.startswith("hermes"):
+                continue
+
+            if not cur_file or file > cur_file:
+                cur_file = file
+
+        if not cur_file:
+            raise FileNotFoundError(f"ERROR: No Hermes executables found in {hermes_dir}")
+
+        return path.join(hermes_dir, cur_file)
+
+    # Return path to executable with matching version
+    for file in listdir(hermes_dir):
+        if file.startswith("hermesc" + version):
+            return path.join(hermes_dir, file)
+        elif file.startswith("hermes" + version):
+            return path.join(hermes_dir, file)
+
+    raise FileNotFoundError(
+        f"ERROR: No Hermes executables found in Hermes build directory ({hermes_dir}) with "
+        f"matching version '{version}'. If the right version does not exist in the Hermes build "
+        "directory then try building the correct version yourself from "
+        "https://github.com/facebook/hermes and add to the Hermes build directory with the "
+        "filename format 'hermescXX' or 'hermescXX.exe' where XX is the version number"
+    )
 
 
 # -------------------------------------------------------------
@@ -127,29 +202,22 @@ def find_installed_hermes(allow_in_rn: bool = True) -> str:
     :return: a path to the Hermes executable file
     """
     # Determine user's OS
-    os_platform = platform.system()
-    os_folder = None
-    if os_platform == "Windows":
-        os_folder = "win64-bin"
-    elif os_platform == "Linux":
-        os_folder = "linux64-bin"
-    elif os_platform == "Darwin":
-        os_folder = "osx-bin"
-    else:
-        raise OSError(
-            f"ERROR: Unsupported OS. Got '{os_platform}' but expected "
-            "'Windows', 'Linux' or 'Darwin' (MacOS)"
-        )
+    os_folder = get_os_folder()
 
     # Locate directory of Hermes binary file
     hermes_paths = []
     hermes_paths.append(path.join(getcwd(), "node_modules", "hermes-engine", os_folder))
     if allow_in_rn:
-        hermes_paths.append(path.join(getcwd(), "node_modules", "react-native", "sdks", "hermesc", os_folder))
+        hermes_paths.append(
+            path.join(getcwd(), "node_modules", "react-native", "sdks", "hermesc", os_folder))
     found_path = next(filter(lambda p: path.isdir(p), hermes_paths), None)
 
-    if found_path is None:             
-        raise FileNotFoundError("ERROR: Could not find hermes executable in project")
+    if not found_path:
+        print(
+            "WARNING: Could not find an installed version of Hermes in the project, "
+            "will use highest local version of Hermes"
+        )
+        return None
 
     # Return path to executable
     for file in listdir(found_path):
@@ -178,7 +246,10 @@ def main() -> int:
     """Does the work"""
     # Process input arguments
     args = process_input_args()
+
+    # Variables used in the script
     original_dir = getcwd()
+    script_dir = path.dirname(path.abspath(__file__))
 
     # Check if path given was a real directory
     if not path.isdir(args.proj_dir):
@@ -203,8 +274,10 @@ def main() -> int:
             cmd="npm install --force"
         )
 
+        check_react_native_version()
+
         # Detect Hermes installed version in project
-        hermes_file = find_installed_hermes()
+        hermes_file = find_installed_hermes() or find_local_hermes(script_dir)
         p_hrms = subprocess.Popen(
             f"{hermes_file} -version",
             shell=True,
@@ -217,19 +290,20 @@ def main() -> int:
         for line in p_hrms.stdout:
             if "HBC bytecode version: " in line.decode():
                 hbc_version = line.decode().split(" ")[-1].rstrip("\n")
-                print("Detected installed Hermes bytecode version " + hbc_version)
+                print("Using Hermes bytecode version " + hbc_version)
                 break
 
         if hbc_version is None:
             raise ValueError("ERROR: Could not determine the installed Hermes version in project")
 
-        check_react_native_version()
+        # Find local modified version of hermes for disassembling Hermes
+        modified_hermes_file = find_local_hermes(script_dir, hbc_version)
 
         # Building JavaScript bundle from project
         execute_command(
             msg=f"Building code bundle from '{entry_file}' to 'index.android.bundle'...",
             cmd=f"npx react-native bundle --dev false --platform android --entry-file "
-                "{entry_file} --bundle-output index.android.bundle --minify false"
+                "{entry_file} --bundle-output index.android.bundle --minify false --yes"
         )
 
         # Compile JS bundle into Hermes binary
@@ -241,19 +315,19 @@ def main() -> int:
             remove("index.android.bundle")
 
         # Determine output filename
-        outfile_name = args.output or entry_file.split(".")[0] + ".hbc"
+        outfile_name = args.output or entry_file.split(".")[0] + ".txt"
 
         # Disassemble Hermes binary in readable Hermes bytecode
         execute_command(
             msg=f"Disassembling Hermes binary into Hermes bytecode to '{outfile_name}'...",
-            cmd=f"{hermes_file} -dump-bytecode index.android.bundle.hbc -out {outfile_name}"
+            cmd=f"{modified_hermes_file} -dump-bytecode index.android.bundle.hbc -out {outfile_name}"
         )
         if not args.keep_files:
             remove("index.android.bundle.hbc")
 
         print(
             f"\nHBC Generation successful! File can be found in: '"
-            "{path.join(args.proj_dir, outfile_name)}'"
+            f"{path.join(args.proj_dir, outfile_name)}'"
         )
 
     finally:
@@ -265,8 +339,8 @@ if __name__ == "__main__":
     # main()  # Uncomment for debugging
     try:
         exit(main())
-    except InterruptedError:
-        print("Keyboard Interupt")
+    except KeyboardInterrupt:
+        print("KeyboardInterupt")
         exit(1)
     except Exception as e:
         print(e)

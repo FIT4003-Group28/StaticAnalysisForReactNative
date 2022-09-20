@@ -64,7 +64,7 @@ def main() -> int:
         entry_file = args.entry_file or determine_entry_point(pkg_path)
         entry_path = path.join(pkg_path, entry_file)
 
-        rollup_exe = path.join(getcwd(), "node_modules", "rollup", "dist", "bin", "rollup")
+        rollup_exe = path.join(".", "node_modules", "rollup", "dist", "bin", "rollup")
 
         # Building JavaScript bundle from package
         execute_command(

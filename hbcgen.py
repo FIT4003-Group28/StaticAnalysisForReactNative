@@ -303,7 +303,7 @@ def main() -> int:
         execute_command(
             msg=f"Building code bundle from '{entry_file}' to 'index.android.bundle'...",
             cmd=f"npx react-native bundle --dev false --platform android --entry-file "
-                "{entry_file} --bundle-output index.android.bundle --minify false --yes"
+                f"{entry_file} --bundle-output index.android.bundle --minify false"
         )
 
         # Compile JS bundle into Hermes binary

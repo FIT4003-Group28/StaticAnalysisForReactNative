@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Button, NativeEventEmitter, NativeModules, StyleSheet, Text, View
 } from "react-native";
+import CustomNativeButton from "./CustomNativeButtonComponent.js";
 
 const { JavaEventModule } = NativeModules;
 const eventEmitter = new NativeEventEmitter(JavaEventModule);
@@ -12,7 +13,6 @@ const App = props => {
 
   useEffect(() => {
     eventEmitter.addListener("EventCount", (eventCount) => {
-      console.log(eventCount);
       if (eventCount != null) {
         setJavaEventCount(eventCount);
       }
@@ -28,7 +28,7 @@ const App = props => {
     try {
       var result = await JavaEventModule.createEventPromise();
     } catch (e) {
-
+      console.log(e);
     }
   }
 
@@ -47,17 +47,18 @@ const App = props => {
       </View>
       <View style={styles.button_container}>
         <View style={styles.button}>
-          <Button title="Create Java Event" onPress={createJavaEventPromise} />
+          <Button title="Call Java" onPress={createJavaEventPromise} />
         </View>
+
+        <CustomNativeButton title="Call Javascript" onClick={() => setJSEventCount(jsEventCount + 1)} />
         <View style={styles.button}>
-          <Button title="Create Javascript Event" onPress={() => setJSEventCount(() => setJSEventCount(jsEventCount + 1))} />
+          <Button title="Call Java Then Javascript " onPress={() => console.log("test")} />
         </View>
-        <View style={styles.button}>
-          <Button title="Create Java Then JS Event" onPress={() => console.log("test")} />
-        </View>
-        <View style={styles.button}>
-          <Button title="Create JS Then Java Event" onPress={() => console.log("test")} />
-        </View>
+
+        <CustomNativeButton title="Call Javascript Then Java" onClick={() => {
+          setJSEventCount(jsEventCount + 1);
+          createJavaEventPromise();
+        }} />
       </View>
     </View>
   );
@@ -75,6 +76,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 40,
-    margin: 5
+    margin: 5,
+    flex: 0
   }
 });

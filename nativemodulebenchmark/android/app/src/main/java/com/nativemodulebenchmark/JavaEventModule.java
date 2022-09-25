@@ -1,10 +1,6 @@
 package com.nativemodulebenchmark;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
-
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;

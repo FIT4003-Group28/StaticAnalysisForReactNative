@@ -42,4 +42,8 @@ function main () {
   }
   
   main();
+
+  // let categories = [gplay.category.APPLICATION, gplay.category.ANDROID_WEAR, gplay.category.VIDEO_PLAYERS, gplay.category.WEATHER, gplay.category.PRODUCTIVITY, gplay.category.SHOPPING, gplay.category.SOCIAL, gplay.category.SPORTS, gplay.category.TOOLS, gplay.category.TRAVEL_AND_LOCAL, gplay.category.LIFESTYLE, gplay.category.MAPS_AND_NAVIGATION, gplay.category.MEDICAL, gplay.category.MUSIC_AND_AUDIO, gplay.category.NEWS_AND_MAGAZINES, gplay.category.PARENTING, gplay.category.PERSONALIZATION, gplay.category.PHOTOGRAPHY, gplay.category.HEALTH_AND_FITNESS, gplay.category.HOUSE_AND_HOME, gplay.category.LIBRARIES_AND_DEMO, gplay.category.BUSINESS, gplay.category.COMICS, gplay.category.COMMUNICATION, gplay.category.DATING, gplay.category.EDUCATION, gplay.category.ENTERTAINMENT, gplay.category.FAMILY, gplay.category.FINANCE, gplay.category.FOOD_AND_DRINK, gplay.category.GAME];
+
+
   

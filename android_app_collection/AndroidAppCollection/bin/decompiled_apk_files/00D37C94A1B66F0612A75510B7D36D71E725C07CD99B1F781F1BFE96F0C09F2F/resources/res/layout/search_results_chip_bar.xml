@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/chip_bar_container" android:background="?attr/ytBrandBackgroundSecondary" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" yt:layout_scrollFlags="0x15">
+    <View android:background="?attr/yt10PercentLayer" android:layout_width="match_parent" android:layout_height="@dimen/bar_separator_height"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/chip_bar_chips_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="?attr/ytTextSecondary" android:ellipsize="end" android:gravity="center" android:id="@+id/text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxWidth="@dimen/text_max_width" android:singleLine="true" android:textIsSelectable="false" android:paddingStart="@dimen/chips_padding_start" yt:robotoFont="0"/>
+    </LinearLayout>
+</LinearLayout>

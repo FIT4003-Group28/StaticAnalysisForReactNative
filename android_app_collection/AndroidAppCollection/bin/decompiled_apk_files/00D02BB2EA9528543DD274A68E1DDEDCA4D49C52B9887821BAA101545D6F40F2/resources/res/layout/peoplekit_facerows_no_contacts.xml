@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/peoplekit_facerows_item_height">
+    <RelativeLayout android:id="@+id/peoplekit_facerows_no_contacts" android:background="@drawable/peoplekit_facerow_grey_circle" android:layout_width="@dimen/peoplekit_facerows_no_contacts_circle" android:layout_height="@dimen/peoplekit_facerows_no_contacts_circle">
+        <android.support.v7.widget.AppCompatImageView android:theme="@style/peoplekit_facerows_grey_tint" android:layout_width="@dimen/peoplekit_facerows_no_contacts_inner_circle" android:layout_height="@dimen/peoplekit_facerows_no_contacts_inner_circle" android:layout_centerInParent="true" app:srcCompat="@drawable/quantum_gm_ic_person_vd_theme_24"/>
+    </RelativeLayout>
+    <TextView android:textColor="@color/google_grey700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/peoplekit_facerows_no_contacts" style="@style/peoplekit_facerows_empty_view_text"/>
+</LinearLayout>

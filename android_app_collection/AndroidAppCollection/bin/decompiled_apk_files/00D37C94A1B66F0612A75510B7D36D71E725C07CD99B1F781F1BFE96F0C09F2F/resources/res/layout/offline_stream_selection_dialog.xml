@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="300dp" android:layout_height="wrap_content">
+    <ListView android:id="@+id/offline_stream_selection_list" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:choiceMode="singleChoice"/>
+</LinearLayout>

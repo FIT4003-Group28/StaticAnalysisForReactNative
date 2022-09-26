@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/screencast_spinner_window_background_color" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="@dimen/screencast_spinner_window_background_alpha">
+    <com.google.android.libraries.youtube.livecreation.ui.view.NetworkOperationView android:layout_gravity="center" android:id="@+id/choose_thumbnail_network_operation" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</RelativeLayout>

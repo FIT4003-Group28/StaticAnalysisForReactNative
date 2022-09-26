@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.actionbar.ElevatedAppBarLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/appbar_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.google.android.apps.youtube.app.ui.actionbar.MainCollapsingToolbarLayout android:id="@+id/toolbar_container" android:layout_width="match_parent" android:layout_height="wrap_content" yt:collapsedTitleTextAppearance="@style/TransparentTitleTextAppearance" yt:expandedTitleTextAppearance="@style/TransparentTitleTextAppearance" yt:layout_scrollFlags="0x15" yt:scrimAnimationDuration="250">
+        <android.support.v7.widget.Toolbar android:theme="?attr/actionBarTheme" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:popupTheme="?attr/actionBarPopupTheme" yt:layout_collapseMode="1"/>
+    </com.google.android.apps.youtube.app.ui.actionbar.MainCollapsingToolbarLayout>
+</com.google.android.apps.youtube.app.ui.actionbar.ElevatedAppBarLayout>

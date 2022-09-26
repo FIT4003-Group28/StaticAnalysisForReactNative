@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.youtube.player.features.markers.HeatMarkerView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:id="@+id/heatseeker_view" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" yt:layout_constraintBottom_toBottomOf="0" yt:layout_constraintLeft_toLeftOf="0" yt:layout_constraintRight_toRightOf="0"/>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <ImageView android:layout_gravity="bottom" android:id="@+id/photos_button" android:paddingLeft="@dimen/photos_composer_start_padding" android:paddingTop="@dimen/photos_composer_vertical_padding" android:paddingBottom="@dimen/photos_composer_vertical_padding" android:layout_width="@dimen/photos_composer_horiz_dimension" android:layout_height="@dimen/photos_composer_vertical_dimension" android:src="0x7f080847" android:scaleType="center" android:contentDescription="@string/content_description_photo_composer_entrypoint" android:paddingStart="@dimen/photos_composer_start_padding"/>
+</FrameLayout>

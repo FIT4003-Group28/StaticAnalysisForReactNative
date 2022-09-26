@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.apps.auto.sdk.ui.PagedScrollBarView android:id="@+id/paged_scroll_view" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="invisible" android:layout_width="@dimen/gearhead_sdk_paged_list_view_pagination_width" android:layout_height="match_parent"/>
+    <com.google.android.apps.auto.sdk.ui.MaxWidthLayout android:id="@+id/max_width_layout" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/gearhead_sdk_card_margin" app:carMaxWidth="@dimen/gearhead_sdk_card_max_width">
+        <com.google.android.apps.auto.sdk.ui.CarRecyclerView android:layout_gravity="center_horizontal" android:id="@+id/recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.google.android.apps.auto.sdk.ui.MaxWidthLayout>
+</merge>

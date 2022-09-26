@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background" android:top="24dp" android:bottom="24dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp"/>
+            <size android:height="56dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:width="@dimen/duration_ms_seek_bar_stroke_width" android:color="?attr/ytTextPrimary"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:left="3dp" android:top="27dp" android:right="3dp" android:bottom="27dp">
+        <clip android:drawable="@drawable/duration_ms_seek_bar_with_waveform_clip"/>
+    </item>
+</layer-list>

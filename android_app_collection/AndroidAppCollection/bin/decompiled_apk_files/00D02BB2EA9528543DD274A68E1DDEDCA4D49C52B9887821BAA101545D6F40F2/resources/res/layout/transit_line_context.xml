@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:gravity="start" android:id="@+id/transit_line_context_padding" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp" android:layout_marginTop="1dp"/>
+        <TextView android:ellipsize="end" android:gravity="start" android:id="@+id/transit_line_context" style="@style/TransitNotificationText.Info"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="end|center_vertical" android:orientation="horizontal" android:id="@+id/transit_station_next_departure_container" android:paddingLeft="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16dp">
+        <TextView android:id="@+id/transit_station_next_departure" style="@style/TransitNotificationText.Info"/>
+        <ImageView android:id="@+id/transit_line_crowdedness_icon" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="4dp" android:layout_marginRight="4dp"/>
+        <ImageView android:id="@+id/transit_line_context_right_arrow" android:layout_width="16dp" android:layout_height="16dp" android:src="0x7f080705"/>
+    </LinearLayout>
+</LinearLayout>

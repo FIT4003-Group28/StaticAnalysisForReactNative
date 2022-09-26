@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="start|center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/og_text_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.GoogleMaterial.Subhead2"/>
+            <TextView android:textColor="?attr/colorOnSurfaceVariant" android:id="@+id/og_text_card_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" style="@style/TextAppearance.GoogleMaterial.Caption"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/og_text_card_trail_image" android:layout_width="@dimen/text_card_trailing_image_size" android:layout_height="@dimen/text_card_trailing_image_size" android:contentDescription="@null"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/og_text_card_custom_content" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text_card_vertical_spacing"/>
+    <com.google.android.material.chip.Chip android:id="@+id/og_text_card_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text_card_vertical_spacing" style="@style/Widget.GoogleMaterial.Chip.Assistive"/>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_centerInParent="true">
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textColor="@color/yt_white1" android:gravity="center" android:id="@+id/progress_label" android:background="@drawable/shorts_slider_text_background" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.YouTube.Spec.Body1a"/>
+    <android.support.v7.widget.AppCompatSeekBar android:id="@+id/seek_bar" android:padding="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:progressDrawable="@drawable/zoom_slider_seek_bar" android:thumb="@drawable/intensity_slider_seek_bar_thumb"/>
+</LinearLayout>

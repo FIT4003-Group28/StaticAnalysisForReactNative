@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:interpolator="@android:anim/linear_interpolator" android:shareInterpolator="true">
+    <set android:ordering="sequentially">
+        <objectAnimator android:duration="100" android:valueFrom="1" android:valueTo="1.2" android:valueType="floatType" android:propertyName="scaleX"/>
+        <objectAnimator android:duration="100" android:valueFrom="1.2" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+        <objectAnimator android:duration="1000" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+    </set>
+    <set android:ordering="sequentially">
+        <objectAnimator android:duration="100" android:valueFrom="1" android:valueTo="1.2" android:valueType="floatType" android:propertyName="scaleY"/>
+        <objectAnimator android:duration="100" android:valueFrom="1.2" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+        <objectAnimator android:duration="1000" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+    </set>
+</set>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="vertical" android:background="@android:color/transparent" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/listPreferredItemHeightSmall" android:paddingStart="?attr/listPreferredItemPaddingStart" android:paddingEnd="12dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:gravity="center_vertical" android:id="@+id/radio" android:focusable="false" android:clickable="false" android:layout_width="35dp" android:layout_height="wrap_content" android:paddingEnd="12dp"/>
+        <TextView android:textAppearance="?attr/textAppearanceListItem" android:textColor="?attr/textColorAlertDialogListItem" android:ellipsize="marquee" android:gravity="start|center_vertical" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/textAppearanceListItemSecondary" android:textSize="12sp" android:textColor="?attr/textColorAlertDialogListItem" android:textColorLink="?attr/ytThemedBlue" android:gravity="start|center_vertical" android:id="@+id/subtitle" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="35dp" yt:hyperlinksClickable="true"/>
+</LinearLayout>

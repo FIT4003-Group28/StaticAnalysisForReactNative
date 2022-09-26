@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:gravity="bottom" android:orientation="vertical" android:id="@+id/filter_bar" android:background="?attr/ytBrandBackgroundSecondary" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" yt:layout_scrollFlags="0x15">
+    <View android:id="@+id/feed_filter_bar_separator" android:background="?attr/yt10PercentLayer" android:layout_width="match_parent" android:layout_height="@dimen/filter_bar_separator_height"/>
+    <RelativeLayout android:id="@+id/chip_bar_with_overlay_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/chip_bar_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/overlay_container" android:visibility="gone" android:layout_width="@dimen/filter_bar_overlay_width" android:layout_height="match_parent" android:layout_alignParentEnd="true">
+            <View android:id="@+id/overlay_divider" android:background="?attr/yt10PercentLayer" android:layout_width="@dimen/filter_bar_overlay_separator_width" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

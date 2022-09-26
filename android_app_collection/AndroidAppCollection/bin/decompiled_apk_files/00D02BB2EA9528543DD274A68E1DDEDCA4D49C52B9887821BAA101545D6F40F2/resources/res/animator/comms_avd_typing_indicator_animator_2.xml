@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="sequentially">
+    <set android:interpolator="@anim/comms_avd_typing_indicator_interpolator">
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_up_duration" android:startOffset="@integer/comms_avd_typing_indicator_delay_2" android:valueFrom="0" android:valueTo="@integer/comms_avd_typing_indicator_up_translateY" android:valueType="floatType" android:propertyName="translateY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_up_duration" android:startOffset="@integer/comms_avd_typing_indicator_delay_2" android:valueFrom="1" android:valueTo="@dimen/comms_avd_typing_indicator_up_scaleY" android:valueType="floatType" android:propertyName="scaleY"/>
+    </set>
+    <set android:interpolator="@anim/comms_avd_typing_indicator_interpolator">
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_down_duration" android:valueFrom="@integer/comms_avd_typing_indicator_up_translateY" android:valueTo="@integer/comms_avd_typing_indicator_down_translateY" android:valueType="floatType" android:propertyName="translateY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_down_duration" android:valueFrom="@dimen/comms_avd_typing_indicator_up_scaleY" android:valueTo="@dimen/comms_avd_typing_indicator_down_scaleY" android:valueType="floatType" android:propertyName="scaleY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_down_duration" android:valueFrom="1" android:valueTo="@dimen/comms_avd_typing_indicator_down_scaleX" android:valueType="floatType" android:propertyName="scaleX"/>
+    </set>
+    <set android:interpolator="@anim/comms_avd_typing_indicator_interpolator">
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_raise_duration" android:valueFrom="@integer/comms_avd_typing_indicator_down_translateY" android:valueTo="@integer/comms_avd_typing_indicator_raise_translateY" android:valueType="floatType" android:propertyName="translateY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_raise_duration" android:valueFrom="@dimen/comms_avd_typing_indicator_down_scaleY" android:valueTo="@dimen/comms_avd_typing_indicator_raise_scaleY" android:valueType="floatType" android:propertyName="scaleY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_raise_duration" android:valueFrom="@dimen/comms_avd_typing_indicator_down_scaleX" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+    </set>
+    <set android:interpolator="@anim/comms_avd_typing_indicator_interpolator">
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_return_duration" android:valueFrom="@integer/comms_avd_typing_indicator_raise_translateY" android:valueTo="0" android:valueType="floatType" android:propertyName="translateY"/>
+        <objectAnimator android:duration="@integer/comms_avd_typing_indicator_return_duration" android:valueFrom="@dimen/comms_avd_typing_indicator_raise_scaleY" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+    </set>
+</set>

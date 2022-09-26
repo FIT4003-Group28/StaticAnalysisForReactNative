@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:paddingStart="8dp" android:paddingEnd="8dp">
+    <FrameLayout android:id="@+id/start_section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="8dp">
+        <include android:id="@+id/nav_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" layout="@layout/mod_app_bar_button_internal"/>
+    </FrameLayout>
+    <Space android:id="@+id/title_start_space" android:layout_width="0dp" android:layout_height="match_parent"/>
+    <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/title_section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:minHeight="48dp">
+            <TextView android:ellipsize="end" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:textAlignment="center" style="@style/TextAppearance.GoogleMaterial.Headline6"/>
+            <TextView android:ellipsize="end" android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:textAlignment="center" style="@style/TextAppearance.GoogleMaterial.Body2"/>
+        </LinearLayout>
+    </FrameLayout>
+    <Space android:id="@+id/title_end_space" android:layout_width="0dp" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/end_section" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Space android:id="@+id/end_button_start_space" android:visibility="gone" android:layout_width="8dp" android:layout_height="match_parent"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/action_buttons" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <include android:id="@+id/overflow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" layout="@layout/mod_app_bar_button_internal"/>
+    </LinearLayout>
+</LinearLayout>

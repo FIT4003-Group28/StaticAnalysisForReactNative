@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/gallery_camera_record_button_stop_rectangle_corner_radius"/>
+    <solid android:color="@color/yt_white1"/>
+</shape>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:foreground="?attr/selectableItemBackground" yt:cardBackgroundColor="?attr/ytGeneralBackgroundA" yt:cardCornerRadius="2dp" yt:cardElevation="0dp" style="@style/RichMetadataCard">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout android:id="@+id/thumbnail_layout" android:background="@drawable/bg_video_thumb" android:layout_width="wrap_content" android:layout_height="100dp" yt:aspectRatio="@fraction/aspect_ratio_16_9">
+            <ImageView android:id="@+id/thumbnail" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:contentDescription="@null"/>
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="?attr/ytOverlayTextSecondary" android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/thumbnail_bottom_label" android:background="?attr/ytOverlayBackgroundMedium" android:layout_width="match_parent" android:layout_height="24dp" android:maxLines="1" yt:robotoFont="0"/>
+        </com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="100dp" android:layout_marginStart="16dp">
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="?attr/ytTextPrimary" android:ellipsize="end" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" yt:robotoFont="0"/>
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="?attr/ytTextSecondary" android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" yt:robotoFont="0"/>
+            <ViewStub android:id="@+id/metadata_badge" android:layout="@layout/metadata_badge" android:inflatedId="@+id/metadata_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="?attr/ytTextSecondary" android:id="@+id/call_to_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" yt:robotoFont="6"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

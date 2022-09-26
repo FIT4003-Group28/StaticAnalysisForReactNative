@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" style="@style/PostEditorPlacePicker">
+    <View android:background="@color/mod_daynight_grey300" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/place_picker_button" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/REVIEW_PLACE_PICKER_TEXT" style="@style/PostEditorPlacePickerButton"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewStub android:id="@+id/inline_playback_time_bar_stub" android:layout="@layout/inline_muted_time_bar" android:inflatedId="@+id/inline_playback_time_bar" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

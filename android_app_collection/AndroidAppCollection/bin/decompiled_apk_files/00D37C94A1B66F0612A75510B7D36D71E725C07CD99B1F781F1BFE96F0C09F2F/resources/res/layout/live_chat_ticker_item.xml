@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:paddingLeft="4dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="4dp" android:paddingEnd="8dp">
+    <com.google.android.libraries.youtube.common.ui.CircularImageView android:layout_gravity="center_vertical" android:id="@+id/avatar" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginEnd="8dp"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/currency_image" android:visibility="gone" android:layout_width="@dimen/live_chat_ticker_currency_image_size" android:layout_height="@dimen/live_chat_ticker_currency_image_size" android:layout_marginEnd="3dp"/>
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:layout_gravity="center_vertical" android:id="@+id/associated_text" android:paddingTop="4dp" android:paddingRight="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" yt:robotoFont="6"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/thumbnail_holder" android:paddingTop="2dp" android:paddingBottom="2dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

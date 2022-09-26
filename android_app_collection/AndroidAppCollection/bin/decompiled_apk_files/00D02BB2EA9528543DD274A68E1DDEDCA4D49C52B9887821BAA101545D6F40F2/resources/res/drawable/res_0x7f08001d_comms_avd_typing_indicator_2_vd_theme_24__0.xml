@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:tint="?attr/colorControlNormal" android:height="30dp" android:width="30dp" android:autoMirrored="true" android:viewportWidth="36" android:viewportHeight="36">
+    <group android:name="group1" android:pivotX="6" android:pivotY="18">
+        <path android:fillColor="@android:color/white" android:pathData="M6,18m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    </group>
+    <group android:name="group2" android:pivotX="18" android:pivotY="18">
+        <path android:fillColor="@android:color/white" android:pathData="M18,18m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    </group>
+    <group android:name="group3" android:pivotX="30" android:pivotY="18">
+        <path android:fillColor="@android:color/white" android:pathData="M30,18m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    </group>
+</vector>

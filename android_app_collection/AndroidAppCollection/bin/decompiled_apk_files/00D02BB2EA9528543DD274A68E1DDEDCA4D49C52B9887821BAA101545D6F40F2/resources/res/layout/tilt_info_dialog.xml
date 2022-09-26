@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16dp" android:paddingTop="32dp" android:paddingRight="16dp" android:paddingBottom="32dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="20sp" android:textColor="@color/google_grey900" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/ARWN_TILT_INFO_TITLE"/>
+    <TextView android:textSize="14sp" android:textColor="@color/google_grey800" android:gravity="center" android:layout_gravity="center" android:id="@+id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ARWN_TILT_INFO_DESCRIPTION"/>
+    <com.google.android.material.button.MaterialButton android:theme="@style/Theme.GoogleMaterial.Light" android:gravity="center" android:layout_gravity="center" android:id="@+id/dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ARWN_TILT_INFO_BUTTON" style="@style/Widget.GoogleMaterial.Button"/>
+</LinearLayout>

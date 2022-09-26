@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:foreground="?android:attr/selectableItemBackground" card_view:cardBackgroundColor="?attr/ytBrandBackgroundSolid" card_view:cardCornerRadius="2dp" card_view:cardElevation="0dp" card_view:cardPreventCornerOverlap="false" card_view:cardUseCompatPadding="true">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/card_content_container" android:layout_width="128dp" android:layout_height="wrap_content">
+            <com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout android:id="@+id/thumbnail_layout" android:layout_width="match_parent" android:layout_height="wrap_content" card_view:aspectRatio="@fraction/rounded_aspect_ratio_16_9">
+                <ImageView android:id="@+id/thumbnail" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+            </com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout>
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/textAppearanceBody1" android:textColor="?attr/ytTextPrimary" android:ellipsize="end" android:id="@+id/query" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:lines="2" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/card_content_outline" android:layout_width="0dp" android:layout_height="0dp" android:src="@drawable/search_refinement_card_background" android:layout_alignTop="@+id/card_content_container" android:layout_alignBottom="@+id/card_content_container" android:layout_alignStart="@+id/card_content_container" android:layout_alignEnd="@+id/card_content_container"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

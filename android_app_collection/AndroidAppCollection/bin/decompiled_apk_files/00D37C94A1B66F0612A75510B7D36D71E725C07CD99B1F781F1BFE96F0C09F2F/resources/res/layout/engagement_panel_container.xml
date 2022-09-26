@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.youtube.app.watch.engagementpanel.util.InterceptTouchListenerLinearLayout android:orientation="vertical" android:id="@+id/header_container" android:background="@drawable/engagement_panel_header_drawable" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="@dimen/engagement_panel_header_drop_shadow_elevation">
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="top|center_horizontal" android:id="@+id/arrow_drag_handle" android:paddingTop="8dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="40dp" android:layout_height="12dp" android:src="@drawable/engagement_panel_drag_handle" android:contentDescription="@string/accessibility_drag_handle"/>
+            <FrameLayout android:id="@+id/panel_header_wrapper" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.apps.youtube.app.watch.engagementpanel.util.InterceptTouchListenerLinearLayout>
+    <FrameLayout android:id="@+id/panel_content" android:background="?attr/ytBrandBackgroundSolid" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/header_container"/>
+    <View android:id="@+id/scrim" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</merge>

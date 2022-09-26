@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="start|center_vertical" android:id="@+id/web_view_display_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/web_view_icon_margin_left" android:contentDescription="@null" android:layout_marginStart="@dimen/web_view_icon_margin_left"/>
+    <TextView android:textSize="14sp" android:textColor="@color/google_grey800" android:layout_gravity="center_vertical" android:id="@+id/web_view_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/web_view_title_margin_left" android:layout_weight="1" android:fontFamily="@font/google_sans" android:layout_marginStart="@dimen/web_view_title_margin_left"/>
+    <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/web_view_dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/web_view_dismiss_button_margin_right" android:src="0x7f0805cc" android:contentDescription="@string/close_button_label" android:layout_marginEnd="@dimen/web_view_dismiss_button_margin_right"/>
+</merge>

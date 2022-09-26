@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/peoplekit_listview_expandable_row" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+    <include android:id="@+id/peoplekit_listview_header" android:visibility="gone" layout="@layout/peoplekit_listview_header"/>
+    <RelativeLayout android:id="@+id/peoplekit_listview_main_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/peoplekit_listview_header">
+        <include android:id="@+id/peoplekit_listview_main_row" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/single_peoplekit_row_view"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/peoplekit_listview_expanded_contact_methods" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/peoplekit_listview_main_row"/>
+    </RelativeLayout>
+    <include android:id="@+id/peoplekit_listview_permissions_row" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/peoplekit_listview_permissions_row"/>
+</RelativeLayout>

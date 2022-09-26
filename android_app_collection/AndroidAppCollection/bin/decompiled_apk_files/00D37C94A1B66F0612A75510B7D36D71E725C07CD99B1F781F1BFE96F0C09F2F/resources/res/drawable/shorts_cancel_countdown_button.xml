@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/shorts_cancel_countdown_button_outer_ring_width" android:color="?attr/ytStaticWhite"/>
+        </shape>
+    </item>
+    <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
+        <shape android:shape="oval">
+            <solid android:color="?attr/ytStaticBrandBlack"/>
+        </shape>
+    </item>
+    <item android:left="24dp" android:top="24dp" android:right="24dp" android:bottom="24dp">
+        <bitmap android:src="0x7f0806b7"/>
+    </item>
+</layer-list>

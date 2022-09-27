@@ -47,16 +47,16 @@ const App = props => {
       </View>
       <View style={styles.button_container}>
         <View style={styles.button}>
-          <Button title="Call Java" onPress={createJavaEventPromise} />
+          <Button title="Javascript -> Java" onPress={createJavaEventPromise} />
         </View>
 
-        <CustomNativeButton title="Call Javascript" onClick={() => setJSEventCount(jsEventCount + 1)} />
+        <CustomNativeButton title="Java -> Javascript" onClick={() => setJSEventCount(jsEventCount + 1)} />
+
         <View style={styles.button}>
-          <Button title="Call Java Then Javascript " onPress={() => console.log("test")} />
+          <Button title="Javascript -> Javascript" onPress={() => setJSEventCount(jsEventCount + 1)} />
         </View>
 
-        <CustomNativeButton title="Call Javascript Then Java" onClick={() => {
-          setJSEventCount(jsEventCount + 1);
+        <CustomNativeButton title="Java -> Java" onClick={() => {
           createJavaEventPromise();
         }} />
       </View>

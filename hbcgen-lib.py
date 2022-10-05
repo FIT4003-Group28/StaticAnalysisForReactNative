@@ -1,5 +1,5 @@
 import argparse
-from os import chdir, getcwd, mkdir, path
+from os import chdir, getcwd, mkdir, path, rename
 from shutil import rmtree
 from hbcgen import determine_entry_point, execute_command, find_local_hermes
 
@@ -60,7 +60,7 @@ def main() -> int:
         # Install hermes into temp directory
         execute_command(
             msg=f"Installing '{pkg_name}' into temp directory...",
-            cmd=f"npm init -y && npm install metro metro-core {pkg_name}"
+            cmd=f"npm init -y && npm install webpack webpack-cli {pkg_name}"
         )
 
         # Determine entry point
@@ -68,22 +68,47 @@ def main() -> int:
         entry_file = args.entry_file or determine_entry_point(pkg_path)
         entry_path = path.join(pkg_path, entry_file)
 
-        metro_exe = path.join(".", "node_modules", "metro", "src", "cli.js")
+        webpack_exe = path.join(".", "node_modules", "webpack", "bin", "webpack.js")
 
         # Building JavaScript bundle from package
         execute_command(
             msg=f"Building code bundle from '{entry_file}' to '{pkg_name}.bundle.js'...",
-            cmd=f"node {metro_exe} build {entry_path} --out {pkg_name}.bundle --platform android --dev --minify false"
+            cmd=f"{webpack_exe} -o . --entry {entry_path} --mode=development --target=node --no-devtool"
         )
+        rename("main.js", f"{pkg_name}.bundle.js")
 
         # Find Hermes installed version in project
         hermes_file = find_local_hermes(script_dir)
 
-        # Compile JS bundle into Hermes binary
-        execute_command(
-            msg=f"Assembling bundle into Hermes binary to '{pkg_name}_bin.hbc'...",
-            cmd=f"{hermes_file} -O -emit-binary -out={pkg_name}_bin.hbc {pkg_name}.bundle.js"
-        )
+        try:
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to '{pkg_name}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={pkg_name}_bin.hbc {pkg_name}.bundle.js",
+                raise_errors=True
+            )
+        except RuntimeError:
+            print("Trying to assemble bundle in compatibility mode")
+
+            # Installing babel
+            execute_command(
+                msg=f"Installing 'babel'...",
+                cmd=f"npm install --save-dev @babel/cli @babel/core @babel/preset-env"
+            )
+
+            babel_exe = path.join(".", "node_modules", "@babel", "cli", "bin", "babel.js")
+
+            # Converting ES6 Javascript into ES5
+            execute_command(
+                msg=f"Converting '{pkg_name}.bundle.js' to ES5 into '{pkg_name}.babel.bundle.js'...",
+                cmd=f"{babel_exe} --presets @babel/env --no-babelrc {pkg_name}.bundle.js -o {pkg_name}.babel.bundle.js"
+            )
+
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to '{pkg_name}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={pkg_name}_bin.hbc {pkg_name}.babel.bundle.js",
+            )
 
         outfile_path = path.join(original_dir, f"{pkg_name}.hbc")
 

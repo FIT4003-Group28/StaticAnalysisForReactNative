@@ -240,6 +240,7 @@ def execute_command(msg: str, cmd: str, raise_errors=False) -> None:
     :param cmd: the command to execute in the OS
     :param raise_errors: raise errors instead of printing them
     """
+    print(cmd)
     sys.stdout.write(msg + " ")
     sys.stdout.flush()
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

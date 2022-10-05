@@ -73,7 +73,7 @@ def main() -> int:
         # Building JavaScript bundle from package
         execute_command(
             msg=f"Building code bundle from '{entry_file}' to '{pkg_name}.bundle.js'...",
-            cmd=f"{webpack_exe} -o . --entry {entry_path} --mode=development --target=node --no-devtool"
+            cmd=f"node {webpack_exe} -o . --entry {entry_path} --mode=development --target=node --no-devtool"
         )
         rename("main.js", f"{pkg_name}.bundle.js")
 
@@ -101,7 +101,7 @@ def main() -> int:
             # Converting ES6 Javascript into ES5
             execute_command(
                 msg=f"Converting '{pkg_name}.bundle.js' to ES5 into '{pkg_name}.babel.bundle.js'...",
-                cmd=f"{babel_exe} --presets @babel/env --no-babelrc {pkg_name}.bundle.js -o {pkg_name}.babel.bundle.js"
+                cmd=f"node {babel_exe} --presets @babel/env --no-babelrc {pkg_name}.bundle.js -o {pkg_name}.babel.bundle.js"
             )
 
             # Compile JS bundle into Hermes binary

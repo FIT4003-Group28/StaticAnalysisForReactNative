@@ -1,0 +1,44 @@
+<ref *1> {
+  type: 'FunctionDeclaration',
+  id: {
+    type: 'Identifier',
+    name: 'bar',
+    range: [ 53, 56 ],
+    loc: { start: [Object], end: [Object] },
+    attr: {
+      enclosingFunction: [Circular *1],
+      enclosingFile: '.\\sunspider-1.0.2\\bar filename.js',
+      scope: [Symtab]
+    }
+  },
+  params: [],
+  defaults: [],
+  body: {
+    type: 'BlockStatement',
+    body: [ [Object], [Object] ],
+    range: [ 60, 110 ],
+    loc: { start: [Object], end: [Object] },
+    attr: {
+      enclosingFunction: [Circular *1],
+      enclosingFile: '.\\sunspider-1.0.2\\bar filename.js'
+    }
+  },
+  rest: null,
+  generator: false,
+  expression: false,
+  range: [ 44, 110 ],
+  loc: { start: { line: 6, column: 0 }, end: { line: 10, column: 1 } },
+  attr: {
+    enclosingFile: '.\\sunspider-1.0.2\\bar filename.js',
+    parent: [ [Object], [Circular *1], [Object] ],
+    childProp: '1',
+    scope: Symtab {
+      outer: [Symtab],
+      global: false,
+      '$this': [Object],
+      '$arguments': [Object]
+    },
+    ret_vertex: { type: 'ReturnVertex', node: [Circular *1], attr: [Object] },
+    func_vertex: { type: 'FuncVertex', func: [Circular *1], attr: [Object] }
+  }
+}

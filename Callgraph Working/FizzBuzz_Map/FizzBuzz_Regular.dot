@@ -1,0 +1,7 @@
+strict digraph {
+    "[FizzBuzz_Regular]executeFizzBuzz" -> "[FizzBuzz_Regular]fizzBuzz"
+    "[FizzBuzz_Regular]fizzBuzz" -> "[FizzBuzz_Regular]print_fizzbuzz"
+    "[FizzBuzz_Regular]fizzBuzz" -> "[FizzBuzz_Regular]print_buzz"
+    "[FizzBuzz_Regular]fizzBuzz" -> "[FizzBuzz_Regular]print_fizz"
+    "[FizzBuzz_Regular] Driver code" -> "[FizzBuzz_Regular]executeFizzBuzz"
+}

@@ -1,0 +1,8 @@
+digraph test {
+    "bar filename.js@3:23-37" -> Math_log
+    "bar filename.js@3:23-37" -> console_log
+    "bar filename.js@8:67-96" -> Math_log
+    "bar filename.js@8:67-96" -> console_log
+    "bar filename.js@9:102-107"(function here is bar) -> "bar filename.js@1:0-40"(function here is foo)
+    "bar filename.js@12:114-119"(no function) -> "bar filename.js@6:44-110"(function here is bar)
+}

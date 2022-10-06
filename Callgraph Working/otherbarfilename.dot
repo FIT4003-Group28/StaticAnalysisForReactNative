@@ -1,0 +1,8 @@
+digraph test {
+    "[bar filename.js]foo" -> "Math_log"
+"[bar filename.js]foo" -> "console_log"
+"[bar filename.js]bar" -> "Math_log"
+"[bar filename.js]bar" -> "console_log"
+"[bar filename.js]bar" -> "[bar filename.js]foo"
+"[bar filename.js]" -> "[bar filename.js]bar"
+}

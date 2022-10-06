@@ -13,6 +13,7 @@
   "dependencies": {
     "react": "18.1.0",
     "react-native": "0.70.1",
+    "rtn-button": "../RTNButton",
     "rtn-counter": "../RTNCounter"
   },
   "devDependencies": {

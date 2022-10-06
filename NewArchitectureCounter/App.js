@@ -11,7 +11,7 @@ import {
   Button, StyleSheet, Text, View
 } from "react-native";
 import RTNCounter from 'rtn-counter/js/NativeRTNCounter.js';
-
+import CustomNativeButton from "./CustomNativeButtonComponent.js";
 
 const App: () => Node = () => {
   const [javaEventCount, setJavaEventCount] = useState(0);
@@ -31,7 +31,6 @@ const App: () => Node = () => {
         </View>
       </View>
       <View style={styles.button_container}>
-
         <View style={styles.button}>
           <Button title="Javascript -> Java"
             onPress={async () => {
@@ -39,10 +38,17 @@ const App: () => Node = () => {
               setJavaEventCount(value);
             }} />
         </View>
-
+        
+        <CustomNativeButton title="Java -> Javascript" onClick={() => setJSEventCount(jsEventCount + 1)} />
+        
         <View style={styles.button}>
           <Button title="Javascript -> Javascript" onPress={() => setJSEventCount(jsEventCount + 1)} />
         </View>
+
+        <CustomNativeButton title="Java -> Java"  onClick={async () => {
+              const value = await RTNCounter.createEventPromise();
+              setJavaEventCount(value);
+            }} />
       </View>
     </View>
   );

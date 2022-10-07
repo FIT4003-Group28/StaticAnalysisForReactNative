@@ -1,6 +1,18 @@
 function FizzBuzz (maxNum){
     this.maxNum = maxNum;
 
+    function print_fizz(){
+        console.log("Fizz")
+    }
+    
+    function print_buzz(){
+        console.log("Buzz")
+    }
+    
+    function print_fizzbuzz(){
+        console.log("FizzBuzz")
+    }
+    
     function loopFizzBuzz(number){
         if (number % 15 == 0)
         {
@@ -29,18 +41,6 @@ function FizzBuzz (maxNum){
     }
 
     executeFizzBuzz()
-}
-
-function print_fizz(){
-    console.log("Fizz")
-}
-
-function print_buzz(){
-    console.log("Buzz")
-}
-
-function print_fizzbuzz(){
-    console.log("FizzBuzz")
 }
 
 FizzBuzz(100)

@@ -1,15 +1,15 @@
 function loopFizzBuzz(number){
     if (number % 15 == 0)
     {
-        console.log("FizzBuzz");
+        print_fizzbuzz();
     }
     else if (number % 5 == 0)
     {
-        console.log("Buzz");
+        print_buzz();
     }
     else if (number % 3 == 0)
     {
-        console.log("Fizz");
+        print_fizz();
     }
     else
     {
@@ -23,6 +23,18 @@ function executeFizzBuzz(maxNum)
     {
         loopFizzBuzz(i);
     }
+}
+
+function print_fizz(){
+    console.log("Fizz")
+}
+
+function print_buzz(){
+    console.log("Buzz")
+}
+
+function print_fizzbuzz(){
+    console.log("FizzBuzz")
 }
 
 executeFizzBuzz(100)

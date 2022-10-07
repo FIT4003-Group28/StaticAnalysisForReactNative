@@ -14,3 +14,9 @@ node .\main.js "./Ivan's FizzBuzz Tests/FizzBuzz_Method" --editcg
 eg here i forgot to add a .js but it still works.
 
 It prints the nodes and edges and the numbers of them as well.
+
+The useful files are: 
+1. main.js
+2. astutil.js
+3. Ivan's FizzBuzz Tests directory
+4. Callgraph Working directory

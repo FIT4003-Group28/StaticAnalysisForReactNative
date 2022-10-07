@@ -1,0 +1,7 @@
+strict digraph {
+    "[FizzBuzz_function.js]loopFizzBuzz" -> "[FizzBuzz_function.js]print_fizzbuzz"
+    "[FizzBuzz_function.js]loopFizzBuzz" -> "[FizzBuzz_function.js]print_buzz"
+    "[FizzBuzz_function.js]loopFizzBuzz" -> "[FizzBuzz_function.js]print_fizz"
+    "[FizzBuzz_function.js]executeFizzBuzz" -> "[FizzBuzz_function.js]loopFizzBuzz"
+    "[FizzBuzz_function.js] Driver code" -> "[FizzBuzz_function.js]executeFizzBuzz"
+}

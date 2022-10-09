@@ -26,7 +26,7 @@ const App = props => {
 
   const createJavaEventPromise = async () => {
     try {
-      var result = await JavaEventModule.createEventPromise();
+      await JavaEventModule.createEventPromise();
     } catch (e) {
       console.log(e);
     }
@@ -49,16 +49,12 @@ const App = props => {
         <View style={styles.button}>
           <Button title="Javascript -> Java" onPress={createJavaEventPromise} />
         </View>
-
         <CustomNativeButton title="Java -> Javascript" onClick={() => setJSEventCount(jsEventCount + 1)} />
-
         <View style={styles.button}>
           <Button title="Javascript -> Javascript" onPress={() => setJSEventCount(jsEventCount + 1)} />
         </View>
+        <CustomNativeButton title="Java -> Java" onClick={createJavaEventPromise} />
 
-        <CustomNativeButton title="Java -> Java" onClick={() => {
-          createJavaEventPromise();
-        }} />
       </View>
     </View>
   );

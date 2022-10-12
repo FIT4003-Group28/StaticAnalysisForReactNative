@@ -1,7 +1,7 @@
 import argparse
 from os import chdir, getcwd, mkdir, path
 from shutil import rmtree
-from hbcgen import determine_entry_point, execute_command, find_installed_hermes
+from hbcgen import determine_entry_point, execute_command, find_local_hermes
 
 TEMP_DIR_NAME = "hermes_tmp"
 
@@ -35,8 +35,12 @@ def main() -> int:
     """Does the work"""
     # Process input arguments
     args = process_input_args()
-    pkg_name = args.npm_package
+
+    # Variables used in the script
     original_dir = getcwd()
+    pkg_name = args.npm_package
+    script_dir = path.dirname(path.abspath(__file__))
+
 
     # Determine if NPM package exists
     execute_command(
@@ -56,7 +60,7 @@ def main() -> int:
         # Install hermes into temp directory
         execute_command(
             msg=f"Installing '{pkg_name}' into temp directory...",
-            cmd=f"npm init -y && npm install rollup hermes-engine {pkg_name}"
+            cmd=f"npm init -y && npm install metro metro-core {pkg_name}"
         )
 
         # Determine entry point
@@ -64,21 +68,21 @@ def main() -> int:
         entry_file = args.entry_file or determine_entry_point(pkg_path)
         entry_path = path.join(pkg_path, entry_file)
 
-        rollup_exe = path.join(".", "node_modules", "rollup", "dist", "bin", "rollup")
+        metro_exe = path.join(".", "node_modules", "metro", "src", "cli.js")
 
         # Building JavaScript bundle from package
         execute_command(
-            msg=f"Building code bundle from '{entry_file}' to '{pkg_name}.bundle'...",
-            cmd=f"{rollup_exe} {entry_path} --file {pkg_name}.bundle --format cjs"
+            msg=f"Building code bundle from '{entry_file}' to '{pkg_name}.bundle.js'...",
+            cmd=f"node {metro_exe} build {entry_path} --out {pkg_name}.bundle --platform android --dev --minify false"
         )
 
         # Find Hermes installed version in project
-        hermes_file = find_installed_hermes(allow_in_rn=False)
+        hermes_file = find_local_hermes(script_dir)
 
         # Compile JS bundle into Hermes binary
         execute_command(
             msg=f"Assembling bundle into Hermes binary to '{pkg_name}_bin.hbc'...",
-            cmd=f"{hermes_file} -O -emit-binary -out={pkg_name}_bin.hbc {pkg_name}.bundle"
+            cmd=f"{hermes_file} -O -emit-binary -out={pkg_name}_bin.hbc {pkg_name}.bundle.js"
         )
 
         outfile_path = path.join(original_dir, f"{pkg_name}.hbc")

@@ -1,4 +1,5 @@
 import argparse
+from genericpath import isfile
 import json
 import platform
 import subprocess
@@ -98,16 +99,20 @@ def check_react_native_version() -> None:
 
 
 # -------------------------------------------------------------
-def determine_subprocess_result(process: subprocess.Popen, mute=False) -> None:
+def determine_subprocess_result(process: subprocess.Popen, raise_errors=False, mute=False) -> None:
     """
     Checks the result from the subprocess and prints out any errors
 
     :param process: the subprocess to analyse
+    :param raise_errors: whether to print or raise errors
     :param mute: optional mute the 'DONE' output
     """
     output, err_output = process.communicate()
     if process.returncode != 0:
         print("FAILED")
+        if raise_errors:
+            raise RuntimeError("Command failed to run")
+
         print("STDOUT DUMP ----------------------------------------------")
         print(output.decode(), end="")
         print("STDERR DUMP ----------------------------------------------")
@@ -228,17 +233,18 @@ def find_installed_hermes(allow_in_rn: bool = True) -> str:
 
 
 # -------------------------------------------------------------
-def execute_command(msg: str, cmd: str) -> None:
+def execute_command(msg: str, cmd: str, raise_errors=False) -> None:
     """
     Spawns a subprocess to execute and OS command and check the result
 
     :param msg: a message to print out before the process runs
     :param cmd: the command to execute in the OS
+    :param raise_errors: raise errors instead of printing them
     """
     sys.stdout.write(msg + " ")
     sys.stdout.flush()
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    determine_subprocess_result(p)
+    determine_subprocess_result(p, raise_errors)
 
 
 # -------------------------------------------------------------
@@ -301,18 +307,42 @@ def main() -> int:
 
         # Building JavaScript bundle from project
         execute_command(
-            msg=f"Building code bundle from '{entry_file}' to 'index.android.bundle'...",
+            msg=f"Building code bundle from '{entry_file}' to 'index.bundle'...",
             cmd=f"npx react-native bundle --dev false --platform android --entry-file "
-                f"{entry_file} --bundle-output index.android.bundle --minify false"
+                f"{entry_file} --bundle-output index.bundle.js --minify false"
         )
 
-        # Compile JS bundle into Hermes binary
-        execute_command(
-            msg="Assembling bundle into Hermes binary to 'index.android.bundle.hbc'...",
-            cmd=f"{hermes_file} -O -emit-binary -out=index.android.bundle.hbc index.android.bundle"
-        )
-        if not args.keep_files:
-            remove("index.android.bundle")
+        try:
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to 'index.bundle.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out=index.bundle.hbc index.bundle.js",
+                raise_errors=True
+            )
+        except RuntimeError:
+            print("Trying to assemble bundle in compatibility mode")
+
+            # Installing babel
+            execute_command(
+                msg=f"Installing 'babel'...",
+                cmd=f"npm install --save-dev @babel/cli @babel/core @babel/preset-env"
+            )
+
+            babel_exe = path.join(".", "node_modules", "@babel", "cli", "bin", "babel.js")
+
+            # Converting ES6 Javascript into ES5
+            execute_command(
+                msg=f"Converting 'index.bundle.js' to ES5 into 'index.babel.bundle.js'...",
+                cmd=f"{babel_exe} --presets @babel/env --no-babelrc index.bundle.js -o index.babel.bundle.js"
+            )
+
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to 'index.bundle.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out=index.bundle.hbc index.babel.bundle.js",
+            )
+            if not args.keep_files:
+                if isfile("index.babel.bundle.js"): remove("index.babel.bundle.js")
 
         # Determine output filename
         outfile_name = args.output or entry_file.split(".")[0] + ".txt"
@@ -320,10 +350,11 @@ def main() -> int:
         # Disassemble Hermes binary in readable Hermes bytecode
         execute_command(
             msg=f"Disassembling Hermes binary into Hermes bytecode to '{outfile_name}'...",
-            cmd=f"{modified_hermes_file} -dump-bytecode index.android.bundle.hbc -out {outfile_name}"
+            cmd=f"{modified_hermes_file} -dump-bytecode index.bundle.hbc -out {outfile_name}"
         )
         if not args.keep_files:
-            remove("index.android.bundle.hbc")
+            if isfile("index.bundle.js"): remove("index.bundle.js")
+            if isfile("index.bundle.hbc"): remove("index.bundle.hbc")
 
         print(
             f"\nHBC Generation successful! File can be found in: '"

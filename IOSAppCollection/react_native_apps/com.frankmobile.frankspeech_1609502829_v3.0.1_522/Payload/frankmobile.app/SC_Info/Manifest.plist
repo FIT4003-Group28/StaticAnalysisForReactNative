@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SinfPaths</key>
+	<array>
+		<string>SC_Info/frankmobile.sinf</string>
+	</array>
+	<key>SinfReplicationPaths</key>
+	<array>
+		<string>Frameworks/OneSignal.framework/SC_Info/OneSignal.sinf</string>
+		<string>Frameworks/OneSignalCore.framework/SC_Info/OneSignalCore.sinf</string>
+		<string>Frameworks/OneSignalExtension.framework/SC_Info/OneSignalExtension.sinf</string>
+		<string>Frameworks/OneSignalOutcomes.framework/SC_Info/OneSignalOutcomes.sinf</string>
+		<string>Frameworks/hermes.framework/SC_Info/hermes.sinf</string>
+		<string>SC_Info/frankmobile.sinf</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,446 @@
+{
+  "identifier" : "83523724",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "01DAFA17",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "boost_1_regular_con_app.social_ios",
+      "referenceName" : "boost_1_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "6.99",
+      "familyShareable" : false,
+      "internalID" : "D4B77421",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "boost_3_regular_con_app.social_ios",
+      "referenceName" : "boost_3_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "0A95081E",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "boost_5_regular_con_app.social_ios",
+      "referenceName" : "boost_5_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "19.99",
+      "familyShareable" : false,
+      "internalID" : "9820C7E5",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "superboost_1_regular_con",
+      "referenceName" : "superboost_1_regular_con",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "19.99",
+      "familyShareable" : false,
+      "internalID" : "1447DC33",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "elite_lifetime_discount_noncon_app.social_ios",
+      "referenceName" : "elite_lifetime_discount_noncon_app.social_ios",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "29.99",
+      "familyShareable" : false,
+      "internalID" : "E33CAD61",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "elite_lifetime_regular_noncon_app.social_ios",
+      "referenceName" : "elite_lifetime_regular_noncon_app.social_ios",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "6.99",
+      "familyShareable" : false,
+      "internalID" : "43C25D06",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "comment_3_regular_con_app.social_ios",
+      "referenceName" : "comment_3_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "12.99",
+      "familyShareable" : false,
+      "internalID" : "FF57AEB3",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "comment_12_regular_con_app.social_ios",
+      "referenceName" : "comment_12_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "19.99",
+      "familyShareable" : false,
+      "internalID" : "0992AE95",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "comment_24_regular_con_app.social_ios",
+      "referenceName" : "comment_24_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "23952D71",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p1_regular_con_app.social_ios",
+      "referenceName" : "coin_p1_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "17.99",
+      "familyShareable" : false,
+      "internalID" : "BA379D80",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p2_regular_con_app.social_ios",
+      "referenceName" : "coin_p2_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "31.99",
+      "familyShareable" : false,
+      "internalID" : "8A4D7B89",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p3_regular_con_app.social_ios",
+      "referenceName" : "coin_p3_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "42.99",
+      "familyShareable" : false,
+      "internalID" : "5DEA4869",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p4_regular_con_app.social_ios",
+      "referenceName" : "coin_p4_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "97.99",
+      "familyShareable" : false,
+      "internalID" : "F7D91E6B",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p5_regular_con_app.social_ios",
+      "referenceName" : "coin_p5_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "179.99",
+      "familyShareable" : false,
+      "internalID" : "59DD6078",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coin_p6_regular_con_app.social_ios",
+      "referenceName" : "coin_p6_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "18.99",
+      "familyShareable" : false,
+      "internalID" : "58C0774D",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "kiss_4_regular_con_app.social_ios",
+      "referenceName" : "kiss_4_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "47.99",
+      "familyShareable" : false,
+      "internalID" : "943321B4",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "kiss_14_regular_con_app.social_ios",
+      "referenceName" : "kiss_14_regular_con_app.social_ios",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "70.99",
+      "familyShareable" : false,
+      "internalID" : "AB652262",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "kiss_30_regular_con_app.social_ios",
+      "referenceName" : "kiss_30_regular_con_app.social_ios",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "D67A42F2",
+      "localizations" : [
+
+      ],
+      "name" : "elite_sub",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2031C32B",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p1m_regular_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "elite_p1m_regular_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "0F8390A7",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p6m_regular_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P6M",
+          "referenceName" : "elite_p6m_regular_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "64.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "5C9F670D",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p1y_regular_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "elite_p1y_regular_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "ED050060",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p1m_discount_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "elite_p1m_discount_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "720AB9F5",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p6m_discount_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P6M",
+          "referenceName" : "elite_p6m_discount_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "49.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "0BDF9054",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "elite_p1y_discount_sub_app.social_ios",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "elite_p1y_discount_sub_app.social_ios",
+          "subscriptionGroupID" : "D67A42F2",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 2
+  }
+}

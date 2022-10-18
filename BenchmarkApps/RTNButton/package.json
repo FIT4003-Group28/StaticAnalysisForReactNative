@@ -1,0 +1,34 @@
+{
+    "name": "rtn-button",
+    "version": "0.0.1",
+    "description": "Showcase a Fabric Native Component with a Button",
+    "react-native": "js/index",
+    "source": "js/index",
+    "files": [
+        "js",
+        "android",
+        "ios",
+        "rtn-button.podspec",
+        "!android/build",
+        "!ios/build",
+        "!**/__tests__",
+        "!**/__fixtures__",
+        "!**/__mocks__"
+    ],
+    "keywords": [
+        "react-native",
+        "ios",
+        "android"
+    ],
+    "license": "MIT",
+    "devDependencies": {},
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*"
+    },
+    "codegenConfig": {
+        "name": "RTNButtonSpecs",
+        "type": "components",
+        "jsSrcsDir": "js"
+    }
+}

@@ -1,6 +1,6 @@
 import argparse
 from os import chdir, getcwd, mkdir, path, rename
-from shutil import rmtree
+from shutil import copy2 as copy, rmtree
 from hbcgen import determine_entry_point, execute_command, find_local_hermes
 
 TEMP_DIR_NAME = "hermes_tmp"
@@ -26,6 +26,10 @@ def process_input_args() -> argparse.Namespace:
     # Allow an option to keep the temp dir after script finishes
     parser.add_argument("--keep-tmp", "-k", action="store_true", default=False, 
         help="Keep the created temp directory when script exits.")
+
+    # Allow an option to dump the bytecode into readable text
+    parser.add_argument("--dump-bytecode", "-d", action="store_true", default=False, 
+        help="Dump the hermes binary file into readable bytecode.")
 
     return parser.parse_args()
 
@@ -112,11 +116,15 @@ def main() -> int:
 
         outfile_path = path.join(original_dir, f"{pkg_name}.hbc")
 
-        # Disassemble Hermes binary in readable Hermes bytecode
-        execute_command(
-            msg=f"Disassembling Hermes binary into Hermes bytecode to '{pkg_name}.hbc'...",
-            cmd=f"{hermes_file} -dump-bytecode {pkg_name}_bin.hbc -out {outfile_path}"
-        )
+        if args.dump_bytecode:
+            # Disassemble Hermes binary in readable Hermes bytecode
+            execute_command(
+                msg=f"Disassembling Hermes binary into Hermes bytecode to '{pkg_name}.hbc'...",
+                cmd=f"{hermes_file} -dump-bytecode {pkg_name}_bin.hbc -out {outfile_path}"
+            )
+        else:
+            # Move compiled Hermes binary to output path
+            copy(f"{pkg_name}_bin.hbc", outfile_path)
 
         print(f"\nHBC Generation successful! File can be found in: '{outfile_path}'")
 

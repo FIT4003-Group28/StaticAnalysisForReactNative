@@ -1,7 +1,7 @@
 import argparse
 import subprocess
 from os import chdir, getcwd, mkdir, path
-from shutil import rmtree
+from shutil import copy2 as copy, rmtree
 from hbcgen import execute_command, find_local_hermes
 
 TEMP_DIR_NAME = "hermes_tmp"
@@ -18,11 +18,15 @@ def process_input_args() -> argparse.Namespace:
 
     # Required input of the NodeJS project directory
     parser.add_argument("js_file", action="store", 
-        help="A JavaScript file to convert into Hermes Bytecode")
+        help="A JavaScript file to convert into Hermes Bytecode.")
 
     # Allow an option to keep the temp dir after script finishes
     parser.add_argument("--keep-tmp", "-k", action="store_true", default=False, 
         help="Keep the created temp directory when script exits.")
+
+    # Allow an option to dump the bytecode into readable text
+    parser.add_argument("--dump-bytecode", "-d", action="store_true", default=False, 
+        help="Dump the hermes binary file into readable bytecode.")
 
     return parser.parse_args()
 
@@ -76,13 +80,17 @@ def main() -> int:
             cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc {file_path}"
         )
 
-        outfile_path = path.join(original_dir, f"{filename}.txt")
+        outfile_path = path.join(original_dir, f"{filename}.hbc")
 
-        # Disassemble Hermes binary in readable Hermes bytecode
-        execute_command(
-            msg=f"Disassembling Hermes binary into Hermes bytecode to '{filename}.hbc'...",
-            cmd=f"{hermes_file} -dump-bytecode {filename}_bin.hbc -out {outfile_path}"
-        )
+        if args.dump_bytecode:
+            # Disassemble Hermes binary in readable Hermes bytecode
+            execute_command(
+                msg=f"Disassembling Hermes binary into Hermes bytecode to '{filename}.hbc'...",
+                cmd=f"{hermes_file} -dump-bytecode {filename}_bin.hbc -out {outfile_path}"
+            )
+        else:
+            # Move compiled Hermes binary to output path
+            copy(f"{filename}_bin.hbc", outfile_path)
 
         print(f"\nHBC Generation successful! File can be found in: '{outfile_path}'")
 

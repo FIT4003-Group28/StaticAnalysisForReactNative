@@ -5,6 +5,7 @@ import platform
 import subprocess
 import sys
 from os import chdir, getcwd, listdir, path, remove
+from shutil import copy2 as copy
 from xml.dom import NotFoundErr
 
 # -------------------------------------------------------------
@@ -33,6 +34,10 @@ def process_input_args() -> argparse.Namespace:
     parser.add_argument("--keep-files", "-k", action="store_true", default=False, 
         help="Keep the generated 'index.android.bundle' and 'index.android.bundle.hbc' "
              "files after the script completes. By default it does not")
+
+    # Allow an option to dump the bytecode into readable text
+    parser.add_argument("--dump-bytecode", "-d", action="store_true", default=False, 
+        help="Dump the hermes binary file into readable bytecode.")
 
     return parser.parse_args()
 
@@ -345,13 +350,20 @@ def main() -> int:
                 if isfile("index.babel.bundle.js"): remove("index.babel.bundle.js")
 
         # Determine output filename
-        outfile_name = args.output or entry_file.split(".")[0] + ".txt"
+        outfile_name = args.output or entry_file.split(".")[0] + ".hbc"
 
-        # Disassemble Hermes binary in readable Hermes bytecode
-        execute_command(
-            msg=f"Disassembling Hermes binary into Hermes bytecode to '{outfile_name}'...",
-            cmd=f"{modified_hermes_file} -dump-bytecode index.bundle.hbc -out {outfile_name}"
-        )
+        if args.dump_bytecode:
+            # Disassemble Hermes binary in readable Hermes bytecode
+            execute_command(
+                msg=f"Disassembling Hermes binary into Hermes bytecode to '{outfile_name}'...",
+                cmd=f"{modified_hermes_file} -dump-bytecode index.bundle.hbc -out {outfile_name}"
+            )
+        else:
+            # Move compiled Hermes binary to output path
+            copy("index.bundle.hbc", outfile_name)
+            remove("index.bundle.hbc")
+
+        # Remove temp files
         if not args.keep_files:
             if isfile("index.bundle.js"): remove("index.bundle.js")
             if isfile("index.bundle.hbc"): remove("index.bundle.hbc")

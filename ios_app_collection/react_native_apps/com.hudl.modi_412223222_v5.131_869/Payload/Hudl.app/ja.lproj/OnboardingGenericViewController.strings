@@ -1,9 +1,0 @@
-/* Class = "UIButton"; normalTitle = "Complete Game"; ObjectID = "3M4-L3-aLV"; */
-"3M4-L3-aLV.normalTitle" = "ゲームを完了";
-
-/* Class = "UILabel"; text = "SECTION HEADER"; ObjectID = "g9j-Qe-2LC"; Note = "This is a placeholder. Please don't translate it."; */
-"g9j-Qe-2LC.text" = "SECTION HEADER";
-
-/* Class = "UILabel"; text = "This is an instruction to do something."; ObjectID = "Uc0-fh-5rm"; Note = "This is a placeholder. Please don't translate it."; */
-"Uc0-fh-5rm.text" = "This is an instruction to do something.";
-

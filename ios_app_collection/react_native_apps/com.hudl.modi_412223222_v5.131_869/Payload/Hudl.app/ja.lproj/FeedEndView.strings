@@ -1,9 +1,0 @@
-/* Class = "UILabel"; text = "Want more to look at?"; ObjectID = "KAr-NQ-pNO"; */
-"KAr-NQ-pNO.text" = "もっと見たいですか?";
-
-/* Class = "UILabel"; text = "No More Posts"; ObjectID = "QD1-co-Obz"; */
-"QD1-co-Obz.text" = "投稿がありません";
-
-/* Class = "UIButton"; normalTitle = "Find Athletes"; ObjectID = "v3R-Gf-com"; */
-"v3R-Gf-com.normalTitle" = "アスリートを検索";
-

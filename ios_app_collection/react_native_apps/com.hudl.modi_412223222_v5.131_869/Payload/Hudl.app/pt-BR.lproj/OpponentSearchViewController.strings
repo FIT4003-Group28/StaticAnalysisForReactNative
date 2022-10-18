@@ -1,9 +1,0 @@
-/* Class = "UITextField"; placeholder = "Enter team name"; ObjectID = "KuI-bJ-zgA"; */
-"KuI-bJ-zgA.placeholder" = "Digite o nome do time";
-
-/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Q9s-lu-5Oo"; */
-"Q9s-lu-5Oo.normalTitle" = "Cancelar";
-
-/* Class = "UILabel"; text = "Opponent"; ObjectID = "Wul-SX-VYz"; */
-"Wul-SX-VYz.text" = "Adversário";
-

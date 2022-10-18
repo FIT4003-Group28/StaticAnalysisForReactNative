@@ -1,9 +1,0 @@
-/* Class = "UILabel"; text = "Want some more practice? Try the practice game to tag some more plays."; ObjectID = "B6A-fL-3cl"; */
-"B6A-fL-3cl.text" = "もう少し練習したいですか? 練習ゲームを使ってもう何プレーかをタグ付けしてみましょう.";
-
-/* Class = "UILabel"; text = "You're a tagging pro!"; ObjectID = "Hmp-eX-Rpi"; */
-"Hmp-eX-Rpi.text" = "あなたはタギングのプロです!";
-
-/* Class = "UILabel"; text = "This is a practice game. It will not affect your stats."; ObjectID = "smA-6n-Xqr"; */
-"smA-6n-Xqr.text" = "これは練習ゲームです. スタッツには影響しません.";
-

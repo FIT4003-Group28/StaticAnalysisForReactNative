@@ -1,6 +1,0 @@
-/* Class = "UITableViewCell"; accessibilityLabel = "Loading Indicator"; ObjectID = "2"; */
-"2.accessibilityLabel" = "ローディングインジケーター";
-
-/* Class = "UILabel"; text = "Loading..."; ObjectID = "4"; */
-"4.text" = "ロード中...";
-

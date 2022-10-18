@@ -1,9 +1,0 @@
-/* Class = "UIButton"; normalTitle = "Finish Game and Upload"; ObjectID = "Bgs-gJ-meW"; */
-"Bgs-gJ-meW.normalTitle" = "ゲームを終了してアップロード";
-
-/* Class = "UIButton"; normalTitle = "Tag Overtime"; ObjectID = "MkQ-Ih-F7p"; */
-"MkQ-Ih-F7p.normalTitle" = "オーバータイムをタグ付け";
-
-/* Class = "UIButton"; normalTitle = "Resume Tagging"; ObjectID = "wPs-QW-t9K"; */
-"wPs-QW-t9K.normalTitle" = "タギングを再開";
-

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="ar_beta_banner_rotation_degrees">45</dimen>
-    <dimen name="ar_beta_banner_rotation_pivot_x">@dimen/ar_beta_banner_width</dimen>
-    <dimen name="google_navigation_item_shape_corner_size_left">24dp</dimen>
-    <dimen name="google_navigation_item_shape_corner_size_right">0dp</dimen>
-    <dimen name="google_navigation_item_shape_margin_end">0dp</dimen>
-    <dimen name="google_navigation_item_shape_margin_start">8dp</dimen>
-</resources>

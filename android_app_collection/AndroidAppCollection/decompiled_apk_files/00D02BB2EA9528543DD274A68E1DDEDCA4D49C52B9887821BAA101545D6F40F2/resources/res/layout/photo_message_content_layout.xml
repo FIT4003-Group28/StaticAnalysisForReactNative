@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <com.google.android.libraries.messaging.lighter.photos.ui.common.RoundedImageView android:id="@+id/photo_content_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" android:maxWidth="@dimen/photos_bubble_cell_max_dim" android:maxHeight="@dimen/photos_bubble_cell_max_dim" android:contentDescription="@string/content_description_photo_message_list_received"/>
-        <ImageView android:layout_gravity="center" android:id="@+id/photos_icon" android:visibility="gone" android:layout_width="@dimen/photos_bubble_cell_min_dim" android:layout_height="@dimen/photos_bubble_cell_min_dim" android:src="0x7f0807cf" android:scaleType="center" android:tint="@color/google_grey700" android:contentDescription="@string/content_description_photo_message_list_received"/>
-    </FrameLayout>
-</merge>

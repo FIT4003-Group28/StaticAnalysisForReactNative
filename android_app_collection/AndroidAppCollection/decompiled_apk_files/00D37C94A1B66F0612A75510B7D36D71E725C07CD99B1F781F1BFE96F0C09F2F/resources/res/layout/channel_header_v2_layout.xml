@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:rowCount="1" android:columnCount="2">
-    <FrameLayout android:layout_gravity="center_vertical" android:id="@+id/channel_avatar_layout_v2" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="104dp" android:layout_height="104dp" android:layout_column="0" android:layout_row="0">
-        <com.google.android.libraries.youtube.common.ui.CircularImageView android:layout_gravity="center" android:id="@+id/channel_avatar_v2" android:background="?attr/ytBrandBackgroundSolid" android:layout_width="72dp" android:layout_height="72dp" android:src="0x7f08058f" android:scaleType="centerCrop" android:contentDescription="@null"/>
-        <View android:layout_gravity="center" android:id="@+id/channel_avatar_ring" android:background="?attr/reelsLockupStrokeChannelHome" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:scaleType="centerCrop"/>
-    </FrameLayout>
-    <ViewStub android:layout_gravity="center" android:id="@+id/channel_info_stub_v2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:layout_row="0"/>
-    <ViewStub android:layout_gravity="center" android:id="@+id/channel_info_stub_with_sponsorship_v2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:layout_row="0"/>
-</GridLayout>

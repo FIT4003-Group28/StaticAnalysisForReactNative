@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/mod_daynight_white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.google.android.apps.gmm.base.mod.components.appbar.ModAppBar android:id="@+id/modAppBar" android:layout_width="match_parent" android:layout_height="wrap_content" app:liftOnScroll="true"/>
-        <android.support.v4.widget.NestedScrollView android:id="@+id/scrollingContent" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:layout_behavior="com.google.android.apps.gmm.ugc.post.editor.DismissKeyboardScrollingViewBehavior">
-            <include layout="@layout/editor_content"/>
-        </android.support.v4.widget.NestedScrollView>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</FrameLayout>

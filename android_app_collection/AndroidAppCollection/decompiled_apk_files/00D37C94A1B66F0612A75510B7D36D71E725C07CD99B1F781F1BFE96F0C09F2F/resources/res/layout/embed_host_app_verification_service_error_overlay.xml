@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView android:textColor="@color/yt_white1" android:textColorLink="@color/yt_white1" android:gravity="center" android:id="@+id/embed_host_app_verification_error_text_view" android:background="@color/darker_transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true"/>
-</RelativeLayout>

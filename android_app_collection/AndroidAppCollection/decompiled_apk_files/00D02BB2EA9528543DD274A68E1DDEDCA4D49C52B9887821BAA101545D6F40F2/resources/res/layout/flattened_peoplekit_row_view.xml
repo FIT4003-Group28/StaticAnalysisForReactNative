@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <include android:id="@+id/peoplekit_listview_flattened_row" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/single_peoplekit_row_view"/>
-    <include android:id="@+id/peoplekit_listview_flattened_permissions_row" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/flattened_peoplekit_permissions_row"/>
-    <include android:id="@+id/peoplekit_listview_no_contacts_row" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/flattened_peoplekit_no_contacts_row"/>
-    <include android:id="@+id/peoplekit_listview_no_results_fullscreen" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/peoplekit_listview_no_results"/>
-</RelativeLayout>

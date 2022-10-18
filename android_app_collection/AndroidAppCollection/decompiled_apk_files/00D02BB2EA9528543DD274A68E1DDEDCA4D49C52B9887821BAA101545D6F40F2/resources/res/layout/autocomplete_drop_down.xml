@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
-    <TextView android:textAppearance="?android:attr/textAppearanceLargePopupMenu" android:ellipsize="end" android:id="@+id/autocomplete_text_main" android:layout_width="match_parent" android:layout_height="@dimen/autocomplete_item_text_main_height" android:maxLines="1"/>
-    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:ellipsize="end" android:id="@+id/autocomplete_text_detail" android:layout_width="match_parent" android:layout_height="@dimen/autocomplete_item_text_detail_height" android:maxLines="1"/>
-</LinearLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.apps.gmm.tutorial.view.PullUpTutorialView xmlns:android="http://schemas.android.com/apk/res/android" style="@style/MatchParentContainer">
-    <LinearLayout android:gravity="bottom" android:id="@+id/tutorial_pull_up_layout" android:paddingLeft="80dp" android:paddingRight="80dp" android:paddingStart="80dp" android:paddingEnd="80dp" style="@style/MatchParentContainer">
-        <TextView android:textAppearance="@style/QuHeadline" android:textColor="@color/quantum_greywhite1000" android:text="@string/TUTORIAL_PULL_UP_TITLE" style="@style/TextBox"/>
-        <TextView android:textAppearance="@style/QuSubhead" android:textColor="@color/quantum_greywhite1000" android:layout_marginTop="8dp" android:text="@string/TUTORIAL_PULL_UP_HINT" android:alpha="0.54" style="@style/TextBox"/>
-        <Button android:textAppearance="@style/QuButton" android:textColor="@color/quantum_greywhite1000" android:id="@+id/tutorial_pull_up_got_it" android:background="@drawable/quantum_flat_button_blue_background_selector" android:paddingLeft="8dp" android:paddingRight="8dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="36dp" android:layout_marginTop="30dp" android:minWidth="64dp" android:text="@string/TUTORIAL_GOT_IT" android:textAllCaps="true" android:paddingStart="8dp" android:paddingEnd="8dp" style="@style/Button"/>
-        <ImageView android:layout_gravity="center_horizontal" android:src="0x7f080418" style="@style/Image"/>
-    </LinearLayout>
-</com.google.android.apps.gmm.tutorial.view.PullUpTutorialView>

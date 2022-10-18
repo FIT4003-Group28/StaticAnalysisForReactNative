@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="16sp" android:textColor="@color/qu_daynight_black_alpha_87" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@+id/text1" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="inherit" android:paddingStart="4dp" android:paddingEnd="4dp"/>

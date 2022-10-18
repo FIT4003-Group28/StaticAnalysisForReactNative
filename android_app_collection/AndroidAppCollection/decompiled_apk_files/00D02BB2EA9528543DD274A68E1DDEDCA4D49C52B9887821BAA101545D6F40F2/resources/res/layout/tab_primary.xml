@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.apps.gmm.base.mod.components.tabs.GmmTabLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/Theme.GoogleMaterial.Light" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/mod_daynight_blue600" app:tabPaddingBottom="10dp" app:tabPaddingEnd="16dp" app:tabPaddingStart="16dp" app:tabPaddingTop="18dp" style="@style/Widget.GoogleMaterial.TabLayout"/>

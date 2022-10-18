@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/res_0x7f08001d_comms_avd_typing_indicator_2_vd_theme_24__0">
-    <target android:name="group1" android:animation="@animator/comms_avd_typing_indicator_animator_1"/>
-    <target android:name="group2" android:animation="@animator/comms_avd_typing_indicator_animator_2"/>
-    <target android:name="group3" android:animation="@animator/comms_avd_typing_indicator_animator_3"/>
-</animated-vector>

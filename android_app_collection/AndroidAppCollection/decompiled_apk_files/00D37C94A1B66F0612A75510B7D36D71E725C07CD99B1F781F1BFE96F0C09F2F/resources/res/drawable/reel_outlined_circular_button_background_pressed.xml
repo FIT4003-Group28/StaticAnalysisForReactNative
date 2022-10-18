@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
-    <solid android:color="?attr/ytOverlayIconInactive"/>
-    <stroke android:width="@dimen/reel_edit_delete_button_border_width" android:color="?attr/ytIconActiveOther"/>
-    <size android:height="@dimen/reel_edit_delete_button_size" android:width="@dimen/reel_edit_delete_button_size"/>
-</shape>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="0x7f080489" android:left="@dimen/video_trim_view_handle_left_padding" android:right="@dimen/video_trim_view_handle_right_padding"/>
-</layer-list>

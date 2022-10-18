@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.libraries.social.peoplekit.common.analytics.PeopleKitControllerLoggingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <HorizontalScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="horizontal" android:id="@+id/peoplekit_ghost_facerows_items" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    </HorizontalScrollView>
-    <android.support.v7.widget.RecyclerView android:id="@+id/peoplekit_facerows_items" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</com.google.android.libraries.social.peoplekit.common.analytics.PeopleKitControllerLoggingRelativeLayout>

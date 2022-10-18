@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/ytTextAppearanceBody2a" android:textColor="?attr/ytTextPrimary" android:id="@+id/dialog_message" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" android:paddingStart="24dp" android:paddingEnd="24dp" app:hyperlinksClickable="true"/>
-    <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <android.widget.Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/ytTextAppearanceButton" android:ellipsize="end" android:gravity="center" android:id="@+id/negative_button" android:layout_width="wrap_content" android:layout_height="36dp" android:maxLines="1" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_marginEnd="8dp"/>
-        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?attr/ytTextAppearanceButton" android:ellipsize="end" android:gravity="center" android:id="@+id/positive_button" android:layout_width="wrap_content" android:layout_height="36dp" android:maxLines="1" android:paddingStart="16dp" android:paddingEnd="16dp"/>
-    </LinearLayout>
-</LinearLayout>

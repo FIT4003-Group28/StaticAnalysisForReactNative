@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/VerticalContainer">
-    <FrameLayout android:id="@+id/statusbar_container" style="@style/Container"/>
-    <FrameLayout style="@style/Page">
-        <include layout="@layout/generic_newprogress_content"/>
-        <com.google.android.apps.gmm.shared.webview.DarkModeAwareWebView android:id="@+id/webview_container" style="@style/MatchParentContainer"/>
-    </FrameLayout>
-</LinearLayout>

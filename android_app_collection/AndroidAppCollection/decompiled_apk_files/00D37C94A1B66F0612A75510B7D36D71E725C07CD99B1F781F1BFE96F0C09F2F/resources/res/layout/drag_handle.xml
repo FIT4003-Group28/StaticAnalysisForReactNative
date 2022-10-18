@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="16dp" android:layout_height="16dp" android:src="0x7f080a33" android:scaleType="center" android:tint="?attr/ytTextPrimary" android:contentDescription="@string/accessibility_drag_handle"/>

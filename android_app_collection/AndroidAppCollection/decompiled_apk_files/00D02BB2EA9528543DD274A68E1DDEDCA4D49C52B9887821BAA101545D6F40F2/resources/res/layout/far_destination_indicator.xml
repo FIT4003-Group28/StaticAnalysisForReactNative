@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="top" android:orientation="horizontal" android:background="@drawable/far_destination_callout_background" android:paddingLeft="15dp" android:paddingTop="15dp" android:paddingRight="15dp" android:paddingBottom="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/destination_pin_view" android:layout_width="wrap_content" android:layout_height="55dp" android:src="@drawable/destination_pin" android:adjustViewBounds="true" android:paddingEnd="14dp"/>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/step_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:maxWidth="160dp" android:maxLines="2" android:singleLine="false" android:lineSpacingExtra="3dp" android:fontFamily="sans-serif"/>
-        <TextView android:textSize="17sp" android:textStyle="normal" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/distance_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0m away" android:fontFamily="sans-serif"/>
-    </LinearLayout>
-</LinearLayout>

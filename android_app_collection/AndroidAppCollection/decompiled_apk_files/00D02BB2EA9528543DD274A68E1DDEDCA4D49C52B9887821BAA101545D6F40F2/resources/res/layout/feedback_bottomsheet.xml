@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/google_blue700" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RadioGroup android:orientation="horizontal" android:id="@+id/thumbs_radio_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
-        <RadioButton android:id="@+id/feedback_thumbs_up_button" android:background="@drawable/thumbs_up_inset" android:layout_width="48dp" android:layout_height="48dp" android:checked="false" android:button="@null" android:contentDescription="@string/ARWN_FEEDBACK_THUMBS_UP" android:backgroundTint="@color/thumbs_up_color_filter"/>
-        <RadioButton android:id="@+id/feedback_thumbs_down_button" android:background="@drawable/thumbs_down_inset" android:layout_width="48dp" android:layout_height="48dp" android:checked="false" android:button="@null" android:contentDescription="@string/ARWN_FEEDBACK_THUMBS_DOWN" android:backgroundTint="@color/thumbs_down_color_filter"/>
-    </RadioGroup>
-    <TextView android:textStyle="bold" android:textColor="@android:color/white" android:id="@android:id/title" android:paddingTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ARWN_FEEDBACK_BAR_TITLE" android:layout_toStartOf="@+id/thumbs_radio_group" android:layout_alignParentStart="true"/>
-    <TextView android:textColor="@android:color/white" android:textColorLink="@android:color/white" android:gravity="center_vertical" android:id="@+id/feedback_description" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_below="@android:id/title" android:layout_toStartOf="@+id/thumbs_radio_group" android:layout_alignParentStart="true"/>
-</RelativeLayout>

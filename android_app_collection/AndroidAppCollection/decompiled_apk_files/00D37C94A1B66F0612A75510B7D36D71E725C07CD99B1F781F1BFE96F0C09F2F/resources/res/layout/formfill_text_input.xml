@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp">
-    <com.google.android.material.textfield.TextInputLayout android:textColorHint="?attr/adText2" android:id="@+id/text_input_layout" android:paddingTop="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="4dp" android:paddingEnd="4dp" android:accessibilityLiveRegion="polite" app:errorTextAppearance="@style/AdsErrorTextAppearance" app:hintTextAppearance="@style/AdsHintTextAppearance">
-        <com.google.android.libraries.youtube.ads.ui.EditTextWithHelpIcon android:theme="@style/AdsTextInputLayoutStyle" android:textSize="14sp" android:textColor="?attr/adText1" android:textColorHint="?attr/ytIconInactive" android:id="@+id/edit_text" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="-9dp" android:minHeight="53dp" android:singleLine="true" android:inputType="text" android:translationY="-4dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
-    <android.support.v7.widget.AppCompatImageView android:id="@+id/icon" android:clickable="false" android:layout_width="24dp" android:layout_height="24dp" android:tint="?attr/ytTextPrimary"/>
-    <FrameLayout android:id="@+id/spinner_header_item_container" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <android.support.v7.widget.AppCompatImageView android:id="@+id/spinner_arrow" android:clickable="false" android:layout_width="24dp" android:layout_height="24dp" android:src="0x7f080a40" android:tint="?attr/ytTextPrimary" android:layout_marginStart="1dp" android:layout_marginEnd="0dp"/>
-</LinearLayout>

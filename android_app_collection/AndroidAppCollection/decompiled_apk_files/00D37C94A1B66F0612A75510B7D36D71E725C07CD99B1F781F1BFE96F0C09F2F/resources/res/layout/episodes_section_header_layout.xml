@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.google.android.apps.youtube.app.red.presenter.NavigationDropdownView android:id="@+id/season_picker" android:layout_width="0dp" android:layout_height="wrap_content" yt:layout_constraintBottom_toBottomOf="0" yt:layout_constraintEnd_toEndOf="0" yt:layout_constraintStart_toStartOf="0" yt:layout_constraintTop_toTopOf="0" yt:layout_constraintWidth_max="@dimen/premium_page_max_content_width"/>
-</android.support.constraint.ConstraintLayout>

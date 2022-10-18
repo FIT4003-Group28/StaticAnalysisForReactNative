@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.libraries.youtube.livechat.ui.view.LiveChatRecyclerView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/conversation_list" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:dividerHeight="0dp" android:importantForAccessibility="no" android:layout_marginStart="@dimen/live_chat_overlay_message_container_margin" android:layout_marginEnd="@dimen/live_chat_overlay_message_container_margin"/>

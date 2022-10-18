@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.libraries.youtube.common.ui.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:id="@+id/reel_pivot_button" android:background="?attr/ytStaticGrey" android:visibility="gone" android:layout_width="@dimen/reel_player_pivot_width" android:layout_height="@dimen/reel_player_pivot_height" android:foreground="@drawable/reel_pivot_button_rounded_outline" android:contentDescription="@null" yt:corners="@dimen/reel_player_pivot_button_corner_radius">
-    <ImageView android:id="@+id/reel_pivot_thumbnail" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="@null"/>
-</com.google.android.libraries.youtube.common.ui.RoundedFrameLayout>

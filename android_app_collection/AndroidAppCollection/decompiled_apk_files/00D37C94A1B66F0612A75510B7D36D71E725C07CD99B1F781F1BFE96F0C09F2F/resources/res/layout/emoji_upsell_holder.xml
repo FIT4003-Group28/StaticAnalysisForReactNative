@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:id="@+id/locked_emoji_container" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="44dp" android:minWidth="44dp">
-    <ImageView android:layout_gravity="center" android:id="@+id/emoji" android:layout_width="wrap_content" android:layout_height="24dp" android:minWidth="24dp"/>
-    <ImageView android:layout_gravity="center" android:id="@+id/lock_behind" android:layout_width="wrap_content" android:layout_height="12dp" android:src="@drawable/lock_behind" android:tint="?attr/ytTextPrimaryInverse" android:minWidth="12dp" android:layout_alignBottom="@+id/emoji" android:layout_alignEnd="@+id/emoji"/>
-    <ImageView android:layout_gravity="center" android:id="@+id/lock_front" android:layout_width="wrap_content" android:layout_height="12dp" android:src="@drawable/lock_front" android:tint="?attr/ytTextPrimary" android:minWidth="12dp" android:layout_alignBottom="@+id/emoji" android:layout_alignEnd="@+id/emoji"/>
-</RelativeLayout>

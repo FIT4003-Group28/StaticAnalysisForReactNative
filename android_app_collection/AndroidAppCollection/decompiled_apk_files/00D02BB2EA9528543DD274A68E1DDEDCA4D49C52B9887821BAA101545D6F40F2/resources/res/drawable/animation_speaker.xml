@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/speaker_animation" android:oneshot="false">
-    <item android:duration="200" android:drawable="0x7f080924"/>
-    <item android:duration="200" android:drawable="0x7f080925"/>
-    <item android:duration="200" android:drawable="0x7f080926"/>
-    <item android:duration="200" android:drawable="0x7f080925"/>
-</animation-list>

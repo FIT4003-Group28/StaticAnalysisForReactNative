@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:id="@+id/card_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/EndscreenElement">
-    <FrameLayout android:id="@+id/image_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <FrameLayout android:layout_gravity="start|top" android:background="@drawable/endscreen_element_gradient_top" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:ellipsize="end" android:layout_gravity="start|top" android:id="@+id/title_text" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" yt:robotoFont="0" style="@style/EndscreenElementText"/>
-    </FrameLayout>
-    <FrameLayout android:layout_gravity="end|bottom" android:id="@+id/icon_container" android:paddingLeft="3dp" android:paddingTop="3dp" android:paddingRight="3dp" android:paddingBottom="3dp" android:layout_width="@dimen/endscreen_icon_size" android:layout_height="@dimen/endscreen_icon_size" style="@style/VideoDurationOverlay"/>
-    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="12sp" android:textColor="@color/quantum_white_100" android:gravity="center" android:layout_gravity="end|bottom" android:orientation="horizontal" android:id="@+id/cta_text" android:background="@color/quantum_black_100" android:paddingLeft="5dp" android:paddingRight="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="24dp" android:alpha="0.8"/>
-</FrameLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="@dimen/photo_post_media_padding" android:layout_marginEnd="@dimen/photo_post_media_padding">
-    <androidx.cardview.widget.CardView android:id="@+id/imageCard" android:layout_width="wrap_content" android:layout_height="match_parent" app:cardCornerRadius="@dimen/photo_post_media_corner_radius" app:cardElevation="@dimen/photo_post_media_elevation" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
-        <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
-    </androidx.cardview.widget.CardView>
-    <com.google.android.material.chip.Chip android:id="@+id/buttonEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/photo_post_media_elevation" app:layout_constraintBottom_toBottomOf="@+id/imageCard" app:layout_constraintStart_toStartOf="@+id/imageCard" style="@style/PhotoPostMediaCarouselEditChip"/>
-</android.support.constraint.ConstraintLayout>

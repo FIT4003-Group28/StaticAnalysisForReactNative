@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.libraries.youtube.common.ui.YouTubeTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:textSize="@dimen/small_font_size" android:ellipsize="end" android:gravity="center" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minHeight="36dp" yt:robotoFont="6"/>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <drawable name="connection_toolbar_back_arrow">?unknown_ref: 7f080670</drawable>
-    <drawable name="selectable_item_background_solid_dark">@drawable/selectable_item_background_solid</drawable>
-    <drawable name="selectable_item_background_solid_light">@drawable/selectable_item_background_solid</drawable>
-</resources>

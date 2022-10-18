@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackgroundBorderless" android:focusable="true" android:clickable="true" android:layout_width="@dimen/offline_commute_playlist_item_image_width" android:layout_height="@dimen/offline_commute_playlist_item_image_double_height">
-    <ImageView android:id="@+id/icon_view" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginBottom="10dp" android:src="0x7f08067a" android:tint="?attr/ytCallToAction" android:contentDescription="@null"/>
-    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textColor="?attr/ytCallToAction" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true"/>
-</LinearLayout>

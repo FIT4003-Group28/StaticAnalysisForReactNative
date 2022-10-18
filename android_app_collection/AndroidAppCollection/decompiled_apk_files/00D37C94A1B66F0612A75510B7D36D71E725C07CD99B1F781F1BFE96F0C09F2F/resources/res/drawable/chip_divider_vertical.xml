@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:left="@dimen/chip_divider_line_padding_left" android:right="@dimen/chip_divider_line_padding_right">
-        <shape android:shape="rectangle">
-            <solid android:color="?attr/yt10PercentLayer"/>
-        </shape>
-    </item>
-</layer-list>

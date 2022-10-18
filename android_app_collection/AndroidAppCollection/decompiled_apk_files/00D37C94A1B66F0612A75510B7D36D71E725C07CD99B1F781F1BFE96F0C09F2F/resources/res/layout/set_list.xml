@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.libraries.youtube.rendering.ui.widget.loadingframe.LoadingFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:background="#ff222222" android:layout_width="match_parent" android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView android:id="@+id/set_list" android:paddingBottom="10dp" android:focusable="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</com.google.android.libraries.youtube.rendering.ui.widget.loadingframe.LoadingFrameLayout>

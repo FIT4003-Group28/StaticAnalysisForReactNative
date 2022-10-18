@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto">
-    <item android:icon="0x7f080829" android:id="@+id/menu_upload" android:orderInCategory="40" android:title="@string/menu_upload" yt:showAsAction="always"/>
-</menu>

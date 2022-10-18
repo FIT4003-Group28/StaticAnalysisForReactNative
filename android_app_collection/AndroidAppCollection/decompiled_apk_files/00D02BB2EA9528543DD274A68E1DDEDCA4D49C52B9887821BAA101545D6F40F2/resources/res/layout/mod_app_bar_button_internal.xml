@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/mod_app_bar_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/mod_app_bar_button_icon" android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="center"/>
-</FrameLayout>

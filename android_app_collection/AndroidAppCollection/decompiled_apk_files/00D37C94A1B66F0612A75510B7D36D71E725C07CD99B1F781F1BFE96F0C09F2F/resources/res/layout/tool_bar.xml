@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="4dp" yt:navigationContentDescription="@string/accessibility_close_button" yt:navigationIcon="0x7f0806b5" yt:titleTextColor="?attr/ytTextPrimary"/>

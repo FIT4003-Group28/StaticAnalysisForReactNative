@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/survey_controls_container" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.google.android.material.button.MaterialButton android:textSize="14sp" android:layout_gravity="end" android:id="@+id/survey_next" android:paddingLeft="8dp" android:paddingTop="10dp" android:paddingRight="8dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="8dp" android:layout_marginRight="16dp" android:layout_marginBottom="12dp" android:minWidth="48dp" android:text="@string/survey_next" style="@style/SurveyFlatButton"/>
-    <include android:id="@+id/survey_controls_divider" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" layout="@layout/survey_divider"/>
-    <include android:id="@+id/survey_controls_legal_text" layout="@layout/survey_legal_text"/>
-</LinearLayout>

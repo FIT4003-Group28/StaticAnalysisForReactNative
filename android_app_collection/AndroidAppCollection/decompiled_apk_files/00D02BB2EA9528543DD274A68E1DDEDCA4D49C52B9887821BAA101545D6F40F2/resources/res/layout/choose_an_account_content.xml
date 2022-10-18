@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.widget.RecyclerView android:id="@+id/account_management" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/OneGoogle.AccountMenu.RecyclerView"/>
-    <android.support.v7.widget.RecyclerView android:id="@+id/action_groups" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/OneGoogle.AccountMenu.RecyclerView"/>
-</merge>

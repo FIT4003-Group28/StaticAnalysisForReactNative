@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.apps.gmm.tutorial.view.UgcTasksSearchButtonTutorialView xmlns:android="http://schemas.android.com/apk/res/android" style="@style/MatchParentContainer">
-    <ImageView android:id="@+id/tutorial_highlight_container" android:background="0x7f080985" android:contentDescription="@string/UGC_TASKS_GOOGLE_SEARCH" style="@style/WrapContentContainer"/>
-    <LinearLayout android:gravity="bottom" android:paddingLeft="40dp" android:paddingRight="40dp" android:paddingStart="40dp" android:paddingEnd="40dp" style="@style/MatchParentContainer">
-        <TextView android:textAppearance="@style/QuSubhead" android:textColor="@color/quantum_greywhite1000" android:layout_gravity="center_horizontal" android:text="@string/UGC_TASKS_SEARCH_BUTTON_DESCRIPTION" style="@style/TextBox"/>
-        <Button android:textAppearance="@style/QuButton" android:textColor="@color/qu_daynight_white" android:layout_gravity="center_horizontal" android:id="@+id/tutorial_ugc_tasks_search_button_got_it" android:background="@drawable/quantum_flat_button_daynight_blue_background_selector" android:paddingLeft="24dp" android:paddingTop="8dp" android:paddingRight="24dp" android:paddingBottom="8dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="100dp" android:minWidth="64dp" android:text="@string/TUTORIAL_GOT_IT" android:textAllCaps="true" style="@style/Button"/>
-    </LinearLayout>
-</com.google.android.apps.gmm.tutorial.view.UgcTasksSearchButtonTutorialView>

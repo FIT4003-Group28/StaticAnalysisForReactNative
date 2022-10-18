@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="48dp" android:layout_height="48dp">
-    <com.google.android.libraries.youtube.player.features.quickseek.overlay.TapBloomView android:layout_gravity="center" android:id="@+id/autonav_tap_bloom_view" android:focusable="false" android:visibility="gone" android:layout_width="@dimen/autonav_toggle_tap_bloom_size" android:layout_height="@dimen/autonav_toggle_tap_bloom_size" android:contentDescription="@null" app:endColor="?attr/ytOverlayButtonPrimary" app:endSize="24dp" app:startColor="@android:color/transparent" app:startSize="24dp"/>
-    <android.support.v7.widget.SwitchCompat android:theme="@style/AutonavSwitch" android:layout_gravity="center" android:id="@+id/autonav_toggle_button" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@null"/>
-</FrameLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="end" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="48dp" android:layout_height="match_parent">
-    <ImageButton android:theme="@style/LightBorderlessButton" android:layout_gravity="top" android:id="@+id/back_button" android:layout_width="match_parent" android:layout_height="0dp" android:src="0x7f0807e3" android:layout_weight="1" android:contentDescription="@string/TRANSIT_GUIDANCE_NOTIFICATION_ACCESSIBILITY_PREVIOUS_STEP" style="@style/Widget.AppCompat.Button.Borderless"/>
-    <ImageButton android:theme="@style/LightBorderlessButton" android:layout_gravity="bottom" android:id="@+id/forward_button" android:layout_width="match_parent" android:layout_height="0dp" android:src="0x7f0807dc" android:layout_weight="1" android:contentDescription="@string/TRANSIT_GUIDANCE_NOTIFICATION_ACCESSIBILITY_NEXT_STEP" style="@style/Widget.AppCompat.Button.Borderless"/>
-</LinearLayout>

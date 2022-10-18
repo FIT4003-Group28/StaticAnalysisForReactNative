@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set>
-    <alpha android:interpolator="@android:interpolator/linear_out_slow_in" android:duration="100" android:fromAlpha="0.1" android:toAlpha="1"/>
-    <scale android:interpolator="@android:interpolator/linear_out_slow_in" android:duration="100" android:pivotX="100%" android:pivotY="0%" android:fromXScale="0.75" android:toXScale="1" android:fromYScale="0.75" android:toYScale="1"/>
-</set>

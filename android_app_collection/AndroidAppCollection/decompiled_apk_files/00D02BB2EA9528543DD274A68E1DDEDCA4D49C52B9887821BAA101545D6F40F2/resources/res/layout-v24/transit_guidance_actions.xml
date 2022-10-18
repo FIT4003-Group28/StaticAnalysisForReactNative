@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/actions" android:layout_width="match_parent" android:layout_height="56dp" style="@style/GuidanceActionsBackground">
-    <LinearLayout android:id="@+id/action_stop" android:layout_width="wrap_content" android:layout_height="match_parent">
-        <Button android:textColor="@color/quantum_googblue" android:ellipsize="end" android:gravity="start|center_vertical" android:layout_gravity="center" android:id="@+id/action_stop_text" android:background="?android:attr/selectableItemBackground" android:clickable="false" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/TRANSIT_GUIDANCE_NOTIFICATION_ACTION_STOP" android:singleLine="true" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginStart="4dp" style="@android:style/Widget.Material.Light.Button.Borderless.Small"/>
-    </LinearLayout>
-    <LinearLayout android:id="@+id/action_share_trip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent">
-        <Button android:textColor="@color/quantum_googblue" android:ellipsize="end" android:gravity="start|center_vertical" android:layout_gravity="center" android:id="@+id/action_share_trip_text" android:background="?android:attr/selectableItemBackground" android:clickable="false" android:layout_width="wrap_content" android:layout_height="48dp" android:singleLine="true" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginStart="4dp" style="@android:style/Widget.Material.Light.Button.Borderless.Small"/>
-    </LinearLayout>
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/res_0x7f080014_animated_deny_button__0">
-    <target android:name="circle" android:animation="@drawable/res_0x7f080015_animated_deny_button__1"/>
-    <target android:name="circle_path" android:animation="@drawable/res_0x7f080016_animated_deny_button__2"/>
-</animated-vector>

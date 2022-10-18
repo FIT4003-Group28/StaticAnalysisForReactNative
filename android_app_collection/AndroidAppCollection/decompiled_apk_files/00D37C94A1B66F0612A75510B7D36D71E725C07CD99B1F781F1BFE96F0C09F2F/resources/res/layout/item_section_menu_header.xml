@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="@dimen/start_end_padding">
-    <FrameLayout android:layout_gravity="start|center_vertical" android:id="@+id/sub_menu_container" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <LinearLayout android:layout_gravity="end|center_vertical" android:orientation="horizontal" android:id="@+id/buttons_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-</FrameLayout>

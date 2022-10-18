@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="?attr/selectableItemBackground" android:paddingLeft="@dimen/account_menu_cards_padding_from_start" android:paddingTop="@dimen/account_menu_cards_vertical_spacing" android:paddingRight="@dimen/account_menu_cards_padding_from_end" android:paddingBottom="@dimen/account_menu_cards_vertical_spacing" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/account_menu_cards_padding_from_start" android:paddingEnd="@dimen/account_menu_cards_padding_from_end">
-    <include android:id="@+id/og_loading_card_view" android:visibility="gone" layout="@layout/og_loading_card"/>
-    <FrameLayout android:id="@+id/og_card_content_root" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</FrameLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/quantum_googblue500" android:paddingLeft="@dimen/uraw_content_padding" android:paddingTop="4dp" android:paddingRight="@dimen/uraw_content_padding" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_alignParentTop="true">
-    <ImageButton android:id="@+id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:src="0x7f080745" android:minWidth="@dimen/uraw_button_width" android:minHeight="@dimen/uraw_button_height" style="@style/Widget.AppCompat.Button.Borderless"/>
-    <TextView android:textSize="20sp" android:textColor="@color/quantum_white_text" android:id="@+id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium"/>
-</LinearLayout>

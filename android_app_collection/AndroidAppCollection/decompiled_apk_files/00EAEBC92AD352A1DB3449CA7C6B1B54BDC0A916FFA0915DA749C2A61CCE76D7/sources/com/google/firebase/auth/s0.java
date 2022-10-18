@@ -1,7 +1,0 @@
-package com.google.firebase.auth;
-/* loaded from: classes.dex */
-public class s0 {
-    public static h a(String str, String str2) {
-        return new r0(str, str2);
-    }
-}

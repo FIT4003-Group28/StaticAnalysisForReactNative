@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/header_contents" android:paddingLeft="@dimen/title_padding" android:paddingRight="@dimen/title_padding" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="2">
-        <com.google.android.libraries.messaging.lighter.ui.avatar.AnonymousConversationAvatarView android:layout_gravity="center" android:id="@+id/conversation_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:textSize="@dimen/conversation_title_size" android:textColor="@color/header_text_color" android:ellipsize="end" android:layout_gravity="center" android:id="@+id/header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/google_sans"/>
-        <TextView android:textSize="@dimen/conversation_subtitle_size" android:textColor="@color/header_subtitle_text_color" android:ellipsize="end" android:layout_gravity="center" android:id="@+id/header_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif"/>
-    </LinearLayout>
-    <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="1" app:navigationContentDescription="@string/back_button_label" app:navigationIcon="0x7f0806f5" app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-</merge>

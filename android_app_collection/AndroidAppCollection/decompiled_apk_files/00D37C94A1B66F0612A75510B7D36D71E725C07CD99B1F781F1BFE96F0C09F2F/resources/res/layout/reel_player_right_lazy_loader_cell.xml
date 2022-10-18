@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:id="@+id/reel_right_lazy_loader_cell" android:layout_width="@dimen/reel_player_right_cell_width" android:layout_height="@dimen/reel_player_right_cell_height" android:scaleType="center" android:contentDescription="@null"/>

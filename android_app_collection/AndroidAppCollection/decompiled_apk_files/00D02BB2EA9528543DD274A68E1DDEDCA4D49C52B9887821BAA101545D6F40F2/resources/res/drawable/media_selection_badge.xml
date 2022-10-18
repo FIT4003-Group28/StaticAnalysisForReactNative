@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
-    <solid android:color="@color/mod_daynight_blue600"/>
-    <size android:height="@dimen/ordinal_badge_size" android:width="@dimen/ordinal_badge_size"/>
-</shape>

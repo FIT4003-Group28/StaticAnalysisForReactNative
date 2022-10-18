@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.apps.gmm.base.views.webimageview.WebImageView android:id="@+id/night_warning_image" android:layout_width="270dp" android:layout_height="270dp" android:layout_marginBottom="16dp"/>
-    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/AR_NIGHT_WARNING_DESCRIPTION" style="?attr/arDialogTitleStyle"/>
-    <com.google.android.material.button.MaterialButton android:id="@+id/night_warning_continue_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/AR_NIGHT_WARNING_CONTINUE" style="@style/Widget.GoogleMaterial.Button"/>
-    <com.google.android.material.button.MaterialButton android:id="@+id/night_warning_regular_directions_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/AR_NIGHT_WARNING_RETURN_TO_MAP" style="@style/Widget.GoogleMaterial.Button.StrokedButton"/>
-</LinearLayout>

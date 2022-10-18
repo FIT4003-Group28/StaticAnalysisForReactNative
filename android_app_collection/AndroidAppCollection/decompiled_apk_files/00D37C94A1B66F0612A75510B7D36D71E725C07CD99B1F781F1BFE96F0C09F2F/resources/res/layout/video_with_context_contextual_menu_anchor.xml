@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/contextual_menu_anchor" android:background="?attr/selectableItemBackgroundBorderless" android:paddingTop="0dp" android:paddingBottom="0dp" android:visibility="gone" android:layout_width="18dp" android:layout_height="18dp" android:src="0x7f080aa6" android:scaleType="center" android:tint="?attr/ytTextPrimary" android:contentDescription="@string/accessibility_menu" android:paddingStart="0dp" android:paddingEnd="2dp"/>

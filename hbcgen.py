@@ -73,29 +73,32 @@ def check_react_native_version() -> None:
 
     :param proj_dir: a path of a NodeJS directory
     """
-    # Find the react-native version in the NodeJS project
-    with open("package.json", "r") as pkg_json_f:
-        pkg_json = json.load(pkg_json_f)
+    try:
+        # Find the react-native version in the NodeJS project
+        with open("node_modules/react-native/package.json", "r") as pkg_json_f:
+            pkg_json = json.load(pkg_json_f)
 
-        # Get react-native version from pakage.json
-        rn_version = pkg_json.get("dependencies", {}).get("react-native", None)
-        if rn_version is None:
-            raise NotFoundErr(
-                "WARNING: NPM package 'react-native' is not installed in this project "
-                "and Hermes likely will not be installed"
-            )
+            # Get react-native version from pakage.json
+            rn_version = pkg_json.get("version", None)
+            if rn_version is None:
+                raise KeyError("Version of 'react-native' package could not be determined.")
 
-        # Check the version is atleast 0.60.4
-        print("Current react-native version " + rn_version.lstrip("^~"))
-        rn_v_split = rn_version.lstrip("^~").split(".")
-        if (int(rn_v_split[0]) == 0 and int(rn_v_split[1]) < 61
-            and ".".join(rn_v_split) not in ("0.60.4", "0.60.5", "0.60.6")):
-            raise ValueError(
-                "WARNING: Hermes engine is only supported by React Native versions 0.60.4 and up\n"
-                "Please upgrade version of 'react-native' for this tool to work properly, will "
-                "use the highest version of Hermes sourced locally but it may cause issues"
-            )
 
+            # Check the version is atleast 0.60.4
+            print("Current react-native version " + rn_version.lstrip("^~"))
+            rn_v_split = rn_version.lstrip("^~").split(".")
+            if (int(rn_v_split[0]) == 0 and int(rn_v_split[1]) < 61
+                and ".".join(rn_v_split) not in ("0.60.4", "0.60.5", "0.60.6")):
+                raise ValueError(
+                    "WARNING: Hermes engine is only supported by React Native versions 0.60.4 and up\n"
+                    "Please upgrade version of 'react-native' for this tool to work properly, will "
+                    "use the highest version of Hermes sourced locally but it may cause issues"
+                )
+    except FileNotFoundError:
+        raise NotFoundErr(
+            "WARNING: NPM package 'react-native' is not installed in this project "
+            "and Hermes likely will not be installed"
+        )
 
 # -------------------------------------------------------------
 def determine_subprocess_result(process: subprocess.Popen, raise_errors=False, mute=False) -> None:
@@ -306,7 +309,7 @@ def main() -> int:
 
         # Building JavaScript bundle from project
         execute_command(
-            msg=f"Building code bundle from '{entry_file}' to 'index.bundle'...",
+            msg=f"Building code bundle from '{entry_file}' to 'index.bundle.js'...",
             cmd=f"npx react-native bundle --dev false --platform android --entry-file "
                 f"{entry_file} --bundle-output index.bundle.js --minify false"
         )
@@ -344,7 +347,7 @@ def main() -> int:
                 remove("index.babel.bundle.js")
 
         # Determine output filename
-        outfile_name = args.output or entry_file.split(".")[0] + ".txt"
+        outfile_name = args.output or entry_file.split(".")[0] + ".hbc"
 
         # Disassemble Hermes binary in readable Hermes bytecode
         execute_command(

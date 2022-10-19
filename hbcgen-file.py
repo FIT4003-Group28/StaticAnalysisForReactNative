@@ -1,6 +1,7 @@
 import argparse
 import subprocess
-from os import chdir, getcwd, mkdir, path
+from os import chdir, getcwd, mkdir, path, remove
+from os.path import isfile
 from shutil import copy2 as copy, rmtree
 from hbcgen import execute_command, find_local_hermes
 
@@ -19,6 +20,10 @@ def process_input_args() -> argparse.Namespace:
     # Required input of the NodeJS project directory
     parser.add_argument("js_file", action="store", 
         help="A JavaScript file to convert into Hermes Bytecode.")
+
+    # Allow an option to keep the temp dir after script finishes
+    parser.add_argument("--hermes-version", "-v", default=None, 
+        help="Choose a specific veersion of Hermes to compile with (Default is highest).")
 
     # Allow an option to keep the temp dir after script finishes
     parser.add_argument("--keep-tmp", "-k", action="store_true", default=False, 
@@ -58,7 +63,7 @@ def main() -> int:
 
     try:
         # Detect Hermes installed version in project
-        hermes_file = find_local_hermes(script_dir)
+        hermes_file = find_local_hermes(script_dir, args.hermes_version)
         p_hrms = subprocess.Popen(
             f"{hermes_file} -version",
             shell=True,
@@ -74,11 +79,35 @@ def main() -> int:
                 print("Using Hermes bytecode version " + hbc_version)
                 break
 
-        # Compile JS bundle into Hermes binary
-        execute_command(
-            msg=f"Assembling JS file into Hermes binary to '{filename}_bin.hbc'...",
-            cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc {file_path}"
-        )
+        try:
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling JS file into Hermes binary to '{filename}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc {file_path}",
+                raise_errors=True
+            )
+        except RuntimeError:
+            print("Trying to assemble bundle in compatibility mode")
+
+            # Installing babel
+            execute_command(
+                msg=f"Installing 'babel'...",
+                cmd=f"npm install --save-dev @babel/cli @babel/core @babel/preset-env"
+            )
+
+            babel_exe = path.join(".", "node_modules", "@babel", "cli", "bin", "babel.js")
+
+            # Converting ES6 Javascript into ES5
+            execute_command(
+                msg=f"Converting '{file_path}' to ES5 into 'index.babel.bundle.js'...",
+                cmd=f"{babel_exe} --presets @babel/env --no-babelrc {file_path} -o index.babel.bundle.js"
+            )
+
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to '{filename}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc index.babel.bundle.js",
+            )
 
         outfile_path = path.join(original_dir, f"{filename}.hbc")
 

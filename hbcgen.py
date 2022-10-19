@@ -1,11 +1,10 @@
 import argparse
-from genericpath import isfile
 import json
 import platform
 import subprocess
 import sys
-from os import chdir, getcwd, listdir, path, remove
-from shutil import copy2 as copy
+from os import chdir, getcwd, listdir, path, remove, rename
+from os.path import isfile
 from xml.dom import NotFoundErr
 
 # -------------------------------------------------------------
@@ -332,8 +331,17 @@ def main() -> int:
 
             # Installing babel
             execute_command(
-                msg=f"Installing 'babel'...",
-                cmd=f"npm install --save-dev @babel/cli @babel/core @babel/preset-env"
+                msg=f"Installing 'webpack' and 'babel'...",
+                cmd=f"npm install --save-dev webpack webpack-cli @babel/cli @babel/core @babel/preset-env"
+            )
+
+            webpack_exe = path.join(".", "node_modules", "webpack", "bin", "webpack.js")
+            entry_path = path.join(args.proj_dir, entry_file)
+
+            # Rebuilding JavaScript bundle from project
+            execute_command(
+                msg=f"Rebuilding code bundle from '{entry_file}' to 'index.bundle.js'...",
+                cmd=f"node {webpack_exe} -o . --entry {entry_path} --mode=development --target=node --no-devtool"
             )
 
             babel_exe = path.join(".", "node_modules", "@babel", "cli", "bin", "babel.js")
@@ -363,8 +371,7 @@ def main() -> int:
             )
         else:
             # Move compiled Hermes binary to output path
-            copy("index.bundle.hbc", outfile_name)
-            remove("index.bundle.hbc")
+            rename("index.bundle.hbc", outfile_name)
 
         # Remove temp files
         if not args.keep_files:

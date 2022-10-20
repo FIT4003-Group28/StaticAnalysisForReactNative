@@ -1,0 +1,221 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: e0ad6a203446ed7b7f036af006cdf2561c8f55c7
+  Function count: 7
+  String count: 15
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 13..16]: Fizz
+s2[ASCII, 17..20]: Buzz
+s3[ASCII, 26..31]: global
+i4[ASCII, 0..6] #629A2BFD: console
+i5[ASCII, 6..20] #E6DC7C30: executeFizzBuzz
+i6[ASCII, 13..20] #7B9C0BFB: FizzBuzz
+i7[ASCII, 21..24] #A2C4B384: call
+i8[ASCII, 24..26] #1C35E808: log
+i9[ASCII, 31..42] #0AC0B301: loopFizzBuzz
+i10[ASCII, 43..48] #D1854E2F: maxNum
+i11[ASCII, 49..58] #54895614: print_buzz
+i12[ASCII, 59..68] #5A3F5F0C: print_fizz
+i13[ASCII, 59..72] #0F485BB4: print_fizzbuzz
+i14[ASCII, 73..81] #807C5F3D: prototype
+
+Function<global>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "FizzBuzz"
+    DeclareGlobalVar  "print_fizz"
+    DeclareGlobalVar  "print_buzz"
+    DeclareGlobalVar  "print_fizzbuzz"
+    DeclareGlobalVar  "executeFizzBuzz"
+    CreateEnvironment r1
+    CreateClosure     r2, r1, 1
+    GetGlobalObject   r0
+    PutById           r0, r2, 1, "FizzBuzz"
+    CreateClosure     r2, r1, 3
+    PutById           r0, r2, 2, "print_fizz"
+    CreateClosure     r2, r1, 4
+    PutById           r0, r2, 3, "print_buzz"
+    CreateClosure     r2, r1, 5
+    PutById           r0, r2, 4, "print_fizzbuzz"
+    CreateClosure     r1, r1, 6
+    PutById           r0, r1, 5, "executeFizzBuzz"
+    GetByIdShort      r2, r0, 1, "executeFizzBuzz"
+    GetByIdShort      r0, r2, 2, "prototype"
+    CreateThis        r4, r0, r2
+    LoadConstUInt8    r3, 100
+    Construct         r0, r2, 2
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<FizzBuzz>(2 params, 12 registers, 0 symbols):
+Offset in debug table: source 0x0020, lexical 0x0000
+    LoadThisNS        r3
+    LoadConstUInt8    r2, 1
+    LoadParam         r0, 1
+    PutById           r3, r0, 1, "maxNum"
+    CreateEnvironment r0
+    CreateClosure     r0, r0, 2
+    PutById           r3, r0, 2, "loopFizzBuzz"
+    GetByIdShort      r0, r3, 1, "maxNum"
+    Mov               r1, r2
+    JNotLessEqual     L1, r1, r0
+L2:
+    GetByIdShort      r0, r3, 2, "loopFizzBuzz"
+    Call2             r0, r0, r3, r1
+    AddN              r1, r1, r2
+    GetByIdShort      r0, r3, 1, "maxNum"
+    JLessEqual        L2, r1, r0
+L1:
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<>(2 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x003c, lexical 0x0000
+    LoadParam         r2, 1
+    LoadConstUInt8    r0, 15
+    Mod               r0, r2, r0
+    LoadConstZero     r1
+    JStrictEqual      L1, r0, r1
+    LoadConstUInt8    r0, 5
+    Mod               r0, r2, r0
+    JStrictEqual      L2, r0, r1
+    LoadConstUInt8    r0, 3
+    Mod               r0, r2, r0
+    JStrictEqual      L3, r0, r1
+    GetGlobalObject   r0
+    TryGetById        r1, r0, 1, "console"
+    GetByIdShort      r0, r1, 2, "log"
+    Call2             r0, r0, r1, r2
+    Jmp               L4
+L3:
+    GetGlobalObject   r0
+    GetByIdShort      r1, r0, 3, "print_fizz"
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+    Jmp               L4
+L2:
+    GetGlobalObject   r0
+    GetByIdShort      r1, r0, 4, "print_buzz"
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+    Jmp               L4
+L1:
+    GetGlobalObject   r0
+    GetByIdShort      r1, r0, 5, "print_fizzbuzz"
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+L4:
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<print_fizz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0064, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "Fizz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<print_buzz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0071, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "Buzz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<print_fizzbuzz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x007e, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "FizzBuzz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<executeFizzBuzz>(2 params, 13 registers, 0 symbols):
+Offset in debug table: source 0x008b, lexical 0x0000
+    GetGlobalObject   r0
+    GetByIdShort      r3, r0, 1, "FizzBuzz"
+    GetByIdShort      r2, r3, 2, "call"
+    LoadThisNS        r1
+    LoadParam         r0, 1
+    Call3             r0, r2, r3, r1, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Debug filename table:
+  0: FizzBuzz_Call.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 34: line 1 col 1
+    bc 45: line 1 col 1
+    bc 56: line 1 col 1
+    bc 67: line 1 col 1
+    bc 78: line 1 col 1
+    bc 84: line 46 col 22
+    bc 89: line 46 col 37
+    bc 94: line 46 col 37
+    bc 101: line 46 col 37
+  0x0020  function idx 1, starts at line 1 col 1
+    bc 8: line 2 col 17
+    bc 21: line 4 col 23
+    bc 27: line 23 col 30
+    bc 35: line 23 col 5
+    bc 39: line 25 col 26
+    bc 44: line 25 col 26
+    bc 53: line 23 col 30
+    bc 58: line 23 col 5
+  0x003c  function idx 2, starts at line 4 col 25
+    bc 6: line 5 col 13
+    bc 19: line 9 col 18
+    bc 30: line 13 col 18
+    bc 40: line 19 col 13
+    bc 46: line 19 col 24
+    bc 51: line 19 col 24
+    bc 60: line 15 col 13
+    bc 67: line 15 col 23
+    bc 75: line 11 col 13
+    bc 82: line 11 col 23
+    bc 90: line 7 col 13
+    bc 97: line 7 col 27
+  0x0064  function idx 3, starts at line 29 col 1
+    bc 2: line 30 col 5
+    bc 8: line 30 col 16
+    bc 17: line 30 col 16
+  0x0071  function idx 4, starts at line 33 col 1
+    bc 2: line 34 col 5
+    bc 8: line 34 col 16
+    bc 17: line 34 col 16
+  0x007e  function idx 5, starts at line 37 col 1
+    bc 2: line 38 col 5
+    bc 8: line 38 col 16
+    bc 17: line 38 col 16
+  0x008b  function idx 6, starts at line 41 col 1
+    bc 2: line 43 col 5
+    bc 7: line 43 col 18
+    bc 17: line 43 col 18
+  0x0098  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

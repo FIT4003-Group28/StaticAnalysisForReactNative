@@ -1,0 +1,142 @@
+import argparse
+import subprocess
+from os import chdir, getcwd, mkdir, path, remove
+from os.path import isfile
+from shutil import copy2 as copy, rmtree
+from hbcgen import execute_command, find_local_hermes
+
+TEMP_DIR_NAME = "hermes_tmp"
+
+
+# -------------------------------------------------------------
+def process_input_args() -> argparse.Namespace:
+    """
+    Processes input arguments from the command line
+
+    :return: an object containing input arguments
+    """
+    parser = argparse.ArgumentParser()
+
+    # Required input of the NodeJS project directory
+    parser.add_argument("js_file", action="store", 
+        help="A JavaScript file to convert into Hermes Bytecode.")
+
+    # Allow an option to keep the temp dir after script finishes
+    parser.add_argument("--hermes-version", "-v", default=None, 
+        help="Choose a specific veersion of Hermes to compile with (Default is highest).")
+
+    # Allow an option to keep the temp dir after script finishes
+    parser.add_argument("--keep-tmp", "-k", action="store_true", default=False, 
+        help="Keep the created temp directory when script exits.")
+
+    # Allow an option to dump the bytecode into readable text
+    parser.add_argument("--dump-bytecode", "-d", action="store_true", default=False, 
+        help="Dump the hermes binary file into readable bytecode.")
+
+    return parser.parse_args()
+
+
+# -------------------------------------------------------------
+def main() -> int:
+    """Does the work"""
+    # Process input arguments
+    args = process_input_args()
+
+    # Variables used in the script
+    original_dir = getcwd()
+    script_dir = path.dirname(path.abspath(__file__))
+
+    # Check if file exists
+    if not path.isfile(args.js_file):
+        raise ValueError("ERROR: JS file specified does not exist")
+
+    filename = path.basename(args.js_file).split(".")[0]
+    file_path = path.join(original_dir, args.js_file)
+
+    # Check if temp dir exists, delete it
+    if path.isdir(TEMP_DIR_NAME):
+        rmtree(TEMP_DIR_NAME)
+
+    # Enter a new Hermes temp directory
+    mkdir(TEMP_DIR_NAME)
+    chdir(TEMP_DIR_NAME)
+
+    try:
+        # Detect Hermes installed version in project
+        hermes_file = find_local_hermes(script_dir, args.hermes_version)
+        p_hrms = subprocess.Popen(
+            f"{hermes_file} -version",
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        p_hrms.wait()
+
+        hbc_version = None
+        for line in p_hrms.stdout:
+            if "HBC bytecode version: " in line.decode():
+                hbc_version = line.decode().split(" ")[-1].rstrip("\n")
+                print("Using Hermes bytecode version " + hbc_version)
+                break
+
+        try:
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling JS file into Hermes binary to '{filename}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc {file_path}",
+                raise_errors=True
+            )
+        except RuntimeError:
+            print("Trying to assemble bundle in compatibility mode")
+
+            # Installing babel
+            execute_command(
+                msg=f"Installing 'babel'...",
+                cmd=f"npm install --save-dev @babel/cli @babel/core @babel/preset-env"
+            )
+
+            babel_exe = path.join(".", "node_modules", "@babel", "cli", "bin", "babel.js")
+
+            # Converting ES6 Javascript into ES5
+            execute_command(
+                msg=f"Converting '{file_path}' to ES5 into 'index.babel.bundle.js'...",
+                cmd=f"{babel_exe} --presets @babel/env --no-babelrc {file_path} -o index.babel.bundle.js"
+            )
+
+            # Compile JS bundle into Hermes binary
+            execute_command(
+                msg=f"Assembling bundle into Hermes binary to '{filename}_bin.hbc'...",
+                cmd=f"{hermes_file} -O -emit-binary -out={filename}_bin.hbc index.babel.bundle.js",
+            )
+
+        outfile_path = path.join(original_dir, f"{filename}.hbc")
+
+        if args.dump_bytecode:
+            # Disassemble Hermes binary in readable Hermes bytecode
+            execute_command(
+                msg=f"Disassembling Hermes binary into Hermes bytecode to '{filename}.hbc'...",
+                cmd=f"{hermes_file} -dump-bytecode {filename}_bin.hbc -out {outfile_path}"
+            )
+        else:
+            # Move compiled Hermes binary to output path
+            copy(f"{filename}_bin.hbc", outfile_path)
+
+        print(f"\nHBC Generation successful! File can be found in: '{outfile_path}'")
+
+    finally:
+        chdir(original_dir)
+        if not args.keep_tmp:
+            rmtree(TEMP_DIR_NAME)
+
+
+# -------------------------------------------------------------
+if __name__ == "__main__":
+    # main()  # Uncomment for debugging
+    try:
+        exit(main())
+    except InterruptedError:
+        print("Keyboard Interupt")
+        exit(1)
+    except Exception as e:
+        print(e)
+        exit(1)

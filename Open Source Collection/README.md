@@ -12,3 +12,8 @@ Get this access token by:
 5. Generate a new token and paste it into your cred.py
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+To use this tool, use in order:
+1. Run get-react-native-repos.py to generate repos.json
+2. Run validate-react-native-repos.py to validate the found repos to generate repos_valid.json
+3. Run clone-react-native-repos.py to clone all of the valid repositories

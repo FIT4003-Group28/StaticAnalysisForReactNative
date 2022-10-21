@@ -1,0 +1,8 @@
+
+digraph test{
+overlap=scalexy;
+"[foo]" -> "[foo]defineProperties"
+"[foo]" -> "[foo]defineProperties"
+"[foo]foobar" -> "[foo]_classCallCheck"
+"[foo]" -> "[foo]foobar"
+}

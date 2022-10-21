@@ -1,0 +1,3 @@
+strict digraph {
+"[3d-morph.js]" -> "[3d-morph.js]morph"
+}

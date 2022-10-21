@@ -1,0 +1,6 @@
+
+digraph test{
+overlap=scalexy;
+"[bar filename]bar" -> "[bar filename]foo"
+"[bar filename]" -> "[bar filename]bar"
+}

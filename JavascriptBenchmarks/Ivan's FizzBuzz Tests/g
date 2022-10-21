@@ -1,0 +1,37 @@
+<ref *1> {
+  type: 'CallExpression',
+  callee: {
+    type: 'Identifier',
+    name: 'foo',
+    range: [ 102, 105 ],
+    loc: { start: [Object], end: [Object] },
+    attr: {
+      enclosingFunction: [Object],
+      enclosingFile: '.\\sunspider-1.0.2\\bar filename.js',
+      scope: [Symtab]
+    }
+  },
+  arguments: [],
+  range: [ 102, 107 ],
+  loc: { start: { line: 9, column: 4 }, end: { line: 9, column: 9 } },
+  attr: {
+    enclosingFunction: {
+      type: 'FunctionDeclaration',
+      id: [Object],
+      params: [],
+      defaults: [],
+      body: [Object],
+      rest: null,
+      generator: false,
+      expression: false,
+      range: [Array],
+      loc: [Object],
+      attr: [Object]
+    },
+    enclosingFile: '.\\sunspider-1.0.2\\bar filename.js',
+    receiver_vertex: { type: 'ArgumentVertex', node: [Circular *1], attr: [Object] },
+    res_vertex: { type: 'ResVertex', node: [Circular *1], attr: [Object] },
+    callee_vertex: { type: 'CalleeVertex', call: [Circular *1], attr: [Object] },
+    expr_vertex: { type: 'ExprVertex', node: [Circular *1], attr: [Object] }
+  }
+}

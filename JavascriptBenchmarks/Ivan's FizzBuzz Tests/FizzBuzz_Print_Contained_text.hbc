@@ -1,0 +1,182 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 2ffa74d0a8b0dc0e095bc41cfdbfb46ea29db0e0
+  Function count: 6
+  String count: 11
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 2..7]: global
+s1[ASCII, 7..18]: loopFizzBuzz
+s2[ASCII, 11..14]: Fizz
+s3[ASCII, 15..18]: Buzz
+s4[ASCII, 19..28]: print_buzz
+s5[ASCII, 29..38]: print_fizz
+s6[ASCII, 29..42]: print_fizzbuzz
+i7[ASCII, 0..2] #1C35E808: log
+i8[ASCII, 11..18] #7B9C0BFB: FizzBuzz
+i9[ASCII, 43..49] #629A2BFD: console
+i10[ASCII, 50..55] #D1854E2F: maxNum
+
+Function<global>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "FizzBuzz"
+    CreateEnvironment r0
+    CreateClosure     r1, r0, 1
+    GetGlobalObject   r0
+    PutById           r0, r1, 1, "FizzBuzz"
+    GetByIdShort      r2, r0, 1, "FizzBuzz"
+    LoadConstUndefined r1
+    LoadConstUInt8    r0, 100
+    Call2             r0, r2, r1, r0
+    Ret               r0
+
+Function<FizzBuzz>(2 params, 14 registers, 4 symbols):
+Offset in debug table: source 0x000e, lexical 0x0000
+    CreateEnvironment r1
+    LoadConstUInt8    r5, 1
+    LoadConstUndefined r0
+    GetGlobalObject   r4
+    CreateClosure     r2, r1, 2
+    StoreToEnvironment r1, 0, r2
+    CreateClosure     r2, r1, 3
+    StoreToEnvironment r1, 1, r2
+    CreateClosure     r2, r1, 4
+    StoreToEnvironment r1, 2, r2
+    CreateClosure     r3, r1, 5
+    LoadParam         r2, 1
+    LoadThisNS        r1
+    PutById           r1, r2, 1, "maxNum"
+    GetByIdShort      r1, r4, 1, "maxNum"
+    Mov               r2, r5
+    JNotLessEqual     L1, r2, r1
+L2:
+    Call2             r1, r3, r0, r2
+    AddN              r2, r2, r5
+    GetByIdShort      r1, r4, 1, "maxNum"
+    JLessEqual        L2, r2, r1
+L1:
+    Ret               r0
+
+Function<print_fizz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0025, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "Fizz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<print_buzz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x0032, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "Buzz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<print_fizzbuzz>(1 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x003f, lexical 0x0000
+    GetGlobalObject   r0
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r1, r2, 2, "log"
+    LoadConstString   r0, "FizzBuzz"
+    Call2             r0, r1, r2, r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<loopFizzBuzz>(2 params, 11 registers, 0 symbols):
+Offset in debug table: source 0x004c, lexical 0x0000
+    LoadParam         r2, 1
+    LoadConstUInt8    r0, 15
+    Mod               r0, r2, r0
+    LoadConstZero     r1
+    JStrictEqual      L1, r0, r1
+    LoadConstUInt8    r0, 5
+    Mod               r0, r2, r0
+    JStrictEqual      L2, r0, r1
+    LoadConstUInt8    r0, 3
+    Mod               r0, r2, r0
+    JStrictEqual      L3, r0, r1
+    GetGlobalObject   r0
+    TryGetById        r1, r0, 1, "console"
+    GetByIdShort      r0, r1, 2, "log"
+    Call2             r0, r0, r1, r2
+    Jmp               L4
+L3:
+    GetEnvironment    r0, 0
+    LoadFromEnvironment r1, r0, 0
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+    Jmp               L4
+L2:
+    GetEnvironment    r0, 0
+    LoadFromEnvironment r1, r0, 1
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+    Jmp               L4
+L1:
+    GetEnvironment    r0, 0
+    LoadFromEnvironment r1, r0, 2
+    LoadConstUndefined r0
+    Call1             r0, r1, r0
+L4:
+    LoadConstUndefined r0
+    Ret               r0
+
+Debug filename table:
+  0: FizzBuzz_Print_Contained.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 14: line 1 col 1
+    bc 20: line 46 col 1
+    bc 30: line 46 col 9
+  0x000e  function idx 1, starts at line 1 col 1
+    bc 46: line 2 col 17
+    bc 52: line 37 col 34
+    bc 60: line 37 col 9
+    bc 64: line 39 col 25
+    bc 73: line 37 col 34
+    bc 78: line 37 col 9
+  0x0025  function idx 2, starts at line 4 col 5
+    bc 2: line 5 col 9
+    bc 8: line 5 col 20
+    bc 17: line 5 col 20
+  0x0032  function idx 3, starts at line 8 col 5
+    bc 2: line 9 col 9
+    bc 8: line 9 col 20
+    bc 17: line 9 col 20
+  0x003f  function idx 4, starts at line 12 col 5
+    bc 2: line 13 col 9
+    bc 8: line 13 col 20
+    bc 17: line 13 col 20
+  0x004c  function idx 5, starts at line 16 col 5
+    bc 6: line 17 col 13
+    bc 19: line 21 col 18
+    bc 30: line 25 col 18
+    bc 40: line 31 col 13
+    bc 46: line 31 col 24
+    bc 51: line 31 col 24
+    bc 67: line 27 col 23
+    bc 82: line 23 col 23
+    bc 97: line 19 col 27
+  0x006b  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

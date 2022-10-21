@@ -1,0 +1,13 @@
+strict digraph {
+    "JavaScript.FunctionOutput global(Javascript.Object[])" -> "<Hbc.GlobalStringTable: JavaScript.FunctionOutput executeFizzBuzz(java.lang.Object[])"
+    "JavaScript.FunctionOutput global(Javascript.Object[])" -> "<Hbc.GlobalStringTable: void <init>()>"
+    "JavaScript.FunctionOutput global(Javascript.Object[])" -> "<Hbc.GlobalStringTable: JavaScript.FunctionOutput returnFizzBuzz(java.lang.Objectp[])"
+
+    "JavaScript.FunctionOutput executeFizzBuzz(JavaScript.Object[])" -> "<JavaScript: JavaScript.FunctionOutput Object(java.lang.Object[])>"
+    
+    "JavaScript.FunctionOutput returnFizzBuzz(JavaScript.Object[])" -> "JavaScript.FunctionOutput hermesNoNameFunction_1(JavaScript.Object[])"
+    "JavaScript.FunctionOutput hermesNoNameFunction_1(JavaScript.Object[])" -> "<Hbc.GlobalStringTable: JavaScript.FunctionOutput print_buzz(java.lang.Object[])>"
+    "JavaScript.FunctionOutput hermesNoNameFunction_1(JavaScript.Object[])" -> "<Hbc.GlobalStringTable: JavaScript.FunctionOutput print_fizz(java.lang.Object[])>"
+    "JavaScript.FunctionOutput hermesNoNameFunction_1(JavaScript.Object[])" -> "<Hbc.GlobalStringTable: JavaScript.FunctionOutput print_fizzbuzz(java.lang.Object[])>"
+    "JavaScript.FunctionOutput hermesNoNameFunction_1(JavaScript.Object[])" -> "<Hbc.GlobalStringTable.console: JavaScriptFunctionOutput log(java.lang.Object[])>"
+}

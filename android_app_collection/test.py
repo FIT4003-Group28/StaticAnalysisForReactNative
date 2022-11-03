@@ -3,7 +3,8 @@ import subprocess
 from subprocess import run
 import pandas as pd
 import csv
-
+import concurrent.futures
+import os.path
 
 # file name = name of the file to be opened
 # the file should have one column with the pkg_name of the popular apps
@@ -22,7 +23,7 @@ def get_popular_android_app_pkg_name(file_name):
     return concat_pkg_name
 
 
-popular_package_name = get_popular_android_app_pkg_name('top_200.csv')
+popular_package_name = get_popular_android_app_pkg_name('/home/android-app/AndroZoo/StaticAnalysisForReactNative/android_app_collection/package_name_data/gplay_package_name.csv')
 
 
 def get_sha256_from_pkg_name(array_of_pkg_name, file_list_of_sha256):
@@ -41,21 +42,33 @@ def get_sha256_from_pkg_name(array_of_pkg_name, file_list_of_sha256):
     return array_of_sha256_local
 
 
-array_of_sha256 = get_sha256_from_pkg_name(popular_package_name, "filter_unique_latest.csv")
+array_of_sha256 = get_sha256_from_pkg_name(popular_package_name, "/home/android-app/AndroZoo/StaticAnalysisForReactNative/android_app_collection/filter_unique_latest.csv")
 
 
 apiKeyString = '0bfb176ee4d69e6ff4d845e1f4e2c007806642c207cf642d64b2c226da0f0256'
-sha256String_1 = '00EAEBC92AD352A1DB3449CA7C6B1B54BDC0A916FFA0915DA749C2A61CCE76D7'
+# sha256String_1 = '00EAEBC92AD352A1DB3449CA7C6B1B54BDC0A916FFA0915DA749C2A61CCE76D7'
 
 i = 0
 
-for sha_256 in array_of_sha256:
-    i = i+1
-    inputString = 'curl -O --remote-header-name -G -d apikey=' + apiKeyString + ' -d sha256=' + sha_256 + ' \https://androzoo.uni.lu/api/download'
+# for sha_256 in array_of_sha256:
+#     i = i+1
+#     inputString = 'curl -O  --remote-header-name -G -d apikey=' + apiKeyString + ' -d sha256=' + sha_256 + ' \https://androzoo.uni.lu/api/download'
 
-    run(inputString, shell=True)
-    if i == 9:
-        break;
+#     run(inputString, shell=True)
+#     if i == 9:
+#         break;
+filePath = '/home/android-app/AndroZoo/dataset/'
+def download_apk(sha_256):
+    try:
+        print("SHA256: " + sha_256)
+        inputString = 'curl -O  --remote-header-name -G -d apikey=' + apiKeyString + ' -d sha256=' + sha_256 + ' \https://androzoo.uni.lu/api/download'
+        run(inputString, shell=True)        
+    except:
+        print('error with item')
+
+executor = concurrent.futures.ProcessPoolExecutor(1)
+futures = [executor.submit(download_apk, sha_256) for sha_256 in array_of_sha256]
+concurrent.futures.wait(futures)
 
 
 ###
